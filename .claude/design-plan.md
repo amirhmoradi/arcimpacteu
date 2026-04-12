@@ -100,7 +100,7 @@ Modern, nature-inspired design reflecting **mountain outdoor** archery (Savoie /
 - Split: Form left, info right
 - Form fields: Name, Email, Phone, Subject (dropdown), Message
 - Form submits to Cloudflare Worker → email
-- Contact info: phone, email, location
+- Contact info: postal addresses + link to Contact form only (no published phone or e-mail in copy)
 - Social media links
 - Small embedded map or location visual
 

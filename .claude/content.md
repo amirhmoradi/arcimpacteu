@@ -12,8 +12,7 @@
 ## Contact Information
 - **Registered Address**: Le Puiset, 12 chemin du four, 73800 PLANAISE, France
 - **Activity Location**: 400 Rue Centrale de la Féclaz, 73230 Les Déserts, Savoie, France
-- **Phone**: __REDACTED__
-- **Email**: __REDACTED__
+- **Public contact**: use the **Contact** page form on the website only (do not store or repeat phone or e-mail in repo copy)
 - **Facebook**: https://fr-fr.facebook.com/arcimpact
 - **YouTube**: https://www.youtube.com/@arcimpact5219
 - **SIRET**: 40363287000040

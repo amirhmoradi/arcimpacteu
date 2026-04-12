@@ -26,7 +26,6 @@ module.exports = {
       latitude: 45.65,
       longitude: 6.12,
     },
-    telephone: '__REDACTED__',
     sameAs: [
       'https://fr-fr.facebook.com/arcimpact',
       'https://www.youtube.com/@arcimpact5219',

@@ -1,5 +1,3 @@
-const path = require('path');
-
 /** GitHub Pages project site: /repo-name/ ; custom domain: / */
 function pathPrefix() {
   const p = process.env.PATH_PREFIX;
@@ -39,7 +37,8 @@ module.exports = function (eleventyConfig) {
       input: 'content/pages',
       includes: '_includes',
       output: '_site',
-      data: path.join(__dirname, '_data'),
+      // Must be relative to `input`: Eleventy joins input + data; an absolute path breaks global JSON loading.
+      data: '../../_data',
     },
   };
 };

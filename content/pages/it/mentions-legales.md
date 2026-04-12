@@ -10,8 +10,7 @@ translationSlug: mentions-legales
 
 **Emmanuel Lécuyer** — **ARC IMPACT**  
 Le Puiset, 12 chemin du four — **73800 Planaise** — Francia  
-Tel.: [__REDACTED__](__REDACTED__)  
-E-mail: [__REDACTED__](__REDACTED__)  
+**Contatti**: esclusivamente tramite il **modulo** nella pagina [Contatti](/it/contact/) di questo sito (nessun numero di telefono né indirizzo e-mail pubblicati qui).  
 **SIRET**: 403 632 870 000 40
 
 ## Sede di attività (stage)
@@ -28,4 +27,4 @@ Il sito statico può essere pubblicato su **GitHub Pages**; il modulo contatti u
 
 ## Dati personali
 
-I dati inviati dal modulo servono solo a rispondere. Per i diritti (accesso, rettifica, cancellazione) scrivete agli indirizzi sopra.
+I dati inviati dal modulo servono solo a rispondere. Per i diritti (accesso, rettifica, cancellazione) usate lo stesso modulo nella pagina Contatti, indicando la richiesta.

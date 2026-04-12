@@ -50,6 +50,8 @@
     "collectivitesLead": "Multi-tirs, tir à l'arc, sarbacane, dirt monster, stand de tir… pour tous les âges.",
     "contactTitle": "Contact",
     "contactLead": "Écrivez-nous : nous vous répondrons rapidement.",
+    "footerContactHint": "Pour nous écrire, utilisez exclusivement le formulaire sur la page Contact (aucun e-mail ni numéro public ici).",
+    "contactAsideFormNote": "Toute demande passe par le formulaire ci-contre ; nous ne publions pas d’adresse e-mail ni de téléphone sur ce site.",
     "legalTitle": "Mentions légales",
     "form": {
       "name": "Nom",
@@ -118,6 +120,8 @@
     "collectivitesLead": "Multi-shooting, archery, blowgun, dirt monster, shooting stand… for all ages.",
     "contactTitle": "Contact",
     "contactLead": "Send a message — we reply as soon as we can.",
+    "footerContactHint": "Please use only the form on the Contact page to reach us (no public e-mail or phone on this site).",
+    "contactAsideFormNote": "All enquiries go through the form on the left; we do not publish an e-mail address or phone number here.",
     "legalTitle": "Legal notice",
     "form": {
       "name": "Last name",
@@ -186,6 +190,8 @@
     "collectivitesLead": "Multi-tiro, arco, cerbottana, dirt monster, stand di tiro… per tutte le età.",
     "contactTitle": "Contatti",
     "contactLead": "Invia un messaggio: ti risponderemo al più presto.",
+    "footerContactHint": "Per scriverci, usa esclusivamente il modulo nella pagina Contatti (nessuna e-mail né numero pubblico qui).",
+    "contactAsideFormNote": "Tutte le richieste passano dal modulo qui accanto; non pubblichiamo e-mail né telefono su questo sito.",
     "legalTitle": "Note legali",
     "form": {
       "name": "Cognome",

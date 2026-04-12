@@ -1,4 +1,4 @@
-{% set t = ui[lang] %}
+{% set t = i18n[lang] %}
 {% set p = localePathPrefix | default('') %}
 <section class="bg-[#F5F5F0] pb-20 pt-8">
   <div class="mx-auto max-w-7xl px-4 lg:px-8">
@@ -43,7 +43,7 @@
             <label class="mb-1 block text-sm font-medium text-gray-700" for="message">{{ t.form.message }} *</label>
             <textarea class="w-full rounded-lg border border-gray-300 px-3 py-2" id="message" name="message" rows="5" required></textarea>
           </div>
-          <div class="cf-turnstile" data-sitekey="{{ site.turnstileSiteKey }}"></div>
+          <div class="cf-turnstile" data-sitekey="{{ brand.turnstileSiteKey }}"></div>
           <p class="form-success-message text-sm font-medium text-green-600" style="display:none">{{ t.form.success }}</p>
           <p class="form-error-message text-sm font-medium text-red-600" style="display:none">{{ t.form.error }}</p>
           <button type="submit" class="rounded-lg bg-primary px-8 py-3 font-semibold text-white transition hover:bg-primary-light">{{ t.form.submit }}</button>
@@ -52,7 +52,7 @@
       <div class="space-y-6 text-gray-700">
         <p><strong class="text-primary">La Féclaz</strong><br />400 Rue Centrale de la Féclaz, 73230 Les Déserts, Savoie</p>
         <p><strong class="text-primary">Siège</strong><br />Le Puiset, 12 chemin du four, 73800 Planaise</p>
-        <p><a class="font-semibold text-primary-light hover:text-accent" href="__REDACTED__">__REDACTED__</a><br /><a class="text-primary-light hover:text-accent" href="__REDACTED__">__REDACTED__</a></p>
+        <p class="text-sm text-gray-600">{{ t.contactAsideFormNote }}</p>
         <p class="text-sm text-gray-500">Chambéry · Lac du Bourget · massifs de Savoie</p>
       </div>
     </div>

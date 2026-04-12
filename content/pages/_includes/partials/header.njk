@@ -1,10 +1,10 @@
-{% set t = ui[lang] %}
+{% set t = i18n[lang] %}
 {% set p = localePathPrefix | default('') %}
 <header class="site-header">
   <div class="mx-auto flex h-full max-w-7xl items-center justify-between px-4 lg:px-8">
     <a href="{{ '/' | localeUrl(p) | url }}" class="flex items-center gap-3 text-white no-underline">
-      <img src="{{ site.logoUrl }}" alt="{{ site.name }}" width="140" height="48" class="h-10 w-auto drop-shadow-sm" loading="eager" />
-      <span class="hidden font-semibold tracking-tight text-white sm:inline">{{ site.name }}</span>
+      <img src="{{ brand.logoUrl }}" alt="{{ brand.name }}" width="140" height="48" class="h-10 w-auto drop-shadow-sm" loading="eager" />
+      <span class="hidden font-semibold tracking-tight text-white sm:inline">{{ brand.name }}</span>
     </a>
     <nav class="hidden items-center gap-6 md:flex" aria-label="Main">
       <a class="nav-link text-sm font-medium" href="{{ '/' | localeUrl(p) | url }}">{{ t.nav.home }}</a>

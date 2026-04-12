@@ -61,6 +61,8 @@ img {
 }
 
 /* ---------- Header / Navigation ---------- */
+/* Opaque bar by default: the fixed header sits above the in-flow spacer (body is
+   white), so a transparent header reads as white-on-white until scroll. */
 .site-header {
   position: fixed;
   top: 0;
@@ -68,13 +70,17 @@ img {
   right: 0;
   z-index: 1000;
   height: var(--header-height);
-  transition: all var(--transition-base);
-  background: transparent;
+  transition: height var(--transition-base), background var(--transition-base),
+    box-shadow var(--transition-base), backdrop-filter var(--transition-base);
+  background: rgba(27, 67, 50, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
 }
 
 .site-header.scrolled {
   height: var(--header-height-scrolled);
-  background: rgba(27, 67, 50, 0.95);
+  background: rgba(27, 67, 50, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
