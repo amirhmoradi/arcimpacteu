@@ -463,26 +463,28 @@ img {
   margin-right: auto;
 }
 
-/* ---------- Scroll Animations ---------- */
+/* ---------- Scroll Animations ----------
+   Content must stay visible if JS is slow or a later init throws — do not use opacity:0
+   on [data-animate] by default. Optional motion only. */
 [data-animate] {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 [data-animate="fade-up"] {
-  transform: translateY(40px);
+  transform: translateY(24px);
 }
 
 [data-animate="fade-left"] {
-  transform: translateX(-40px);
+  transform: translateX(-24px);
 }
 
 [data-animate="fade-right"] {
-  transform: translateX(40px);
+  transform: translateX(24px);
 }
 
 [data-animate="scale-in"] {
-  transform: scale(0.9);
+  transform: scale(0.98);
 }
 
 [data-animate="fade-in"] {

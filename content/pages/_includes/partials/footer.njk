@@ -1,0 +1,31 @@
+{% set t = ui[lang] %}
+{% set p = localePathPrefix | default('') %}
+<footer class="border-t border-gray-200 bg-primary py-14 text-white">
+  <div class="mx-auto flex max-w-7xl flex-col gap-10 px-4 lg:flex-row lg:justify-between lg:px-8">
+    <div>
+      <img src="{{ site.logoUrl }}" alt="" width="120" height="40" class="mb-4 h-9 w-auto opacity-90" loading="lazy" />
+      <p class="max-w-sm text-sm text-white/80">{{ t.footerTagline }}</p>
+    </div>
+    <div class="flex flex-wrap gap-10 text-sm">
+      <div>
+        <p class="mb-2 font-semibold text-accent">{{ t.footerContact }}</p>
+        <a class="block text-white/85 hover:text-accent" href="__REDACTED__">__REDACTED__</a>
+        <a class="block text-white/85 hover:text-accent" href="__REDACTED__">__REDACTED__</a>
+      </div>
+      <div>
+        <p class="mb-2 font-semibold text-accent">La Féclaz</p>
+        <p class="text-white/75">400 Rue Centrale de la Féclaz<br />73230 Les Déserts, France</p>
+      </div>
+      <div>
+        <p class="mb-2 font-semibold text-accent">{{ t.footerLegal }}</p>
+        <a class="block text-white/85 hover:text-accent" href="{{ '/mentions-legales/' | localeUrl(p) | url }}">{{ t.nav.legal }}</a>
+        <a class="mt-2 inline-flex text-white/85 hover:text-accent" href="https://fr-fr.facebook.com/arcimpact" rel="noopener noreferrer">Facebook</a>
+        <span class="mx-2 text-white/40">·</span>
+        <a class="inline-flex text-white/85 hover:text-accent" href="https://www.youtube.com/@arcimpact5219" rel="noopener noreferrer">YouTube</a>
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto mt-10 max-w-7xl border-t border-white/10 px-4 pt-6 text-center text-xs text-white/50 lg:px-8">
+    {{ t.copyright }} · SIRET 40363287000040
+  </div>
+</footer>

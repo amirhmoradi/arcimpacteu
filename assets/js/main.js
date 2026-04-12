@@ -6,8 +6,10 @@
 (function () {
   'use strict';
 
-  // -- Configuration --
-  const WORKER_URL = 'https://contact.arcimpact.eu/api/contact';
+  // -- Configuration (override via <body data-worker-url="...">) --
+  const WORKER_URL =
+    (document.body && document.body.getAttribute('data-worker-url')) ||
+    'https://contact.arcimpact.eu/api/contact';
   const SCROLL_OFFSET = 80;
   const COUNTER_DURATION = 2000;
 
@@ -410,6 +412,20 @@
         }
       });
 
+      var turnDiv = qs('.cf-turnstile', form);
+      if (turnDiv) {
+        var tsField = qs('input[name="cf-turnstile-response"], textarea[name="cf-turnstile-response"]', form);
+        if (!tsField || !tsField.value) {
+          if (errorMsg) errorMsg.style.display = 'block';
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = submitText;
+          }
+          return;
+        }
+        data['cf-turnstile-response'] = tsField.value;
+      }
+
       fetch(WORKER_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -423,6 +439,14 @@
         if (successMsg) successMsg.style.display = 'block';
         form.reset();
         formOpenedAt = Date.now();
+        if (window.turnstile) {
+          var w = qs('.cf-turnstile', form);
+          if (w && w.getAttribute('data-widget-id')) {
+            try { window.turnstile.reset(w.getAttribute('data-widget-id')); } catch (e) {}
+          } else {
+            try { window.turnstile.reset(); } catch (e2) {}
+          }
+        }
       })
       .catch(function () {
         if (errorMsg) errorMsg.style.display = 'block';
@@ -495,19 +519,27 @@
   // Init everything on DOM ready
   // =======================================================================
   document.addEventListener('DOMContentLoaded', function () {
-    initHero();
-    initMobileNav();
-    initStickyHeader();
-    initSmoothScroll();
-    initScrollAnimations();
-    initCounters();
-    initObjectiveBars();
-    initCarousels();
-    initLightbox();
-    initLanguageSwitcher();
-    initContactForm();
-    initBackToTop();
-    initActiveNav();
+    [
+      initHero,
+      initMobileNav,
+      initStickyHeader,
+      initSmoothScroll,
+      initScrollAnimations,
+      initCounters,
+      initObjectiveBars,
+      initCarousels,
+      initLightbox,
+      initLanguageSwitcher,
+      initContactForm,
+      initBackToTop,
+      initActiveNav,
+    ].forEach(function (fn) {
+      try {
+        fn();
+      } catch (e) {
+        console.error('Arc IMPACT init:', fn.name || fn, e);
+      }
+    });
   });
 
 })();

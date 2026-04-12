@@ -1,0 +1,24 @@
+# Arc IMPACT — contact form mailer (Turnstile + HTTPS email API)
+# Docs: worker/README.md
+
+name = "arcimpact-contact"
+main = "src/index.ts"
+compatibility_date = "2025-04-01"
+
+# Route this worker on your zone, e.g. contact.example.com/api/*
+# [[routes]]
+# pattern = "contact.arcimpact.eu/api/*"
+# zone_name = "arcimpact.eu"
+
+[vars]
+# Comma-separated list of browser origins allowed to call this worker (GitHub Pages + custom domain)
+# Add your GitHub Pages origin, e.g. https://<user>.github.io (no trailing path)
+ALLOWED_ORIGINS = "https://arcimpact.eu,https://www.arcimpact.eu"
+MAIL_DRIVER = "resend"
+MAIL_TO = "you@example.com"
+MAIL_FROM = "noreply@example.com"
+
+# Set secrets with:
+#   wrangler secret put TURNSTILE_SECRET
+#   wrangler secret put RESEND_API_KEY
+# (or POSTMARK_SERVER_TOKEN / BREVO_API_KEY depending on MAIL_DRIVER)

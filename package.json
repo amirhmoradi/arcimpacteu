@@ -1,0 +1,14 @@
+{
+  "name": "arcimpacteu",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Arc IMPACT — multilingual static site (Eleventy + Sveltia-managed content)",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve --watch",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.0"
+  }
+}

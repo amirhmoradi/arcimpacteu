@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default('fr') }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if title %}{{ title }} — {% endif %}{{ site.name }}</title>
+  {% if description %}<meta name="description" content="{{ description | escape }}" />{% endif %}
+  <link rel="canonical" href="{{ metadata.url }}{{ page.url }}" />
+  {% include "partials/hreflang.njk" %}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{% if title %}{{ title }} — {% endif %}{{ site.name }}" />
+  <meta property="og:description" content="{{ description | default(site.name) | escape }}" />
+  <meta property="og:image" content="{{ site.ogImage }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#1B4332', light: '#2D6A4F', dark: '#0F2A1E' },
+            accent: { DEFAULT: '#D4A843', light: '#E4C06E' },
+            charcoal: '#2D2D2D',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}" />
+  {% if schemaJsonLd %}
+  <script type="application/ld+json">{{ schemaJsonLd | safe }}</script>
+  {% endif %}
+</head>
+<body
+  class="bg-white text-charcoal antialiased"
+  data-worker-url="{{ site.contactWorkerUrl }}"
+  data-turnstile-site-key="{{ site.turnstileSiteKey }}"
+>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    {{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+  <button type="button" class="back-to-top fixed bottom-6 right-6 z-[900] flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white shadow-lg opacity-0 pointer-events-none transition-all hover:bg-primary-light" aria-label="Top">↑</button>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="{{ '/assets/js/main.js' | url }}"></script>
+</body>
+</html>

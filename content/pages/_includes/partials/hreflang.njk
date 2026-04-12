@@ -1,0 +1,12 @@
+{% set slug = translationSlug | default(page.fileSlug) %}
+{% if slug == '404' %}
+  {% set paths = { fr: '/', en: '/en/', it: '/it/' } %}
+{% elif slug == 'home' %}
+  {% set paths = { fr: '/', en: '/en/', it: '/it/' } %}
+{% else %}
+  {% set paths = { fr: '/' + slug + '/', en: '/en/' + slug + '/', it: '/it/' + slug + '/' } %}
+{% endif %}
+<link rel="alternate" hreflang="fr" href="{{ metadata.url }}{{ paths.fr | url }}" />
+<link rel="alternate" hreflang="en" href="{{ metadata.url }}{{ paths.en | url }}" />
+<link rel="alternate" hreflang="it" href="{{ metadata.url }}{{ paths.it | url }}" />
+<link rel="alternate" hreflang="x-default" href="{{ metadata.url }}{{ paths.fr | url }}" />

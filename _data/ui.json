@@ -1,0 +1,206 @@
+{
+  "fr": {
+    "nav": {
+      "home": "Accueil",
+      "emmanuel": "Emmanuel Lécuyer",
+      "stages": "Stages",
+      "seminaires": "Séminaires",
+      "collectivites": "Collectivités",
+      "contact": "Contact",
+      "legal": "Mentions légales"
+    },
+    "hero": {
+      "kicker": "Savoie · Chambéry · Lac du Bourget · La Féclaz",
+      "title": "À la poursuite de l'excellence",
+      "subtitle": "Stages techniques 3D, salle et plein air, séminaires et animations — encadrement par Emmanuel Lécuyer et son équipe.",
+      "ctaStages": "Découvrir les stages",
+      "ctaContact": "Nous contacter"
+    },
+    "intro": {
+      "title": "Arc IMPACT",
+      "p1": "Nous proposons des stages techniques de tir à l'arc, des animations, des activités de groupe et de la vente de cibles 3D. Fort de 20 ans d'expérience et responsable de l'équipe de France 3D de 2003 à 2014 (53 titres / médailles en tant qu'entraîneur national FFTA), Emmanuel Lécuyer et son équipe dispensent une méthode d'entraînement exigeante et bienveillante.",
+      "p2": "Arc IMPACT, c'est aussi des stages nationaux et internationaux, des animations (sarbacane, lance-pierres géant, dirt monster…) et des activités de cohésion pour les entreprises et collectivités."
+    },
+    "pillars": [
+      { "title": "Préparation physique", "text": "Renforcement, gainage, préparation spécifique au tir à l'arc. « Il est temps de contrôler son arc plutôt que de le subir. »" },
+      { "title": "Préparation technique", "text": "Alternance apprentissage / pratique / théorie, organisation de saison, tir par équipes." },
+      { "title": "Encadrement", "text": "Entraîneurs spécialisés parcours et 3D, passionnés et diplômés d'État." }
+    ],
+    "stats": [
+      { "n": 20, "s": "+", "l": "ans d'expérience" },
+      { "n": 53, "s": "", "l": "titres & médailles (Équipe de France 3D)" },
+      { "n": 12, "s": "", "l": "ans équipe de France (2003–2014)" },
+      { "n": 3, "s": "+", "l": "Championnats du monde (période palmarès)" }
+    ],
+    "servicesTitle": "Stages & offres",
+    "servicesLead": "La plupart des stages se déroulent à La Féclaz (Savoie), au cœur des Alpes.",
+    "palmarèsTitle": "Palmarès équipe de France 3D (extraits)",
+    "testimonialsTitle": "Ils en parlent",
+    "ctaBand": "Prêt à franchir un cap ?",
+    "ctaBandBtn": "Écrire à Arc IMPACT",
+    "footerTagline": "Tir à l'arc de haut niveau en Savoie.",
+    "footerContact": "Contact",
+    "footerLegal": "Mentions légales",
+    "copyright": "© Arc IMPACT",
+    "stagesPageTitle": "Stages techniques",
+    "stagesPageLead": "Des formats courts aux semaines complètes, en salle, sur le terrain ou sur parcours 3D.",
+    "seminairesTitle": "Séminaires & entreprises",
+    "seminairesLead": "Plateaux multi-activités, cohésion, tir à l'arc ludique : matériel autonome, France entière.",
+    "collectivitesTitle": "Collectivités & animations",
+    "collectivitesLead": "Multi-tirs, tir à l'arc, sarbacane, dirt monster, stand de tir… pour tous les âges.",
+    "contactTitle": "Contact",
+    "contactLead": "Écrivez-nous : nous vous répondrons rapidement.",
+    "legalTitle": "Mentions légales",
+    "form": {
+      "name": "Nom",
+      "first": "Prénom",
+      "club": "Votre club",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "message": "Message",
+      "newsletter": "Newsletter",
+      "newsYes": "Oui",
+      "newsNo": "Non",
+      "submit": "Envoyer",
+      "success": "Message envoyé. Merci !",
+      "error": "Envoi impossible. Réessayez plus tard.",
+      "required": "obligatoire"
+    }
+  },
+  "en": {
+    "nav": {
+      "home": "Home",
+      "emmanuel": "Emmanuel Lécuyer",
+      "stages": "Training camps",
+      "seminaires": "Corporate",
+      "collectivites": "Groups & councils",
+      "contact": "Contact",
+      "legal": "Legal notice"
+    },
+    "hero": {
+      "kicker": "Savoie · Chambéry · Lake Bourget · La Féclaz",
+      "title": "In pursuit of excellence",
+      "subtitle": "Technical 3D, indoor and field courses, seminars and team events — led by Emmanuel Lécuyer and his team.",
+      "ctaStages": "Explore training camps",
+      "ctaContact": "Get in touch"
+    },
+    "intro": {
+      "title": "Arc IMPACT",
+      "p1": "We run technical archery camps, animations, group activities and 3D target sales. With 20+ years of experience and as head coach of the French national 3D team from 2003 to 2014 (53 titles/medals), Emmanuel Lécuyer and his staff deliver structured, field-proven coaching.",
+      "p2": "Arc IMPACT also organises national and international camps, fun activities (blowgun, giant sling, dirt monster…) and cohesion programmes for companies and public bodies."
+    },
+    "pillars": [
+      { "title": "Physical preparation", "text": "Strength, core work and archery-specific conditioning — “control the bow, don’t fight it.”" },
+      { "title": "Technical preparation", "text": "Blended learning, season planning and team shooting." },
+      { "title": "Coaching staff", "text": "State-certified coaches focused on field and 3D disciplines." }
+    ],
+    "stats": [
+      { "n": 20, "s": "+", "l": "years of experience" },
+      { "n": 53, "s": "", "l": "titles & medals (French 3D national team)" },
+      { "n": 12, "s": "", "l": "years with Team France (2003–2014)" },
+      { "n": 3, "s": "+", "l": "World Championships (highlight period)" }
+    ],
+    "servicesTitle": "Camps & services",
+    "servicesLead": "Most camps take place at La Féclaz (Savoie), in the French Alps.",
+    "palmarèsTitle": "French national 3D team — selected results",
+    "testimonialsTitle": "What archers say",
+    "ctaBand": "Ready to level up?",
+    "ctaBandBtn": "Write to Arc IMPACT",
+    "footerTagline": "High-level archery coaching in Savoie.",
+    "footerContact": "Contact",
+    "footerLegal": "Legal notice",
+    "copyright": "© Arc IMPACT",
+    "stagesPageTitle": "Technical training camps",
+    "stagesPageLead": "From short modules to full weeks — indoor, field or 3D course.",
+    "seminairesTitle": "Seminars & companies",
+    "seminairesLead": "Multi-activity platforms and cohesion events — self-contained equipment, anywhere in France.",
+    "collectivitesTitle": "Public sector & animations",
+    "collectivitesLead": "Multi-shooting, archery, blowgun, dirt monster, shooting stand… for all ages.",
+    "contactTitle": "Contact",
+    "contactLead": "Send a message — we reply as soon as we can.",
+    "legalTitle": "Legal notice",
+    "form": {
+      "name": "Last name",
+      "first": "First name",
+      "club": "Your club",
+      "email": "E-mail",
+      "phone": "Phone",
+      "message": "Message",
+      "newsletter": "Newsletter",
+      "newsYes": "Yes",
+      "newsNo": "No",
+      "submit": "Send",
+      "success": "Message sent. Thank you!",
+      "error": "Could not send. Please try again later.",
+      "required": "required"
+    }
+  },
+  "it": {
+    "nav": {
+      "home": "Home",
+      "emmanuel": "Emmanuel Lécuyer",
+      "stages": "Stage tecnici",
+      "seminaires": "Seminari",
+      "collectivites": "Enti & gruppi",
+      "contact": "Contatti",
+      "legal": "Note legali"
+    },
+    "hero": {
+      "kicker": "Savoia · Chambéry · Lago del Bourget · La Féclaz",
+      "title": "Alla ricerca dell'eccellenza",
+      "subtitle": "Stage tecnici 3D, indoor e campo, seminari ed eventi di gruppo — con Emmanuel Lécuyer e il suo staff.",
+      "ctaStages": "Scopri gli stage",
+      "ctaContact": "Contattaci"
+    },
+    "intro": {
+      "title": "Arc IMPACT",
+      "p1": "Proponiamo stage tecnici di tiro con l'arco, animazioni, attività di gruppo e vendita di bersagli 3D. Con oltre 20 anni di esperienza e come responsabile della nazionale francese 3D dal 2003 al 2014 (53 titoli/medaglie), Emmanuel Lécuyer e il team offrono un metodo di allenamento solido e personalizzato.",
+      "p2": "Arc IMPACT organizza anche stage nazionali e internazionali, animazioni (cerbottana, fionda gigante, dirt monster…) e attività di coesione per aziende e collettività."
+    },
+    "pillars": [
+      { "title": "Preparazione fisica", "text": "Forza, core e lavoro specifico — « controlla l'arco invece di subirlo »." },
+      { "title": "Preparazione tecnica", "text": "Apprendimento, pratica e teoria; gestione della stagione e tiro di squadra." },
+      { "title": "Staff", "text": "Allenatori diplomati, orientati al parcours e al 3D." }
+    ],
+    "stats": [
+      { "n": 20, "s": "+", "l": "anni di esperienza" },
+      { "n": 53, "s": "", "l": "titoli e medaglie (nazionale 3D)" },
+      { "n": 12, "s": "", "l": "anni con la Francia (2003–2014)" },
+      { "n": 3, "s": "+", "l": "Campionati del mondo (periodo di riferimento)" }
+    ],
+    "servicesTitle": "Stage e servizi",
+    "servicesLead": "La maggior parte degli stage si svolge a La Féclaz (Savoia), tra le Alpi.",
+    "palmarèsTitle": "Nazionale francese 3D — risultati (estratti)",
+    "testimonialsTitle": "Dicono di noi",
+    "ctaBand": "Vuoi fare il passo successivo?",
+    "ctaBandBtn": "Scrivi ad Arc IMPACT",
+    "footerTagline": "Tiro con l'arco ad alto livello in Savoia.",
+    "footerContact": "Contatti",
+    "footerLegal": "Note legali",
+    "copyright": "© Arc IMPACT",
+    "stagesPageTitle": "Stage tecnici",
+    "stagesPageLead": "Da moduli brevi a settimane complete — indoor, campo o percorso 3D.",
+    "seminairesTitle": "Seminari & aziende",
+    "seminairesLead": "Piattaforme multi-attività e coesione — materiale autonomo, in tutta la Francia.",
+    "collectivitesTitle": "Enti & animazioni",
+    "collectivitesLead": "Multi-tiro, arco, cerbottana, dirt monster, stand di tiro… per tutte le età.",
+    "contactTitle": "Contatti",
+    "contactLead": "Invia un messaggio: ti risponderemo al più presto.",
+    "legalTitle": "Note legali",
+    "form": {
+      "name": "Cognome",
+      "first": "Nome",
+      "club": "La tua società",
+      "email": "E-mail",
+      "phone": "Telefono",
+      "message": "Messaggio",
+      "newsletter": "Newsletter",
+      "newsYes": "Sì",
+      "newsNo": "No",
+      "submit": "Invia",
+      "success": "Messaggio inviato. Grazie!",
+      "error": "Invio non riuscito. Riprova più tardi.",
+      "required": "obbligatorio"
+    }
+  }
+}

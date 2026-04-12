@@ -1,0 +1,14 @@
+{
+  "name": "arcimpact-contact-worker",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Cloudflare Worker: Turnstile verification + transactional email for Arc IMPACT contact form",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "wrangler": "^4.28.0"
+  }
+}

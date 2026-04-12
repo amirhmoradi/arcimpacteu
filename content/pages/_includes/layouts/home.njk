@@ -1,0 +1,120 @@
+---
+layout: layouts/base.njk
+---
+{% set t = ui[lang] %}
+{% set p = localePathPrefix | default('') %}
+<section class="hero relative flex min-h-[92vh] items-end overflow-hidden bg-primary-dark pb-24 pt-32 text-white md:items-center md:pb-32">
+  <div class="absolute inset-0 z-0">
+    <img src="{{ '/images/arcimpact/headers/DSC_0083_v.jpg' | arcImage }}" alt="" class="h-full w-full object-cover opacity-50" loading="eager" />
+    <div class="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/70 to-primary/40"></div>
+  </div>
+  <div class="relative z-10 mx-auto w-full max-w-7xl px-4 lg:px-8">
+    <p class="mb-3 text-sm font-medium uppercase tracking-widest text-accent">{{ t.hero.kicker }}</p>
+    <h1 class="mb-6 max-w-3xl font-serif text-4xl font-semibold leading-tight md:text-5xl lg:text-6xl">{{ t.hero.title }}</h1>
+    <p class="mb-10 max-w-2xl text-lg text-white/90 md:text-xl">{{ t.hero.subtitle }}</p>
+    <div class="flex flex-wrap gap-4">
+      <a href="{{ '/stages/' | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded bg-accent px-6 py-3 text-sm font-semibold text-primary shadow transition hover:bg-accent-light">{{ t.hero.ctaStages }}</a>
+      <a href="{{ '/contact/' | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded border-2 border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:border-accent hover:text-accent">{{ t.hero.ctaContact }}</a>
+    </div>
+  </div>
+  <div class="scroll-indicator absolute bottom-8 left-1/2 hidden -translate-x-1/2 md:block" aria-hidden="true"></div>
+</section>
+
+<section id="intro" class="py-16 lg:py-24">
+  <div class="mx-auto grid max-w-7xl gap-12 px-4 lg:grid-cols-2 lg:items-center lg:px-8">
+    <div data-animate="fade-up" class="transition duration-700">
+      <img src="{{ '/images/arcimpact/headers/DSC_0169_v.jpg' | arcImage }}" alt="{{ t.intro.title }}" class="rounded-2xl shadow-xl" loading="lazy" width="640" height="420" />
+    </div>
+    <div data-animate="fade-up" class="transition delay-75 duration-700">
+      <h2 class="mb-4 font-serif text-3xl font-semibold text-primary md:text-4xl">{{ t.intro.title }}</h2>
+      <p class="mb-4 text-gray-600">{{ t.intro.p1 }}</p>
+      <p class="text-gray-600">{{ t.intro.p2 }}</p>
+      <a href="{{ '/emmanuel-lecuyer/' | localeUrl(p) | url }}" class="mt-6 inline-flex font-semibold text-primary-light hover:text-accent">{{ t.nav.emmanuel }} →</a>
+    </div>
+  </div>
+</section>
+
+<section id="piliers" class="border-y border-gray-100 bg-[#F5F5F0] py-16 lg:py-20">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <div class="grid gap-8 md:grid-cols-3">
+      {% for pillar in t.pillars %}
+      <div data-animate="fade-up" class="rounded-2xl bg-white p-8 shadow-sm transition duration-700">
+        <h3 class="mb-3 font-serif text-xl font-semibold text-primary">{{ pillar.title }}</h3>
+        <p class="text-gray-600">{{ pillar.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="stats" class="bg-primary py-16 text-white lg:py-20">
+  <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
+    {% for s in t.stats %}
+    <div class="text-center">
+      <p class="font-serif text-4xl font-bold text-accent md:text-5xl"><span data-counter="{{ s.n }}">{{ s.n }}</span>{{ s.s }}</p>
+      <p class="mt-2 text-sm text-white/80">{{ s.l }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="stages" class="py-16 lg:py-24">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <h2 class="mb-3 text-center font-serif text-3xl font-semibold text-primary md:text-4xl">{{ t.servicesTitle }}</h2>
+    <p class="mx-auto mb-12 max-w-2xl text-center text-gray-600">{{ t.servicesLead }}</p>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {% for item in services %}
+      {% set s = item[lang] %}
+      <a href="{{ '/stages/' | localeUrl(p) | url }}#{{ item.id }}" class="group block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+        <img src="{{ item.img | arcImage }}" alt="" class="h-40 w-full object-cover transition group-hover:scale-105" loading="lazy" width="400" height="160" />
+        <div class="p-5">
+          <h3 class="font-semibold text-primary group-hover:text-primary-light">{{ s.title }}</h3>
+          <p class="mt-2 text-sm text-gray-600">{{ s.desc }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="palmarès" class="bg-charcoal py-16 text-white lg:py-20">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <h2 class="mb-10 text-center font-serif text-3xl font-semibold text-accent md:text-4xl">{{ t.palmarèsTitle }}</h2>
+    <div class="mx-auto max-w-3xl space-y-6">
+      {% for row in palmares %}
+      <div class="border-l-4 border-accent pl-6">
+        <p class="text-sm font-semibold text-accent">{{ row.period }}</p>
+        <p class="mt-1 text-white/85">{{ row[lang] }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="témoignages" class="border-t border-gray-100 py-16 lg:py-20">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <h2 class="mb-10 text-center font-serif text-3xl font-semibold text-primary">{{ t.testimonialsTitle }}</h2>
+    <div class="carousel relative">
+      <div class="overflow-hidden rounded-2xl">
+        <div class="carousel-track flex transition-transform duration-500 ease-out">
+          {% for quote in testimonials %}
+          <div class="carousel-slide w-full shrink-0 basis-full px-2 md:basis-1/2 lg:basis-1/3">
+            <blockquote class="h-full rounded-xl border border-gray-100 bg-[#F5F5F0] p-6">
+              <p class="text-gray-700">“{{ quote.text }}”</p>
+              <footer class="mt-4 text-sm font-semibold text-primary">{{ quote.who }} <span class="font-normal text-gray-500">· {{ quote.bow }}</span></footer>
+            </blockquote>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <button type="button" class="carousel-btn-prev absolute left-0 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white p-2 shadow md:block" aria-label="Previous">‹</button>
+      <button type="button" class="carousel-btn-next absolute right-0 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white p-2 shadow md:block" aria-label="Next">›</button>
+      <div class="carousel-dots mt-6 flex justify-center gap-2"></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-primary py-14 text-center text-white">
+  <h2 class="mb-6 font-serif text-2xl font-semibold md:text-3xl">{{ t.ctaBand }}</h2>
+  <a href="{{ '/contact/' | localeUrl(p) | url }}" class="inline-flex rounded bg-accent px-8 py-3 font-semibold text-primary hover:bg-accent-light">{{ t.ctaBandBtn }}</a>
+</section>

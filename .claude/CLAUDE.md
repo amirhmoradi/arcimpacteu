@@ -1,28 +1,32 @@
 # Arc IMPACT - Website Refactor Project
 
-## Project Overview
-Refactoring the Arc IMPACT archery coaching website (arcimpact.eu) into a modern, multilingual, SEO-optimized static site hosted on GitHub Pages.
+## Project overview
+Refactoring **Arc IMPACT** (Emmanuel Lécuyer, Savoie — Chambéry, Lac du Bourget, La Féclaz) into a multilingual, SEO-oriented static site on **GitHub Pages**, with **Cloudflare Workers** for forms and optional CMS OAuth. **No paid servers** required beyond free-tier limits.
 
-## Tech Stack
-- **HTML5** - Semantic markup
-- **Tailwind CSS** (CDN) - Utility-first CSS framework
-- **Vanilla JavaScript** - No build step required
-- **GitHub Pages** - Static hosting
-- **Cloudflare Workers** - Contact form backend
+## Tech stack
+- **Eleventy (11ty)** — builds Markdown in `content/pages/` → `_site/`
+- **Nunjucks** — layouts under `content/pages/_includes/`
+- **Tailwind CSS** (CDN) + `assets/css/style.css`
+- **Vanilla JavaScript** — `assets/js/main.js`
+- **GitHub Pages** — deploy via **GitHub Actions** (`.github/workflows/pages.yml`)
+- **Cloudflare Workers** — contact form + Turnstile (`worker/`)
 
-## Project Structure
+## Project structure
 ```
-/                       → French (primary language)
-/en/                    → English version
-/it/                    → Italian version
-/assets/css/style.css   → Custom styles
-/assets/js/main.js      → Core JavaScript
-/assets/js/i18n.js      → Internationalization helper
-/assets/images/         → Image assets
-/worker/                → Cloudflare Worker for contact form
-/sitemap.xml            → SEO sitemap
-/robots.txt             → SEO robots
-/404.html               → Custom error page
+/                         → French site root (when built)
+/en/                      → English
+/it/                      → Italian
+/admin/                   → Sveltia CMS (index.html + config.yml)
+/content/pages/{fr,en,it}/→ Markdown managed by Sveltia
+/public/media/            → Uploaded media (CMS)
+/assets/css/style.css     → Custom styles
+/assets/js/main.js        → Core JavaScript
+/assets/js/i18n.js        → i18n helper (optional)
+/assets/images/           → Static image assets
+/worker/                  → Cloudflare Worker (contact + Turnstile)
+/eleventy.config.cjs      → Eleventy configuration
+/package.json             → `npm run build` / `npm run dev`
+/docs/sveltia-cms-setup.md→ CMS + hosting tutorial
 ```
 
 ## Languages
@@ -47,5 +51,7 @@ Refactoring the Arc IMPACT archery coaching website (arcimpact.eu) into a modern
 ## Contact Form
 Submissions go to a Cloudflare Worker endpoint that forwards to email via mail provider API.
 
-## Content Source
-All content sourced from arcimpact.eu / arcimpact.fr. Images from client site. Decorative images from Unsplash.
+## Content sources
+- Legacy: `docs/legacysite/` and arcimpact.eu assets where applicable.
+- **Coach page:** `content/pages/*/emmanuel-lecuyer.md`; interview `docs/emmanuel-interview-2021.md`; Maizières reference extract `docs/maizieres-sejour-archery-extract.md`.
+- Decorative: **Unsplash** (Alpine / lake mood — [license](https://unsplash.com/license)).

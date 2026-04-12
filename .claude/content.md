@@ -3,7 +3,7 @@
 ## Brand Identity
 - **Name**: Arc IMPACT
 - **Tagline**: "À la poursuite de l'excellence"
-- **Owner/Director**: Emmanuel Lécuyer
+- **Owner/Director**: Emmanuel Lécuyer — primary practice area **Savoie** (greater **Chambéry**, **Lac du Bourget**, **La Féclaz / Les Déserts**)
 - **Co-trainer**: Alexandre Blandin
 - **Copyright**: (c) Arc Impact 2006
 - **Domains**: arcimpact.eu (current), arcimpact.fr (previous, lost)
