@@ -6,7 +6,7 @@ layout: layouts/base.njk
 {% set items = (featuredEvenements.items | default([])) | sort(attribute='order') %}
 {% set heroKicker = t.evenementsKicker %}
 {% include "partials/page-hero-header.njk" %}
-<section class="bg-[#F5F5F0] py-14">
+<section class="bg-cream py-16">
   <div class="mx-auto max-w-7xl px-4 lg:px-8">
     <div class="prose-wrap mx-auto mb-12 max-w-3xl text-charcoal">
       <div class="article-markdown text-base leading-relaxed">{{ content | safe }}</div>
@@ -30,7 +30,7 @@ layout: layouts/base.njk
           {% if badgeEv %}<p class="mb-2 text-xs font-semibold uppercase tracking-wide text-accent">{{ badgeEv }}</p>{% endif %}
           <h2 class="font-serif text-xl font-semibold text-primary"><a href="{{ hrefEv | url }}" class="text-inherit no-underline hover:text-primary-light">{{ titleEv }}</a></h2>
           <p class="mt-2 flex-1 text-sm text-gray-600">{{ excerptEv }}</p>
-          <a href="{{ hrefEv | url }}" class="mt-4 inline-flex font-semibold text-primary-light hover:text-accent">{{ t.evenementsCardCta }} →</a>
+          <a href="{{ hrefEv | url }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary transition hover:text-accent">{{ t.evenementsCardCta }} <span class="transition-transform group-hover:translate-x-0.5">&rarr;</span></a>
         </div>
       </article>
       {% endfor %}

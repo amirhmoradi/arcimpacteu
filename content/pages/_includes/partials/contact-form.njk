@@ -1,45 +1,45 @@
 {% set t = i18n[lang] %}
 {% set p = localePathPrefix | default('') %}
-<section class="bg-[#F5F5F0] pb-20 pt-8">
+<section class="bg-cream pb-24 pt-10">
   <div class="mx-auto max-w-7xl px-4 lg:px-8">
-    <p class="mb-6 max-w-2xl text-lg text-gray-700">{{ t.contactLead }}</p>
-    <p class="mb-10 max-w-2xl rounded-xl border border-primary/10 bg-primary/5 px-4 py-3 text-sm text-gray-700">{{ t.reviewsOnContactHint | safe }}</p>
-    <div class="grid gap-12 lg:grid-cols-2">
-      <div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-        <form id="contact-form" class="space-y-5" novalidate>
+    <p class="mb-6 max-w-2xl text-base text-gray-600">{{ t.contactLead }}</p>
+    <p class="mb-10 max-w-2xl rounded-xl border border-primary/8 bg-primary/[0.03] px-5 py-3.5 text-sm text-gray-600">{{ t.reviewsOnContactHint | safe }}</p>
+    <div class="grid gap-14 lg:grid-cols-2">
+      <div class="rounded-2xl border border-gray-200/60 bg-white p-8 shadow-sm md:p-10">
+        <form id="contact-form" class="space-y-6" novalidate>
           <div class="form-hp absolute -left-[9999px] opacity-0" aria-hidden="true">
             <label>Ne pas remplir<input type="text" name="company" tabindex="-1" autocomplete="off" /></label>
           </div>
-          <div class="form-group grid gap-4 sm:grid-cols-2">
+          <div class="form-group grid gap-5 sm:grid-cols-2">
             <div>
-              <label class="mb-1 block text-sm font-medium text-gray-700" for="nom">{{ t.form.name }} *</label>
-              <input class="w-full rounded-lg border border-gray-300 px-3 py-2" id="nom" name="nom" type="text" required autocomplete="family-name" />
+              <label class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-gray-500" for="nom">{{ t.form.name }} *</label>
+              <input class="w-full rounded-lg border border-gray-200 bg-cream/50 px-4 py-2.5 text-sm transition focus:border-primary focus:bg-white focus:shadow-sm focus:outline-none" id="nom" name="nom" type="text" required autocomplete="family-name" />
             </div>
             <div>
-              <label class="mb-1 block text-sm font-medium text-gray-700" for="prenom">{{ t.form.first }} *</label>
-              <input class="w-full rounded-lg border border-gray-300 px-3 py-2" id="prenom" name="prenom" type="text" required autocomplete="given-name" />
+              <label class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-gray-500" for="prenom">{{ t.form.first }} *</label>
+              <input class="w-full rounded-lg border border-gray-200 bg-cream/50 px-4 py-2.5 text-sm transition focus:border-primary focus:bg-white focus:shadow-sm focus:outline-none" id="prenom" name="prenom" type="text" required autocomplete="given-name" />
             </div>
           </div>
           <div class="form-group">
-            <label class="mb-1 block text-sm font-medium text-gray-700" for="club">{{ t.form.club }}</label>
-            <input class="w-full rounded-lg border border-gray-300 px-3 py-2" id="club" name="club" type="text" autocomplete="organization" />
+            <label class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-gray-500" for="club">{{ t.form.club }}</label>
+            <input class="w-full rounded-lg border border-gray-200 bg-cream/50 px-4 py-2.5 text-sm transition focus:border-primary focus:bg-white focus:shadow-sm focus:outline-none" id="club" name="club" type="text" autocomplete="organization" />
           </div>
           <div class="form-group">
-            <label class="mb-1 block text-sm font-medium text-gray-700" for="sujet">{{ t.form.subject }}</label>
-            <input class="w-full rounded-lg border border-gray-300 px-3 py-2" id="sujet" name="sujet" type="text" maxlength="200" autocomplete="off" placeholder="{{ t.form.subjectPlaceholder }}" />
+            <label class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-gray-500" for="sujet">{{ t.form.subject }}</label>
+            <input class="w-full rounded-lg border border-gray-200 bg-cream/50 px-4 py-2.5 text-sm transition focus:border-primary focus:bg-white focus:shadow-sm focus:outline-none" id="sujet" name="sujet" type="text" maxlength="200" autocomplete="off" placeholder="{{ t.form.subjectPlaceholder }}" />
           </div>
           <div class="form-group">
-            <label class="mb-1 block text-sm font-medium text-gray-700" for="email">{{ t.form.email }} *</label>
-            <input class="w-full rounded-lg border border-gray-300 px-3 py-2" id="email" name="email" type="email" required autocomplete="email" />
+            <label class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-gray-500" for="email">{{ t.form.email }} *</label>
+            <input class="w-full rounded-lg border border-gray-200 bg-cream/50 px-4 py-2.5 text-sm transition focus:border-primary focus:bg-white focus:shadow-sm focus:outline-none" id="email" name="email" type="email" required autocomplete="email" />
           </div>
           <div class="form-group">
-            <label class="mb-1 block text-sm font-medium text-gray-700" for="telephone">{{ t.form.phone }} *</label>
-            <input class="w-full rounded-lg border border-gray-300 px-3 py-2" id="telephone" name="telephone" type="tel" required autocomplete="tel" />
+            <label class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-gray-500" for="telephone">{{ t.form.phone }} *</label>
+            <input class="w-full rounded-lg border border-gray-200 bg-cream/50 px-4 py-2.5 text-sm transition focus:border-primary focus:bg-white focus:shadow-sm focus:outline-none" id="telephone" name="telephone" type="tel" required autocomplete="tel" />
           </div>
-          <div class="form-group grid gap-4 sm:grid-cols-2">
+          <div class="form-group grid gap-5 sm:grid-cols-2">
             <div>
-              <label class="mb-1 block text-sm font-medium text-gray-700" for="arme">{{ t.form.bow }}</label>
-              <select class="w-full rounded-lg border border-gray-300 px-3 py-2" id="arme" name="arme" autocomplete="off">
+              <label class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-gray-500" for="arme">{{ t.form.bow }}</label>
+              <select class="w-full rounded-lg border border-gray-200 bg-cream/50 px-4 py-2.5 text-sm transition focus:border-primary focus:bg-white focus:shadow-sm focus:outline-none" id="arme" name="arme" autocomplete="off">
                 <option value="">{{ t.form.optionSelect }}</option>
                 <option value="classique">{{ t.form.bowClassic }}</option>
                 <option value="poulies">{{ t.form.bowCompound }}</option>
@@ -48,8 +48,8 @@
               </select>
             </div>
             <div>
-              <label class="mb-1 block text-sm font-medium text-gray-700" for="niveau">{{ t.form.level }}</label>
-              <select class="w-full rounded-lg border border-gray-300 px-3 py-2" id="niveau" name="niveau" autocomplete="off">
+              <label class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-gray-500" for="niveau">{{ t.form.level }}</label>
+              <select class="w-full rounded-lg border border-gray-200 bg-cream/50 px-4 py-2.5 text-sm transition focus:border-primary focus:bg-white focus:shadow-sm focus:outline-none" id="niveau" name="niveau" autocomplete="off">
                 <option value="">{{ t.form.optionSelect }}</option>
                 <option value="initiation">{{ t.form.levelBeginner }}</option>
                 <option value="club">{{ t.form.levelClub }}</option>
@@ -59,27 +59,34 @@
             </div>
           </div>
           <div class="form-group">
-            <span class="mb-2 block text-sm font-medium text-gray-700">{{ t.form.newsletter }}</span>
-            <div class="flex gap-4">
-              <label class="inline-flex items-center gap-2"><input type="radio" name="newsletter" value="oui" /> {{ t.form.newsYes }}</label>
-              <label class="inline-flex items-center gap-2"><input type="radio" name="newsletter" value="non" checked /> {{ t.form.newsNo }}</label>
+            <span class="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-500">{{ t.form.newsletter }}</span>
+            <div class="flex gap-5">
+              <label class="inline-flex items-center gap-2 text-sm"><input type="radio" name="newsletter" value="oui" class="accent-primary" /> {{ t.form.newsYes }}</label>
+              <label class="inline-flex items-center gap-2 text-sm"><input type="radio" name="newsletter" value="non" checked class="accent-primary" /> {{ t.form.newsNo }}</label>
             </div>
           </div>
           <div class="form-group">
-            <label class="mb-1 block text-sm font-medium text-gray-700" for="message">{{ t.form.message }} *</label>
-            <textarea class="w-full rounded-lg border border-gray-300 px-3 py-2" id="message" name="message" rows="5" required></textarea>
+            <label class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-gray-500" for="message">{{ t.form.message }} *</label>
+            <textarea class="w-full rounded-lg border border-gray-200 bg-cream/50 px-4 py-2.5 text-sm transition focus:border-primary focus:bg-white focus:shadow-sm focus:outline-none" id="message" name="message" rows="5" required></textarea>
           </div>
           <div class="cf-turnstile" data-sitekey="{{ brand.turnstileSiteKey }}"></div>
           <p class="form-success-message text-sm font-medium text-green-600" style="display:none">{{ t.form.success }}</p>
           <p class="form-error-message text-sm font-medium text-red-600" style="display:none">{{ t.form.error }}</p>
-          <button type="submit" class="rounded-lg bg-primary px-8 py-3 font-semibold text-white transition hover:bg-primary-light">{{ t.form.submit }}</button>
+          <button type="submit" class="rounded-lg bg-primary px-8 py-3 text-sm font-semibold tracking-wide text-white shadow transition hover:-translate-y-0.5 hover:bg-primary-light hover:shadow-lg">{{ t.form.submit }}</button>
         </form>
       </div>
-      <div class="space-y-6 text-gray-700">
-        <p><strong class="text-primary">La Féclaz</strong><br />400 Rue Centrale de la Féclaz, 73230 Les Déserts, Savoie</p>
-        <p><strong class="text-primary">Siège</strong><br />Le Puiset, 12 chemin du four, 73800 Planaise</p>
-        <p class="text-sm text-gray-600">{{ t.contactAsideFormNote }}</p>
-        <p class="text-sm text-gray-500">Chambéry · Lac du Bourget · massifs de Savoie</p>
+      <div class="space-y-8 text-gray-600">
+        <div>
+          <p class="mb-1 text-xs font-semibold uppercase tracking-widest text-accent-warm">La Féclaz</p>
+          <p class="text-sm leading-relaxed">400 Rue Centrale de la Féclaz, 73230 Les Déserts, Savoie</p>
+        </div>
+        <div>
+          <p class="mb-1 text-xs font-semibold uppercase tracking-widest text-accent-warm">Siège</p>
+          <p class="text-sm leading-relaxed">Le Puiset, 12 chemin du four, 73800 Planaise</p>
+        </div>
+        <div class="h-[1px] bg-gradient-to-r from-accent/20 to-transparent"></div>
+        <p class="text-sm text-gray-500">{{ t.contactAsideFormNote }}</p>
+        <p class="text-xs text-gray-400">Chambéry · Lac du Bourget · massifs de Savoie</p>
       </div>
     </div>
   </div>

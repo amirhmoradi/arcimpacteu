@@ -4,40 +4,51 @@ layout: layouts/base.njk
 {% set t = i18n[lang] %}
 {% set p = localePathPrefix | default('') %}
 {% set contactHomeHref = ('/contact/?sujet=' ~ (t.contactSujetGeneral | encodeURIComponent)) | localeUrl(p) | url %}
-<section class="hero relative flex min-h-[92vh] items-end overflow-hidden bg-primary-dark pb-24 pt-32 text-white md:items-center md:pb-32">
+
+{# ──── HERO ──── #}
+<section class="hero relative flex min-h-[100vh] items-end overflow-hidden bg-primary-dark pb-28 pt-32 text-white md:items-center md:pb-36">
   <div class="absolute inset-0 z-0">
-    <img src="{{ '/images/arcimpact/headers/DSC_0083_v.jpg' | arcImage | url }}" alt="" class="h-full w-full object-cover opacity-50" loading="eager" />
-    <div class="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/70 to-primary/40"></div>
+    <img src="{{ '/images/arcimpact/headers/DSC_0083_v.jpg' | arcImage | url }}" alt="" class="h-full w-full object-cover" loading="eager" />
+    <div class="absolute inset-0 bg-gradient-to-b from-primary-dark/95 via-primary-dark/70 to-primary/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-dark/60 via-transparent to-transparent"></div>
   </div>
+  {# Decorative elements #}
+  <div class="absolute right-[10%] top-[20%] z-[1] hidden h-[1px] w-32 bg-gradient-to-r from-transparent via-accent/30 to-transparent lg:block" aria-hidden="true"></div>
+  <div class="absolute bottom-[30%] left-[8%] z-[1] hidden h-40 w-[1px] bg-gradient-to-b from-transparent via-accent/20 to-transparent lg:block" aria-hidden="true"></div>
+  <div class="absolute right-[15%] top-[35%] z-[1] hidden h-64 w-64 rounded-full border border-accent/[0.06] lg:block" aria-hidden="true"></div>
+
   <div class="relative z-10 mx-auto w-full max-w-7xl px-4 lg:px-8">
-    <p class="mb-3 text-sm font-medium uppercase tracking-widest text-accent">{{ t.hero.kicker }}</p>
-    <h1 class="mb-6 max-w-3xl font-serif text-4xl font-semibold leading-tight md:text-5xl lg:text-6xl">{{ t.hero.title }}</h1>
-    <p class="mb-10 max-w-2xl text-lg text-white/90 md:text-xl">{{ t.hero.subtitle }}</p>
+    <p class="mb-4 text-[11px] font-medium uppercase tracking-[0.2em] text-accent">{{ t.hero.kicker }}</p>
+    <h1 class="mb-6 max-w-4xl font-serif text-[clamp(2.5rem,7vw,5rem)] font-semibold leading-[1.05] tracking-tight">{{ t.hero.title }}</h1>
+    <p class="mb-10 max-w-xl text-[15px] font-light leading-relaxed text-white/75 md:text-base">{{ t.hero.subtitle }}</p>
     <div class="flex flex-wrap gap-4">
-      <a href="{{ '/stages/' | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded bg-white px-6 py-3 text-sm font-semibold text-primary shadow transition hover:bg-gray-100">{{ t.hero.ctaStages }}</a>
-      <a href="{{ contactHomeHref }}" class="inline-flex items-center justify-center rounded border-2 border-white/70 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10">{{ t.hero.ctaContact }}</a>
+      <a href="{{ '/stages/' | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-md bg-white px-7 py-3.5 text-sm font-semibold tracking-wide text-primary-dark shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">{{ t.hero.ctaStages }}</a>
+      <a href="{{ contactHomeHref }}" class="inline-flex items-center justify-center rounded-md border border-white/25 px-7 py-3.5 text-sm font-medium text-white/90 transition hover:border-white/50 hover:bg-white/[0.06]">{{ t.hero.ctaContact }}</a>
     </div>
   </div>
-  <div class="scroll-indicator absolute bottom-8 left-1/2 hidden -translate-x-1/2 md:block" aria-hidden="true"></div>
+  <div class="scroll-indicator absolute bottom-8 left-1/2 hidden -translate-x-1/2 md:block" aria-hidden="true">
+    <span></span>
+  </div>
 </section>
 
+{# ──── POSTER MARQUEE ──── #}
 {% if posters and posters.slides and (posters.slides | length) > 0 %}
-<section id="affiches" class="border-t border-white/10 bg-charcoal py-16 text-white lg:py-20" aria-labelledby="affiches-title">
+<section id="affiches" class="border-t border-white/5 bg-charcoal py-16 text-white lg:py-20" aria-labelledby="affiches-title">
   <div class="mx-auto max-w-7xl px-4 lg:px-8">
     <h2 id="affiches-title" class="mb-2 text-center font-serif text-2xl font-semibold text-accent md:text-3xl">{{ t.postersTitle }}</h2>
-    <p class="mx-auto mb-10 max-w-2xl text-center text-sm text-white/80 md:text-base">{{ t.postersLead }}</p>
+    <p class="mx-auto mb-10 max-w-2xl text-center text-sm text-white/50">{{ t.postersLead }}</p>
     <div class="banner-carousel poster-marquee" role="region" aria-roledescription="carousel" aria-label="{{ t.postersTitle }}">
       <div class="banner-carousel-track poster-marquee-track">
         {% for slide in posters.slides %}
         <div class="banner-item poster-marquee-item">
-          <a href="{{ ('/stages/' ~ slide.slug ~ '/') | localeUrl(p) | url }}" class="block overflow-hidden rounded-xl bg-white/5 no-underline ring-1 ring-white/10 transition hover:ring-accent">
+          <a href="{{ ('/stages/' ~ slide.slug ~ '/') | localeUrl(p) | url }}" class="block overflow-hidden rounded-xl bg-white/5 no-underline ring-1 ring-white/10 transition hover:ring-accent/50">
             <img src="{{ slide.image | arcImage | url }}" alt="{{ slide.alt[lang] | default(slide.alt.fr) }}" class="h-full w-full object-cover object-top" loading="lazy" width="280" height="397" />
           </a>
         </div>
         {% endfor %}
         {% for slide in posters.slides %}
         <div class="banner-item poster-marquee-item" aria-hidden="true">
-          <a href="{{ ('/stages/' ~ slide.slug ~ '/') | localeUrl(p) | url }}" class="block overflow-hidden rounded-xl bg-white/5 no-underline ring-1 ring-white/10 transition hover:ring-accent" tabindex="-1">
+          <a href="{{ ('/stages/' ~ slide.slug ~ '/') | localeUrl(p) | url }}" class="block overflow-hidden rounded-xl bg-white/5 no-underline ring-1 ring-white/10 transition hover:ring-accent/50" tabindex="-1">
             <img src="{{ slide.image | arcImage | url }}" alt="" loading="lazy" width="280" height="397" />
           </a>
         </div>
@@ -48,72 +59,96 @@ layout: layouts/base.njk
 </section>
 {% endif %}
 
-<section id="intro" class="py-16 lg:py-24">
-  <div class="mx-auto grid max-w-7xl gap-12 px-4 lg:grid-cols-2 lg:items-center lg:px-8">
+{# ──── INTRO ──── #}
+<section id="intro" class="py-20 lg:py-32">
+  <div class="mx-auto grid max-w-7xl gap-16 px-4 lg:grid-cols-2 lg:items-center lg:px-8">
     <div data-animate="fade-up" class="transition duration-700">
-      <img src="{{ '/images/arcimpact/headers/DSC_0169_v.jpg' | arcImage | url }}" alt="{{ t.intro.title }}" class="rounded-2xl shadow-xl" loading="lazy" width="640" height="420" />
+      <div class="relative">
+        <img src="{{ '/images/arcimpact/headers/DSC_0169_v.jpg' | arcImage | url }}" alt="{{ t.intro.title }}" class="rounded-2xl shadow-2xl" loading="lazy" width="640" height="420" />
+        <div class="absolute -bottom-4 -right-4 h-full w-full rounded-2xl border border-accent/15" aria-hidden="true"></div>
+      </div>
     </div>
-    <div data-animate="fade-up" class="transition delay-75 duration-700">
-      <h2 class="mb-4 font-serif text-3xl font-semibold text-primary md:text-4xl">{{ t.intro.title }}</h2>
-      <p class="mb-4 text-gray-600">{{ t.intro.p1 }}</p>
-      <p class="text-gray-600">{{ t.intro.p2 }}</p>
-      <a href="{{ '/emmanuel-lecuyer/' | localeUrl(p) | url }}" class="mt-6 inline-flex font-semibold text-primary-light hover:text-accent">{{ t.nav.emmanuel }} →</a>
+    <div data-animate="fade-up" class="transition delay-100 duration-700">
+      <div class="mb-4 h-[2px] w-12 bg-accent"></div>
+      <h2 class="mb-5 font-serif text-3xl font-semibold tracking-tight text-primary md:text-4xl lg:text-[2.75rem]">{{ t.intro.title }}</h2>
+      <p class="mb-4 text-[15px] leading-relaxed text-gray-600">{{ t.intro.p1 }}</p>
+      <p class="text-[15px] leading-relaxed text-gray-600">{{ t.intro.p2 }}</p>
+      <a href="{{ '/emmanuel-lecuyer/' | localeUrl(p) | url }}" class="group mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:text-accent">
+        {{ t.nav.emmanuel }}
+        <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+      </a>
     </div>
   </div>
 </section>
 
-<section id="video-accueil" class="border-t border-gray-100 bg-white py-16 lg:py-24" aria-labelledby="video-accueil-title">
-  <div class="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-2 lg:items-center lg:gap-14 lg:px-8">
+{# ──── VIDEO ──── #}
+<div class="mx-auto max-w-7xl px-4 lg:px-8"><div class="h-[1px] bg-gradient-to-r from-transparent via-accent/20 to-transparent"></div></div>
+<section id="video-accueil" class="py-20 lg:py-32" aria-labelledby="video-accueil-title">
+  <div class="mx-auto grid max-w-7xl gap-14 px-4 lg:grid-cols-2 lg:items-center lg:px-8">
     <div data-animate="fade-up" class="order-2 transition duration-700 lg:order-1">
-      <p class="mb-2 text-sm font-medium uppercase tracking-widest text-primary-light">{{ t.homeVideoKicker }}</p>
-      <h2 id="video-accueil-title" class="mb-4 font-serif text-3xl font-semibold text-primary md:text-4xl">{{ t.homeVideoTitle }}</h2>
-      <p class="mb-6 text-gray-600">{{ t.homeVideoLead }}</p>
-      <a href="{{ '/video-training/' | localeUrl(p) | url }}" class="inline-flex font-semibold text-primary-light hover:text-accent">{{ t.homeVideoCta }} →</a>
+      <p class="mb-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-accent-warm">{{ t.homeVideoKicker }}</p>
+      <h2 id="video-accueil-title" class="mb-5 font-serif text-3xl font-semibold tracking-tight text-primary md:text-4xl">{{ t.homeVideoTitle }}</h2>
+      <p class="mb-6 text-[15px] leading-relaxed text-gray-600">{{ t.homeVideoLead }}</p>
+      <a href="{{ '/video-training/' | localeUrl(p) | url }}" class="group inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:text-accent">
+        {{ t.homeVideoCta }}
+        <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+      </a>
     </div>
     <div data-animate="fade-up" class="order-1 transition delay-75 duration-700 lg:order-2">
-      <div class="relative aspect-video w-full overflow-hidden rounded-2xl bg-primary-dark shadow-xl ring-1 ring-gray-200">
+      <div class="relative aspect-video w-full overflow-hidden rounded-2xl bg-primary-dark shadow-2xl ring-1 ring-black/10">
         <iframe class="absolute inset-0 h-full w-full" src="https://www.youtube-nocookie.com/embed/UbmVWZKgqSY" title="{{ t.homeVideoIframeTitle }}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 </section>
 
-<section id="piliers" class="border-y border-gray-100 bg-[#F5F5F0] py-16 lg:py-20">
+{# ──── PILLARS ──── #}
+<section id="piliers" class="border-y border-gray-100 bg-cream py-20 lg:py-24">
   <div class="mx-auto max-w-7xl px-4 lg:px-8">
     <div class="grid gap-8 md:grid-cols-3">
       {% for pillar in t.pillars %}
-      <div data-animate="fade-up" class="rounded-2xl bg-white p-8 shadow-sm transition duration-700">
+      <div data-animate="fade-up" class="group rounded-2xl border border-transparent bg-white p-10 shadow-sm transition duration-500 hover:border-accent/20 hover:shadow-lg" style="transition-delay: {{ loop.index0 * 80 }}ms">
+        <div class="mb-5 h-[2px] w-8 bg-accent transition-all group-hover:w-12"></div>
         <h3 class="mb-3 font-serif text-xl font-semibold text-primary">{{ pillar.title }}</h3>
-        <p class="text-gray-600">{{ pillar.text }}</p>
+        <p class="text-[15px] leading-relaxed text-gray-600">{{ pillar.text }}</p>
       </div>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section id="stats" class="bg-primary py-16 text-white lg:py-20">
-  <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
-    {% for s in t.stats %}
-    <div class="text-center">
-      <p class="font-serif text-4xl font-bold text-accent md:text-5xl"><span data-counter="{{ s.n }}">{{ s.n }}</span>{{ s.s }}</p>
-      <p class="mt-2 text-sm text-white/80">{{ s.l }}</p>
+{# ──── STATS ──── #}
+<section id="stats" class="bg-primary-dark py-20 text-white lg:py-24">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      {% for s in t.stats %}
+      <div class="text-center">
+        <p class="font-serif text-[clamp(2.5rem,5vw,3.75rem)] font-semibold leading-none text-accent"><span data-counter="{{ s.n }}">{{ s.n }}</span>{{ s.s }}</p>
+        <p class="mt-3 text-sm text-white/50">{{ s.l }}</p>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </section>
 
-<section id="stages" class="py-16 lg:py-24">
+{# ──── SERVICES GRID ──── #}
+<section id="stages" class="py-20 lg:py-28">
   <div class="mx-auto max-w-7xl px-4 lg:px-8">
-    <h2 class="mb-3 text-center font-serif text-3xl font-semibold text-primary md:text-4xl">{{ t.servicesTitle }}</h2>
-    <p class="mx-auto mb-12 max-w-2xl text-center text-gray-600">{{ t.servicesLead }}</p>
+    <div class="mb-14 text-center">
+      <div class="mx-auto mb-4 h-[2px] w-12 bg-accent"></div>
+      <h2 class="mb-3 font-serif text-3xl font-semibold tracking-tight text-primary md:text-4xl">{{ t.servicesTitle }}</h2>
+      <p class="mx-auto max-w-xl text-[15px] text-gray-500">{{ t.servicesLead }}</p>
+    </div>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {% for item in services.items %}
       {% set s = item[lang] %}
-      <a href="{{ ('/stages/' ~ item.slug ~ '/') | localeUrl(p) | url }}" class="group block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-        <img src="{{ item.img | arcImage | url }}" alt="" class="h-40 w-full object-cover transition group-hover:scale-105" loading="lazy" width="400" height="160" />
-        <div class="p-5">
-          <h3 class="font-semibold text-primary group-hover:text-primary-light">{{ s.title }}</h3>
-          <p class="mt-2 text-sm text-gray-600">{{ s.desc }}</p>
+      <a href="{{ ('/stages/' ~ item.slug ~ '/') | localeUrl(p) | url }}" class="group block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-accent/20 hover:shadow-xl">
+        <div class="overflow-hidden">
+          <img src="{{ item.img | arcImage | url }}" alt="" class="h-44 w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="400" height="176" />
+        </div>
+        <div class="p-6">
+          <h3 class="mb-2 text-[15px] font-semibold tracking-tight text-charcoal group-hover:text-primary">{{ s.title }}</h3>
+          <p class="text-sm leading-relaxed text-gray-500">{{ s.desc }}</p>
         </div>
       </a>
       {% endfor %}
@@ -121,23 +156,33 @@ layout: layouts/base.njk
   </div>
 </section>
 
-<section id="palmarès" class="bg-charcoal py-16 text-white lg:py-20">
+{# ──── PALMARÈS ──── #}
+<section id="palmarès" class="bg-charcoal py-20 text-white lg:py-24">
   <div class="mx-auto max-w-7xl px-4 lg:px-8">
-    <h2 class="mb-10 text-center font-serif text-3xl font-semibold text-accent md:text-4xl">{{ t.palmarèsTitle }}</h2>
-    <div class="mx-auto max-w-3xl space-y-6">
+    <div class="mb-12 text-center">
+      <div class="mx-auto mb-4 h-[2px] w-12 bg-accent"></div>
+      <h2 class="font-serif text-3xl font-semibold text-white md:text-4xl">{{ t.palmarèsTitle }}</h2>
+    </div>
+    <div class="mx-auto max-w-3xl space-y-8">
       {% for row in palmares.rows %}
-      <div class="border-l-4 border-accent pl-6">
-        <p class="text-sm font-semibold text-accent">{{ row.period }}</p>
-        <p class="mt-1 text-white/85">{{ row[lang] }}</p>
+      <div class="border-l-2 border-accent/40 pl-6 transition hover:border-accent">
+        <p class="text-xs font-semibold uppercase tracking-widest text-accent">{{ row.period }}</p>
+        <p class="mt-2 text-[15px] leading-relaxed text-white/70">{{ row[lang] }}</p>
       </div>
       {% endfor %}
     </div>
   </div>
 </section>
 
+{# ──── TESTIMONIALS ──── #}
 {% include "partials/testimonials-section.njk" %}
 
-<section class="bg-primary py-14 text-center text-white">
-  <h2 class="mb-6 font-serif text-2xl font-semibold md:text-3xl">{{ t.ctaBand }}</h2>
-  <a href="{{ contactHomeHref }}" class="inline-flex rounded bg-white px-8 py-3 font-semibold text-primary shadow transition hover:bg-gray-100">{{ t.ctaBandBtn }}</a>
+{# ──── FINAL CTA ──── #}
+<section class="relative overflow-hidden bg-primary py-16 text-center text-white lg:py-20">
+  <div class="absolute inset-0 bg-gradient-to-br from-primary-dark/50 via-transparent to-primary-light/20" aria-hidden="true"></div>
+  <div class="absolute left-[10%] top-1/2 h-64 w-64 -translate-y-1/2 rounded-full border border-accent/[0.06]" aria-hidden="true"></div>
+  <div class="relative z-10">
+    <h2 class="mb-6 font-serif text-3xl font-semibold md:text-4xl">{{ t.ctaBand }}</h2>
+    <a href="{{ contactHomeHref }}" class="inline-flex rounded-md bg-white px-8 py-3.5 text-sm font-semibold tracking-wide text-primary shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">{{ t.ctaBandBtn }}</a>
+  </div>
 </section>

@@ -1,35 +1,51 @@
 {% set t = i18n[lang] %}
 {% set p = localePathPrefix | default('') %}
-<footer class="border-t border-gray-200 bg-primary py-14 text-white">
-  <div class="mx-auto flex max-w-7xl flex-col gap-10 px-4 lg:flex-row lg:justify-between lg:px-8">
-    <div>
-      <img src="{{ brand.logoUrl | url }}" alt="" width="120" height="40" class="mb-4 h-9 w-auto opacity-90" loading="lazy" />
-      <p class="max-w-sm text-sm text-white/80">{{ t.footerTagline }}</p>
+<footer class="bg-charcoal text-white">
+  {# Gold accent line #}
+  <div class="h-[1px] bg-gradient-to-r from-transparent via-accent/40 to-transparent"></div>
+
+  <div class="mx-auto max-w-7xl px-4 pb-10 pt-16 lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-4">
+      {# Brand #}
+      <div class="lg:col-span-1">
+        <img src="{{ brand.logoUrl | url }}" alt="" width="120" height="40" class="mb-5 h-9 w-auto opacity-80" loading="lazy" />
+        <p class="max-w-xs text-sm leading-relaxed text-white/50">{{ t.footerTagline }}</p>
+      </div>
+
+      {# Contact #}
+      <div>
+        <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">{{ t.footerContact }}</p>
+        <p class="mb-4 text-sm leading-relaxed text-white/50">{{ t.footerContactHint }}</p>
+        <a class="group inline-flex items-center gap-2 text-sm font-semibold text-white/80 transition hover:text-accent" href="{{ '/contact/' | localeUrl(p) | url }}">
+          {{ t.nav.contact }}
+          <span class="transition-transform group-hover:translate-x-0.5">&rarr;</span>
+        </a>
+      </div>
+
+      {# Location #}
+      <div>
+        <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">La Féclaz</p>
+        <p class="text-sm leading-relaxed text-white/50">400 Rue Centrale de la Féclaz<br />73230 Les Déserts, France</p>
+      </div>
+
+      {# Legal & Social #}
+      <div>
+        <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">{{ t.footerLegal }}</p>
+        <a class="block text-sm text-white/50 transition hover:text-accent" href="{{ '/mentions-legales/' | localeUrl(p) | url }}">{{ t.nav.legal }}</a>
+        <div class="mt-4 flex gap-4">
+          <a class="text-sm text-white/50 transition hover:text-accent" href="https://fr-fr.facebook.com/arcimpact" rel="noopener noreferrer">Facebook</a>
+          <a class="text-sm text-white/50 transition hover:text-accent" href="https://www.youtube.com/@arcimpact5219" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
     </div>
-    <div class="flex flex-wrap gap-10 text-sm">
-      <div>
-        <p class="mb-2 font-semibold text-accent">{{ t.footerContact }}</p>
-        <p class="mb-3 max-w-xs text-sm text-white/80">{{ t.footerContactHint }}</p>
-        <a class="inline-flex font-semibold text-white hover:text-accent" href="{{ '/contact/' | localeUrl(p) | url }}">{{ t.nav.contact }} →</a>
-      </div>
-      <div>
-        <p class="mb-2 font-semibold text-accent">La Féclaz</p>
-        <p class="text-white/75">400 Rue Centrale de la Féclaz<br />73230 Les Déserts, France</p>
-      </div>
-      <div>
-        <p class="mb-2 font-semibold text-accent">{{ t.footerLegal }}</p>
-        <a class="block text-white/85 hover:text-accent" href="{{ '/mentions-legales/' | localeUrl(p) | url }}">{{ t.nav.legal }}</a>
-        <a class="mt-2 inline-flex text-white/85 hover:text-accent" href="https://fr-fr.facebook.com/arcimpact" rel="noopener noreferrer">Facebook</a>
-        <span class="mx-2 text-white/40">·</span>
-        <a class="inline-flex text-white/85 hover:text-accent" href="https://www.youtube.com/@arcimpact5219" rel="noopener noreferrer">YouTube</a>
-      </div>
+
+    {# Bottom bar #}
+    <div class="mt-12 border-t border-white/[0.06] pt-6 text-center">
+      <p class="text-xs text-white/35">{{ t.copyright }} · SIRET 40363287000040</p>
+      <p class="mx-auto mt-2 max-w-2xl text-[11px] text-white/25">
+        {{ t.footerCreditLead }}
+        <a href="https://amirmoradi.com/?ref=arcimpact" target="_blank" class="text-white/35 underline decoration-white/15 underline-offset-2 transition hover:text-accent hover:decoration-accent/60">Amir Moradi</a>
+      </p>
     </div>
-  </div>
-  <div class="mx-auto mt-10 max-w-7xl border-t border-white/10 px-4 pt-6 text-center text-xs text-white/65 lg:px-8">
-    <p class="m-0">{{ t.copyright }} · SIRET 40363287000040</p>
-    <p class="mx-auto mt-2 max-w-2xl text-[11px] leading-snug text-white/50">
-      {{ t.footerCreditLead }}
-      <a href="https://amirmoradi.com/?ref=arcimpact" target="_blank" class="text-white/60 underline decoration-white/25 underline-offset-2 transition hover:text-accent hover:decoration-accent/80">Amir Moradi</a>
-    </p>
   </div>
 </footer>

@@ -15,7 +15,7 @@
         <a href="{{ ('/stages/' ~ item.slug ~ '/') | localeUrl(p) | url }}" class="text-inherit no-underline hover:text-primary-light">{{ s.title }}</a>
       </h2>
       <p class="mt-2 flex-1 text-sm text-gray-600">{{ s.desc }}</p>
-      <a href="{{ ('/stages/' ~ item.slug ~ '/') | localeUrl(p) | url }}" class="mt-4 inline-flex font-semibold text-primary-light hover:text-accent">{{ t.stagesCardCta }} →</a>
+      <a href="{{ ('/stages/' ~ item.slug ~ '/') | localeUrl(p) | url }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary transition hover:text-accent">{{ t.stagesCardCta }} <span class="transition-transform group-hover:translate-x-0.5">&rarr;</span></a>
     </div>
   </article>
   {% endfor %}

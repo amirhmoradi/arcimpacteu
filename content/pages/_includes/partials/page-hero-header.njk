@@ -1,10 +1,13 @@
-{# Shared dark header (Événements / Calendrier style). Expects: title, optional description, optional heroKicker. #}
-<section class="bg-primary-dark py-14 text-white md:py-18">
-  <div class="mx-auto max-w-4xl px-4 text-center lg:px-8">
+{# Shared dark header for inner pages. Expects: title, optional description, optional heroKicker. #}
+<section class="relative overflow-hidden bg-primary-dark py-16 text-white md:py-20">
+  <div class="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary-dark/90 to-primary/30" aria-hidden="true"></div>
+  <div class="absolute right-[10%] top-1/2 hidden h-48 w-48 -translate-y-1/2 rounded-full border border-accent/[0.06] lg:block" aria-hidden="true"></div>
+  <div class="absolute left-[5%] top-[20%] hidden h-[1px] w-24 bg-gradient-to-r from-transparent via-accent/25 to-transparent lg:block" aria-hidden="true"></div>
+  <div class="relative z-10 mx-auto max-w-4xl px-4 text-center lg:px-8">
     {% if heroKicker %}
-    <p class="mb-2 text-sm font-medium uppercase tracking-widest text-accent">{{ heroKicker }}</p>
+    <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">{{ heroKicker }}</p>
     {% endif %}
-    <h1 class="font-serif text-3xl font-semibold md:text-4xl">{{ title }}</h1>
-    {% if description %}<p class="mx-auto mt-4 max-w-2xl text-lg text-white/90">{{ description }}</p>{% endif %}
+    <h1 class="font-serif text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">{{ title }}</h1>
+    {% if description %}<p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/70">{{ description }}</p>{% endif %}
   </div>
 </section>

@@ -6,30 +6,30 @@ layout: layouts/base.njk
 {% set heroKicker = heroKicker | default(t.pageHeroKicker) %}
 {% include "partials/page-hero-header.njk" %}
 {% if heroImage %}
-<section class="border-b border-gray-200 bg-charcoal" aria-hidden="true">
+<section class="border-b border-gray-200/50 bg-charcoal" aria-hidden="true">
   <div class="mx-auto max-w-6xl px-0">
-    <img src="{{ heroImage | arcImage | url }}" alt="" class="h-52 w-full object-cover md:h-64" loading="eager" width="1600" height="640" />
+    <img src="{{ heroImage | arcImage | url }}" alt="" class="h-56 w-full object-cover md:h-72" loading="eager" width="1600" height="640" />
   </div>
 </section>
 {% endif %}
 {% set _showPoster = showPosterSheet | default(false) %}
 {% if heroImage and _showPoster %}
-<section class="border-b border-gray-200 bg-[#e8e6df] py-10 md:py-14" aria-labelledby="poster-sheet-heading">
+<section class="border-b border-gray-200/50 bg-cream py-12 md:py-16" aria-labelledby="poster-sheet-heading">
   <div class="mx-auto max-w-5xl px-4 lg:px-8">
     <div class="text-center">
       <h2 id="poster-sheet-heading" class="font-serif text-xl font-semibold text-primary md:text-2xl">{{ t.posterSheetTitle }}</h2>
-      <p class="mx-auto mt-2 max-w-2xl text-sm text-gray-600 md:text-base">{{ t.posterSheetLead }}</p>
+      <p class="mx-auto mt-2 max-w-2xl text-sm text-gray-500">{{ t.posterSheetLead }}</p>
     </div>
-    <figure class="mt-8 overflow-hidden rounded-2xl border border-gray-200 bg-white p-3 shadow-xl md:p-6">
+    <figure class="mt-10 overflow-hidden rounded-2xl border border-gray-200/60 bg-white p-4 shadow-xl md:p-8">
       <img src="{{ heroImage | arcImage | url }}" alt="{{ posterAlt | default(title) }}" class="mx-auto max-h-[min(92vh,960px)] w-full max-w-3xl object-contain object-top" width="800" height="1132" loading="lazy" decoding="async" />
-      <figcaption class="mt-4 border-t border-gray-100 pt-4 text-left text-sm text-gray-600">{{ t.posterSheetCaption }}</figcaption>
+      <figcaption class="mt-6 border-t border-gray-100 pt-4 text-left text-sm text-gray-500">{{ t.posterSheetCaption }}</figcaption>
     </figure>
   </div>
 </section>
 {% endif %}
-<section class="bg-[#F5F5F0] pb-20 pt-10">
+<section class="bg-cream pb-24 pt-12">
   <div class="prose-wrap mx-auto max-w-4xl px-4 text-charcoal lg:px-8">
-    <div class="article-markdown text-base leading-relaxed [&_h1]:mb-4 [&_h1]:font-serif [&_h1]:text-3xl [&_h1]:font-semibold [&_h1]:text-primary [&_h2]:mt-10 [&_h2]:scroll-mt-28 [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:text-primary [&_figure]:my-8 [&_img]:rounded-xl [&_img]:shadow-md [&_ul]:my-4 [&_li]:my-1 [&_.cta-row]:my-10 [&_.cta-row]:flex [&_.cta-row]:flex-wrap [&_.cta-row]:gap-4">
+    <div class="article-markdown text-[15px] leading-relaxed [&_h1]:mb-4 [&_h1]:font-serif [&_h1]:text-3xl [&_h1]:font-semibold [&_h1]:tracking-tight [&_h1]:text-primary [&_h2]:mt-12 [&_h2]:scroll-mt-28 [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:tracking-tight [&_h2]:text-primary [&_figure]:my-8 [&_img]:rounded-xl [&_img]:shadow-md [&_ul]:my-4 [&_li]:my-1 [&_.cta-row]:my-10 [&_.cta-row]:flex [&_.cta-row]:flex-wrap [&_.cta-row]:gap-4">
       {{ content | safe }}
     </div>
     {% if prefillContactSubject == false %}

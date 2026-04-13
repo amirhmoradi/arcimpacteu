@@ -19,13 +19,14 @@
       theme: {
         extend: {
           colors: {
-            primary: { DEFAULT: '#1B4332', light: '#2D6A4F', dark: '#0F2A1E' },
-            accent: { DEFAULT: '#D4A843', light: '#E4C06E' },
-            charcoal: '#2D2D2D',
+            primary: { DEFAULT: '#1B4332', light: '#2D6A4F', dark: '#0B1F15', deeper: '#071510' },
+            accent: { DEFAULT: '#C9A84C', light: '#DFC06E', warm: '#B8943E' },
+            charcoal: { DEFAULT: '#1A1A1A', light: '#2D2D2D' },
+            cream: '#FAF8F3',
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
-            serif: ['Playfair Display', 'Georgia', 'serif'],
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
           },
         },
       },
@@ -33,7 +34,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}" />
   {% if schemaJsonLd %}
   <script type="application/ld+json">{{ schemaJsonLd | safe }}</script>

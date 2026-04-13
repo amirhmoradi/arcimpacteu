@@ -6,13 +6,17 @@
 {% endif %}
 {% set secRaw = ctaSecondaryHref | default(false) %}
 {% set sec = secRaw and (secRaw | localeUrl(p) | url) %}
-<section class="not-prose mx-auto mt-14 max-w-4xl rounded-2xl bg-primary px-6 py-10 text-center text-white lg:px-10">
-  {% if ctaTitle %}<h2 class="font-serif text-2xl font-semibold text-accent md:text-3xl">{{ ctaTitle }}</h2>{% endif %}
-  {% if ctaLead %}<p class="mx-auto mt-3 max-w-2xl text-sm text-white/90 md:text-base">{{ ctaLead }}</p>{% endif %}
-  <div class="mt-8 flex flex-wrap justify-center gap-4">
-    <a href="{{ primary }}" class="inline-flex rounded-lg bg-white px-8 py-3 font-semibold text-primary no-underline shadow transition hover:bg-gray-100">{{ ctaPrimaryLabel | default(i18n[lang].ctaBlockPrimary) }}</a>
-    {% if sec and ctaSecondaryLabel %}
-    <a href="{{ sec }}" class="inline-flex rounded-lg border-2 border-white/80 px-8 py-3 font-semibold text-white no-underline transition hover:bg-white/15">{{ ctaSecondaryLabel }}</a>
-    {% endif %}
+<section class="not-prose relative mx-auto mt-16 max-w-4xl overflow-hidden rounded-2xl bg-primary px-8 py-12 text-center text-white lg:px-12">
+  <div class="absolute inset-0 bg-gradient-to-br from-primary-dark/40 via-transparent to-primary-light/20" aria-hidden="true"></div>
+  <div class="absolute -right-8 -top-8 h-40 w-40 rounded-full border border-accent/[0.08]" aria-hidden="true"></div>
+  <div class="relative z-10">
+    {% if ctaTitle %}<h2 class="font-serif text-2xl font-semibold tracking-tight md:text-3xl">{{ ctaTitle }}</h2>{% endif %}
+    {% if ctaLead %}<p class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/70">{{ ctaLead }}</p>{% endif %}
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <a href="{{ primary }}" class="inline-flex rounded-md bg-white px-8 py-3 text-sm font-semibold tracking-wide text-primary no-underline shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">{{ ctaPrimaryLabel | default(i18n[lang].ctaBlockPrimary) }}</a>
+      {% if sec and ctaSecondaryLabel %}
+      <a href="{{ sec }}" class="inline-flex rounded-md border border-white/25 px-8 py-3 text-sm font-medium text-white/90 no-underline transition hover:border-white/50 hover:bg-white/[0.06]">{{ ctaSecondaryLabel }}</a>
+      {% endif %}
+    </div>
   </div>
 </section>

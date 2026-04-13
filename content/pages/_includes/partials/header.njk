@@ -5,21 +5,21 @@
     <a href="{{ '/' | localeUrl(p) | url }}" class="site-header-brand flex items-center no-underline" aria-label="{{ t.navAriaLogo }}">
       <img src="{{ brand.logoUrl | url }}" alt="" width="140" height="48" class="header-logo h-10 w-auto" loading="eager" />
     </a>
-    <nav class="hidden items-center gap-6 md:flex" aria-label="Main">
-      <a class="nav-link text-sm font-medium" href="{{ '/emmanuel-lecuyer/' | localeUrl(p) | url }}">{{ t.nav.emmanuel }}</a>
-      <a class="nav-link text-sm font-medium" href="{{ '/stages/' | localeUrl(p) | url }}">{{ t.nav.stages }}</a>
-      <a class="nav-link text-sm font-medium" href="{{ '/seminaires/' | localeUrl(p) | url }}">{{ t.nav.seminaires }}</a>
-      <a class="nav-link text-sm font-medium" href="{{ '/collectivites/' | localeUrl(p) | url }}">{{ t.nav.collectivites }}</a>
-      <a class="nav-link text-sm font-medium" href="{{ '/video-training/' | localeUrl(p) | url }}">{{ t.nav.videoTraining }}</a>
-      <a class="nav-link text-sm font-medium" href="{{ '/vente-cibles-3d/' | localeUrl(p) | url }}">{{ t.nav.targets3d }}</a>
-      <a class="nav-link text-sm font-medium" href="{{ '/evenements/' | localeUrl(p) | url }}">{{ t.nav.evenements }}</a>
-      <a class="nav-link text-sm font-medium" href="{{ '/calendrier/' | localeUrl(p) | url }}">{{ t.nav.calendar }}</a>
-      <a class="nav-link text-sm font-medium" href="{{ '/contact/' | localeUrl(p) | url }}">{{ t.nav.contact }}</a>
+    <nav class="hidden items-center gap-7 md:flex" aria-label="Main">
+      <a class="nav-link text-[13px]" href="{{ '/emmanuel-lecuyer/' | localeUrl(p) | url }}">{{ t.nav.emmanuel }}</a>
+      <a class="nav-link text-[13px]" href="{{ '/stages/' | localeUrl(p) | url }}">{{ t.nav.stages }}</a>
+      <a class="nav-link text-[13px]" href="{{ '/seminaires/' | localeUrl(p) | url }}">{{ t.nav.seminaires }}</a>
+      <a class="nav-link text-[13px]" href="{{ '/collectivites/' | localeUrl(p) | url }}">{{ t.nav.collectivites }}</a>
+      <a class="nav-link text-[13px]" href="{{ '/video-training/' | localeUrl(p) | url }}">{{ t.nav.videoTraining }}</a>
+      <a class="nav-link text-[13px]" href="{{ '/vente-cibles-3d/' | localeUrl(p) | url }}">{{ t.nav.targets3d }}</a>
+      <a class="nav-link text-[13px]" href="{{ '/evenements/' | localeUrl(p) | url }}">{{ t.nav.evenements }}</a>
+      <a class="nav-link text-[13px]" href="{{ '/calendrier/' | localeUrl(p) | url }}">{{ t.nav.calendar }}</a>
+      <a class="nav-link text-[13px]" href="{{ '/contact/' | localeUrl(p) | url }}">{{ t.nav.contact }}</a>
     </nav>
     <div class="header-lang-desktop hidden items-center gap-1 md:flex">
-      <a class="lang-btn header-lang-link rounded px-2 py-1 text-xs font-semibold {% if lang == 'fr' %}is-active{% endif %}" href="{{ '/' | url }}" data-lang="fr">FR</a>
-      <a class="lang-btn header-lang-link rounded px-2 py-1 text-xs font-semibold {% if lang == 'en' %}is-active{% endif %}" href="{{ '/en/' | url }}" data-lang="en">EN</a>
-      <a class="lang-btn header-lang-link rounded px-2 py-1 text-xs font-semibold {% if lang == 'it' %}is-active{% endif %}" href="{{ '/it/' | url }}" data-lang="it">IT</a>
+      <a class="lang-btn header-lang-link rounded-md px-2.5 py-1 text-[11px] font-semibold {% if lang == 'fr' %}is-active{% endif %}" href="{{ '/' | url }}" data-lang="fr">FR</a>
+      <a class="lang-btn header-lang-link rounded-md px-2.5 py-1 text-[11px] font-semibold {% if lang == 'en' %}is-active{% endif %}" href="{{ '/en/' | url }}" data-lang="en">EN</a>
+      <a class="lang-btn header-lang-link rounded-md px-2.5 py-1 text-[11px] font-semibold {% if lang == 'it' %}is-active{% endif %}" href="{{ '/it/' | url }}" data-lang="it">IT</a>
     </div>
     <button type="button" class="hamburger md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
       <span></span>
@@ -29,7 +29,7 @@
   </div>
   <div class="mobile-menu-overlay" aria-hidden="true"></div>
   <div id="mobile-menu" class="mobile-menu">
-    <nav class="mobile-menu-nav flex flex-col gap-1 px-6 py-4" aria-label="Mobile">
+    <nav class="mobile-menu-nav flex flex-col gap-0 px-6 py-4" aria-label="Mobile">
       <a class="mobile-menu-link" href="{{ '/emmanuel-lecuyer/' | localeUrl(p) | url }}">{{ t.nav.emmanuel }}</a>
       <a class="mobile-menu-link" href="{{ '/stages/' | localeUrl(p) | url }}">{{ t.nav.stages }}</a>
       <a class="mobile-menu-link" href="{{ '/seminaires/' | localeUrl(p) | url }}">{{ t.nav.seminaires }}</a>
@@ -39,10 +39,10 @@
       <a class="mobile-menu-link" href="{{ '/evenements/' | localeUrl(p) | url }}">{{ t.nav.evenements }}</a>
       <a class="mobile-menu-link" href="{{ '/calendrier/' | localeUrl(p) | url }}">{{ t.nav.calendar }}</a>
       <a class="mobile-menu-link" href="{{ '/contact/' | localeUrl(p) | url }}">{{ t.nav.contact }}</a>
-      <div class="mt-4 flex gap-2">
-        <a class="lang-btn header-lang-link mobile-lang flex-1 rounded py-2 text-center text-sm font-semibold {% if lang == 'fr' %}is-active{% endif %}" href="{{ '/' | url }}" data-lang="fr">FR</a>
-        <a class="lang-btn header-lang-link mobile-lang flex-1 rounded py-2 text-center text-sm font-semibold {% if lang == 'en' %}is-active{% endif %}" href="{{ '/en/' | url }}" data-lang="en">EN</a>
-        <a class="lang-btn header-lang-link mobile-lang flex-1 rounded py-2 text-center text-sm font-semibold {% if lang == 'it' %}is-active{% endif %}" href="{{ '/it/' | url }}" data-lang="it">IT</a>
+      <div class="mt-6 flex gap-2">
+        <a class="lang-btn header-lang-link mobile-lang flex-1 rounded-lg py-2.5 text-center text-sm font-semibold {% if lang == 'fr' %}is-active{% endif %}" href="{{ '/' | url }}" data-lang="fr">FR</a>
+        <a class="lang-btn header-lang-link mobile-lang flex-1 rounded-lg py-2.5 text-center text-sm font-semibold {% if lang == 'en' %}is-active{% endif %}" href="{{ '/en/' | url }}" data-lang="en">EN</a>
+        <a class="lang-btn header-lang-link mobile-lang flex-1 rounded-lg py-2.5 text-center text-sm font-semibold {% if lang == 'it' %}is-active{% endif %}" href="{{ '/it/' | url }}" data-lang="it">IT</a>
       </div>
     </nav>
   </div>
