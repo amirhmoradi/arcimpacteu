@@ -4,8 +4,6 @@ description: Informations légales — Arc IMPACT, Emmanuel Lécuyer.
 translationSlug: mentions-legales
 ---
 
-# Mentions légales
-
 ## Éditeur du site
 
 **Emmanuel Lécuyer** — **ARC IMPACT**  

@@ -1,4 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
+{% set t = i18n[lang] %}
+{% set heroKicker = t.nav.contact %}
+{% include "partials/page-hero-header.njk" %}
 {% include "partials/contact-form.njk" %}

@@ -6,8 +6,6 @@ translationSlug: collectivites
 
 {% set p = localePathPrefix | default('') %}
 
-# Enti pubblici & animazioni
-
 Progettiamo **percorsi educativi** per **scuole**, **centri estivi**, **comuni**, **sagre** e **giornate sportive**: attrezzature per fascia d’età, **staff diplomato**, code ordinate e **regole di sicurezza** semplici da ripetere ai volontari sul campo.
 
 <figure class="not-prose my-10 overflow-hidden rounded-2xl shadow-lg">

@@ -4,8 +4,6 @@ description: Informazioni legali — Arc IMPACT, Emmanuel Lécuyer.
 translationSlug: mentions-legales
 ---
 
-# Note legali
-
 ## Editore
 
 **Emmanuel Lécuyer** — **ARC IMPACT**  

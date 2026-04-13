@@ -6,8 +6,6 @@ translationSlug: collectivites
 
 {% set p = localePathPrefix | default('') %}
 
-# Collectivités & animations
-
 Nous concevons des **parcours pédagogiques** pour **écoles**, **centres de loisirs**, **communes**, **fêtes de village** et **événements sportifs** : matériel adapté à l’âge, **encadrement diplômé d’État**, files d’attente fluides et **messages sécurité** simples à répéter pour les bénévoles sur site.
 
 <figure class="not-prose my-10 overflow-hidden rounded-2xl shadow-lg">

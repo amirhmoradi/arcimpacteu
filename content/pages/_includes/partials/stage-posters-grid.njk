@@ -1,0 +1,16 @@
+{# Uses global posters.slides — images are local under /images/banners/stages-2026/ #}
+{% set t = i18n[lang] %}
+{% set p = localePathPrefix | default('') %}
+{% if posters and posters.slides and (posters.slides | length) > 0 %}
+<div class="not-prose mt-10">
+  <h2 class="mb-2 font-serif text-2xl font-semibold text-primary md:text-3xl">{{ t.videoTrainingPostersTitle }}</h2>
+  <p class="mb-6 max-w-3xl text-sm text-gray-600 md:text-base">{{ t.videoTrainingPostersLead }}</p>
+  <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-3">
+    {% for slide in posters.slides %}
+    <a href="{{ ('/stages/' ~ slide.slug ~ '/') | localeUrl(p) | url }}" class="group block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm ring-1 ring-gray-100 transition hover:ring-accent">
+      <img src="{{ slide.image | arcImage | url }}" alt="{{ slide.alt[lang] | default(slide.alt.fr) }}" class="aspect-[600/848] w-full object-cover object-top transition group-hover:scale-[1.02]" loading="lazy" width="280" height="397" />
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

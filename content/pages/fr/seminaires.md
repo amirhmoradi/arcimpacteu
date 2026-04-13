@@ -6,8 +6,6 @@ translationSlug: seminaires
 
 {% set p = localePathPrefix | default('') %}
 
-# Séminaires & entreprises
-
 Depuis plus de **vingt ans**, Arc IMPACT conçoit des **expériences vivantes** pour **comités d’entreprise**, **agences événementielles** et **services RH** : nos équipes arrivent avec un **matériel homologué**, une logistique rodée et des animateurs **diplômés d’État** — pour que votre séminaire reste **sûr**, **lisible** et **mémorable**.
 
 <figure class="not-prose my-10 overflow-hidden rounded-2xl shadow-lg">

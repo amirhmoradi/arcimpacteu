@@ -6,8 +6,6 @@ translationSlug: seminaires
 
 {% set p = localePathPrefix | default('') %}
 
-# Corporate seminars & team events
-
 For **20+ years**, Arc IMPACT has designed **hands-on experiences** for **works councils**, **event agencies** and **HR teams**. We arrive with **certified equipment**, proven logistics and **state-qualified** facilitators—so your seminar stays **safe**, **easy to read on an agenda**, and **memorable**.
 
 <figure class="not-prose my-10 overflow-hidden rounded-2xl shadow-lg">

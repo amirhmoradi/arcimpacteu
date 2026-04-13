@@ -6,8 +6,6 @@ translationSlug: seminaires
 
 {% set p = localePathPrefix | default('') %}
 
-# Seminari & team building
-
 Da oltre **vent’anni** progettiamo **esperienze concrete** per **comitati aziendali**, **agenzie** e **HR**: arriviamo con **attrezzature certificate**, logistica collaudata e animatori **diplomati** — così il vostro evento resta **sicuro**, **chiaro in agenda** e **memorabile**.
 
 <figure class="not-prose my-10 overflow-hidden rounded-2xl shadow-lg">

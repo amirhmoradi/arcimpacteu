@@ -6,8 +6,6 @@ translationSlug: stages
 
 {% set p = localePathPrefix | default('') %}
 
-# Stages techniques
-
 Arc IMPACT propose des **stages en immersion** à **La Féclaz** (Savoie) et **en déplacement** partout en France et dans les pays voisins pour les clubs et organisateurs : **3D**, **salle 18 m**, **TAE**, **prestige**, **ados**, **préparation physique**, **coaching compétition** et **interventions sur mesure**. Chaque fiche ci-dessous résume l’offre, les publics visés et la **prochaine étape** pour réserver ou demander le programme.
 
 <p class="cta-row not-prose my-8 flex flex-wrap gap-4">

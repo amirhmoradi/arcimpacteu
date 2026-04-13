@@ -6,8 +6,6 @@ translationSlug: collectivites
 
 {% set p = localePathPrefix | default('') %}
 
-# Public sector & group events
-
 We design **pedagogical runs** for **schools**, **holiday centres**, **town halls**, **village festivals** and **sports days**: age-appropriate equipment, **state-qualified** supervision, smooth queues and **safety scripts** that local volunteers can repeat with confidence.
 
 <figure class="not-prose my-10 overflow-hidden rounded-2xl shadow-lg">
