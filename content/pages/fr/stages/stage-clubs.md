@@ -5,6 +5,7 @@ description: Interventions sur devis — France et international.
 translationSlug: stage-clubs
 heroImage: /images/arcimpact/multitir-Am.jpg
 heroKicker: Sur mesure
+showPosterSheet: false
 ctaTitle: Obtenir un devis
 ctaLead: Réponse sous quelques jours ouvrés avec proposition pédagogique.
 ctaPrimaryLabel: Demander les dates & infos

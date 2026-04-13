@@ -5,6 +5,7 @@ description: Gainage, renforcement, cardio — toutes armes.
 translationSlug: stage-physique
 heroImage: /images/arcimpact/tec3d05-600x400.jpg
 heroKicker: Physique
+showPosterSheet: false
 ctaTitle: S’inscrire sur liste hiver
 ctaLead: Nous confirmons la période et le matériel à prévoir.
 ctaPrimaryLabel: Demander les dates & infos

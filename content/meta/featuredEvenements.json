@@ -85,14 +85,14 @@
       "image": "/images/banners/stages-2026/Lou-Poney-2026.jpg",
       "badge": { "fr": "Jeunes", "en": "Youth", "it": "Giovani" },
       "title": {
-        "fr": "Franco-Suisse ados 3D",
-        "en": "Franco-Swiss youth 3D",
-        "it": "Franco-Svizzero giovani 3D"
+        "fr": "Stage 3D jeunes — Lou Poney",
+        "en": "Youth 3D camp — Lou Poney",
+        "it": "Stage 3D giovani — Lou Poney"
       },
       "excerpt": {
-        "fr": "3 jours Bauges, tipis, découverte encadrée.",
-        "en": "3 days in the Bauges, tipis, guided discovery.",
-        "it": "3 giorni Bauges, tipi, scoperta guidata."
+        "fr": "14–17 mai 2026, Haute-Loire — théorie & parcours.",
+        "en": "14–17 May 2026, Haute-Loire — theory & course.",
+        "it": "14–17 maggio 2026, Alta Loira — teoria e parcours."
       },
       "href": { "fr": "/stages/stage-ados/", "en": "/en/stages/stage-ados/", "it": "/it/stages/stage-ados/" }
     }

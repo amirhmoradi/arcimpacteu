@@ -1,0 +1,34 @@
+{
+  "slides": [
+    {
+      "image": "/images/banners/stages-2026/Stage-2026-tEch-feclaz-3D.jpg",
+      "slug": "stage-3d",
+      "alt": { "fr": "Affiche 2026 — Stage technique 3D La Féclaz", "en": "2026 poster — 3D technical camp La Féclaz", "it": "Locandina 2026 — stage tecnico 3D La Féclaz" }
+    },
+    {
+      "image": "/images/banners/stages-2026/Stage-Indoor-Feeclaz-2026.jpg",
+      "slug": "stage-indoor",
+      "alt": { "fr": "Affiche 2026 — Stage indoor 2×18 m La Féclaz", "en": "2026 poster — Indoor 18 m camp La Féclaz", "it": "Locandina 2026 — indoor 18 m La Féclaz" }
+    },
+    {
+      "image": "/images/banners/stages-2026/Stage-2026-TAE.jpg",
+      "slug": "stage-tae",
+      "alt": { "fr": "Affiche 2026 — Stage TAE Bourget du Lac", "en": "2026 poster — Field camp Bourget du Lac", "it": "Locandina 2026 — stage TAE Bourget du Lac" }
+    },
+    {
+      "image": "/images/banners/stages-2026/Stage-Prestige-2026.jpg",
+      "slug": "stage-prestige",
+      "alt": { "fr": "Affiche 2026 — Stage prestige Roche-sur-Linotte", "en": "2026 poster — Prestige 3D Roche-sur-Linotte", "it": "Locandina 2026 — prestige 3D Roche-sur-Linotte" }
+    },
+    {
+      "image": "/images/banners/stages-2026/Lou-Poney-2026.jpg",
+      "slug": "stage-ados",
+      "alt": { "fr": "Affiche 2026 — Stage 3D Lou Poney", "en": "2026 poster — 3D camp Lou Poney", "it": "Locandina 2026 — stage 3D Lou Poney" }
+    },
+    {
+      "image": "/images/banners/stages-2026/Stage-2026-Perf-Feclaz-3D.jpg",
+      "slug": "stage-coaching",
+      "alt": { "fr": "Affiche 2026 — Stage performance 3D La Féclaz", "en": "2026 poster — Performance 3D camp La Féclaz", "it": "Locandina 2026 — performance 3D La Féclaz" }
+    }
+  ]
+}

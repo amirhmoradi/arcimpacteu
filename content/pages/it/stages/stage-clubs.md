@@ -5,6 +5,7 @@ description: Weekend o 4 giorni.
 translationSlug: stage-clubs
 heroImage: /images/arcimpact/multitir-Am.jpg
 heroKicker: Su misura
+showPosterSheet: false
 ctaTitle: Richiedi preventivo
 ctaLead: Risposta rapida.
 ctaPrimaryLabel: Date e informazioni

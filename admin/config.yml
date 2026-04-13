@@ -105,3 +105,23 @@ collections:
                   - { label: FR, name: fr, widget: string }
                   - { label: EN, name: en, widget: string }
                   - { label: IT, name: it, widget: string }
+      - name: home_posters
+        label: Affiches page d’accueil (carrousel)
+        file: _data/posters.json
+        format: json
+        fields:
+          - label: Affiches (ordre = défilement)
+            name: slides
+            widget: list
+            summary: "{{fields.slug}}"
+            fields:
+              - { label: Image (/images/...), name: image, widget: string }
+              - { label: Lien stage (slug fichier), name: slug, widget: string, hint: "ex. stage-3d → /stages/stage-3d/" }
+              - label: Texte alternatif (SEO)
+                name: alt
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: FR, name: fr, widget: string }
+                  - { label: EN, name: en, widget: string }
+                  - { label: IT, name: it, widget: string }

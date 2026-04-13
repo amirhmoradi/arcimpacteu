@@ -35,9 +35,9 @@
     "id": "ados",
     "slug": "stage-ados",
     "img": "/images/banners/stages-2026/Lou-Poney-2026.jpg",
-    "fr": { "title": "Franco-Suisse ados 3D", "desc": "Massif des Bauges — village tipis, 3 jours." },
-    "en": { "title": "Franco-Swiss youth 3D", "desc": "Bauges mountains — tipi village, 3 days." },
-    "it": { "title": "Franco-Svizzero giovani 3D", "desc": "Massiccio dei Bauges — villaggio tipi, 3 giorni." }
+    "fr": { "title": "Stage 3D jeunes — Lou Poney", "desc": "Haute-Loire — 14–17 mai 2026, parcours et théorie." },
+    "en": { "title": "Youth 3D camp — Lou Poney", "desc": "Haute-Loire — 14–17 May 2026, course + theory." },
+    "it": { "title": "Stage 3D giovani — Lou Poney", "desc": "Alta Loira — 14–17 maggio 2026, parcours e teoria." }
   },
   {
     "id": "physique",
@@ -51,9 +51,9 @@
     "id": "coaching",
     "slug": "stage-coaching",
     "img": "/images/banners/stages-2026/Stage-2026-Perf-Feclaz-3D.jpg",
-    "fr": { "title": "Stage coaching", "desc": "Compétition — théorie et coaching en situation." },
-    "en": { "title": "Competition coaching", "desc": "Theory plus on-line coaching blocks." },
-    "it": { "title": "Coaching gara", "desc": "Teoria e coaching in situazione." }
+    "fr": { "title": "Performance 3D", "desc": "La Féclaz — semaine exigeante sur parcours (affiche 2026)." },
+    "en": { "title": "Performance 3D", "desc": "La Féclaz — demanding on-course week (2026 poster)." },
+    "it": { "title": "Performance 3D", "desc": "La Féclaz — settimana intensa sul parcours (locandina 2026)." }
   },
   {
     "id": "clubs",

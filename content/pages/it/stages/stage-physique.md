@@ -5,6 +5,7 @@ description: Core, forza, cardio.
 translationSlug: stage-physique
 heroImage: /images/arcimpact/tec3d05-600x400.jpg
 heroKicker: Fisico
+showPosterSheet: false
 ctaTitle: Lista inverno
 ctaLead: Conferma materiali.
 ctaPrimaryLabel: Date e informazioni

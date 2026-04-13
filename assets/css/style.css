@@ -1122,6 +1122,23 @@ img {
   100% { transform: translateX(-50%); }
 }
 
+/* Homepage A4-style poster strip (portrait thumbnails, seamless loop) */
+.poster-marquee .poster-marquee-item {
+  width: min(260px, 72vw);
+  flex-shrink: 0;
+  margin: 0 14px;
+  aspect-ratio: 210 / 297;
+}
+
+.poster-marquee .poster-marquee-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster-marquee-track {
+  width: max-content;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 767px) {
   .section { padding: 60px 0; }
