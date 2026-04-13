@@ -3,6 +3,9 @@
 # GitHub Pages: site + this admin are served from the repo root (/admin/).
 # Auth: team uses one limited PAT in Sveltia (“Sign in with token”) — see docs/sveltia-cms-setup.md §4.1 (security).
 # Optional OAuth: set backend.base_url to a Sveltia CMS Authenticator Worker URL instead of sharing a PAT.
+#
+# Content model matches Eleventy: locale roots under content/pages/{fr,en,it}/ (including stages/, seminaires/, collectivites/).
+# Default-locale (FR) URLs have no prefix; EN/IT use /en/… and /it/… via *.11tydata.js — keep filenames aligned across locales.
 
 backend:
   name: github
@@ -12,32 +15,172 @@ backend:
 media_folder: /public/media
 public_folder: /media
 
-i18n:
-  structure: multiple_folders
-  locales: [fr, en, it]
+# Shared Markdown fields (FR / EN / IT folder collections). Optional keys stay out of the saved file when empty.
+x-markdown-fields: &markdown_fields
+  - { label: Title, name: title, widget: string }
+  - {
+      label: Description (SEO),
+      name: description,
+      widget: text,
+      required: false,
+      hint: "Courte phrase pour les moteurs de recherche.",
+    }
+  - { label: Date, name: date, widget: datetime, type: date, required: false }
+  - {
+      label: Slug (URL, optionnel),
+      name: slug,
+      widget: string,
+      required: false,
+      hint: "Certaines pages (ex. biographie) ont encore ce champ ; l’URL vient surtout du nom de fichier.",
+    }
+  - {
+      label: translationSlug,
+      name: translationSlug,
+      widget: string,
+      required: false,
+      hint: "Lien entre versions FR / EN / IT (même valeur dans les trois fichiers).",
+    }
+  - {
+      label: Layout,
+      name: layout,
+      widget: string,
+      required: false,
+      hint: "Ex. layouts/event-product.njk, layouts/contact.njk, layouts/calendar.njk, layouts/evenements-hub.njk — laisser vide pour le défaut du dossier.",
+    }
+  - { label: Permalink (rare), name: permalink, widget: string, required: false }
+  - { label: Lang (rare), name: lang, widget: string, required: false }
+  - { label: localePathPrefix (rare), name: localePathPrefix, widget: string, required: false }
+  - {
+      label: Exclure des collections Eleventy,
+      name: eleventyExcludeFromCollections,
+      widget: boolean,
+      required: false,
+      default: false,
+    }
+  - {
+      label: Hero image (underscore, pages type biographie),
+      name: hero_image,
+      widget: string,
+      required: false,
+      hint: "Chemin /images/… ou /media/…",
+    }
+  - {
+      label: Hero image (heroImage, fiches stages / séminaires / collectivités),
+      name: heroImage,
+      widget: string,
+      required: false,
+      hint: "Chemin /images/…",
+    }
+  - { label: Hero kicker, name: heroKicker, widget: string, required: false }
+  - { label: Texte alternatif affiche (posterAlt), name: posterAlt, widget: string, required: false }
+  - { label: CTA — titre, name: ctaTitle, widget: string, required: false }
+  - { label: CTA — texte, name: ctaLead, widget: text, required: false }
+  - { label: CTA — bouton principal, name: ctaPrimaryLabel, widget: string, required: false }
+  - { label: CTA — bouton secondaire, name: ctaSecondaryLabel, widget: string, required: false }
+  - { label: CTA — lien secondaire (href), name: ctaSecondaryHref, widget: string, required: false }
+  - { label: Corps (Markdown + Nunjucks autorisé), name: body, widget: markdown }
 
 collections:
-  - name: pages
-    label: Pages
-    label_singular: Page
-    description: Contenu éditorial (FR prioritaire, puis EN / IT)
-    folder: /content/pages
+  - name: fr_pages
+    label: Pages (français)
+    label_singular: Page FR
+    description: Tout le Markdown sous content/pages/fr (y compris stages/, seminaires/, collectivites/).
+    folder: /content/pages/fr
     create: true
     slug: "{{slug}}"
     extension: md
     format: frontmatter
-    i18n: true
-    fields:
-      - { label: Title, name: title, widget: string, i18n: true }
-      - { label: Slug (URL), name: slug, widget: string, hint: "e.g. emmanuel-lecuyer — no spaces", i18n: duplicate }
-      - { label: Date, name: date, widget: datetime, type: date, i18n: duplicate }
-      - { label: SEO description, name: description, widget: text, i18n: true }
-      - { label: Hero image (URL or /media/...), name: hero_image, widget: string, required: false, i18n: true }
-      - { label: Body, name: body, widget: markdown, i18n: true }
+    preview_path: "/{{slug}}/"
+    fields: *markdown_fields
+
+  - name: en_pages
+    label: Pages (English)
+    label_singular: EN page
+    description: All Markdown under content/pages/en.
+    folder: /content/pages/en
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    preview_path: "/en/{{slug}}/"
+    fields: *markdown_fields
+
+  - name: it_pages
+    label: Pagine (italiano)
+    label_singular: Pagina IT
+    description: Tutto il Markdown sotto content/pages/it.
+    folder: /content/pages/it
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    preview_path: "/it/{{slug}}/"
+    fields: *markdown_fields
+
+  - name: site_singletons
+    label: Fichiers uniques (404, robots, sitemap…)
+    description: Pages et templates à la racine de content/pages (hors dossiers par langue).
+    files:
+      - name: page_404
+        label: Page 404
+        file: content/pages/404.md
+        format: frontmatter
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Description (SEO), name: description, widget: text }
+          - { label: Permalink, name: permalink, widget: string }
+          - { label: Layout, name: layout, widget: string }
+          - { label: Lang, name: lang, widget: string }
+          - { label: localePathPrefix, name: localePathPrefix, widget: string }
+          - { label: translationSlug, name: translationSlug, widget: string }
+          - { label: Corps, name: body, widget: markdown }
+      - name: robots_txt
+        label: robots.txt (Nunjucks)
+        file: content/pages/robots.njk
+        format: frontmatter
+        extension: njk
+        fields:
+          - { label: Permalink, name: permalink, widget: string }
+          - {
+              label: Exclure des collections,
+              name: eleventyExcludeFromCollections,
+              widget: boolean,
+              default: true,
+            }
+          - {
+              label: "Corps du template (Nunjucks — conserver les balises {{ … }} du site)",
+              name: body,
+              widget: code,
+              default_language: plaintext,
+            }
+      - name: sitemap_xml
+        label: Plan du site (sitemap.xml)
+        file: content/pages/sitemap.njk
+        format: raw
+        extension: njk
+        fields:
+          - {
+              label: "Fichier complet (front matter YAML + template Nunjucks/XML)",
+              name: body,
+              widget: code,
+              default_language: plaintext,
+            }
+      - name: legacy_redirect_template
+        label: Template redirections index.php (legacy-redirect.njk)
+        file: content/pages/legacy-redirect.njk
+        format: raw
+        extension: njk
+        fields:
+          - {
+              label: "Fichier complet (pagination Eleventy + HTML ; à ne modifier qu’en connaissance de cause)",
+              name: body,
+              widget: code,
+              default_language: plaintext,
+            }
 
   - name: site_meta
-    label: Calendrier, événements & témoignages (JSON)
-    description: Données publiques du site (calendrier, cartes « Événements », avis affichés sur l’accueil).
+    label: Calendrier, événements, témoignages & affiches
+    description: JSON éditoriaux sous content/meta et _data/posters.json.
     files:
       - name: calendar
         label: Calendrier (iframe + liens)
@@ -160,3 +303,84 @@ collections:
                   - { label: FR, name: fr, widget: string }
                   - { label: EN, name: en, widget: string }
                   - { label: IT, name: it, widget: string }
+
+  - name: site_data
+    label: Données globales (_data)
+    description: Textes d’interface, services, marque, galerie, redirections — et JSON i18n (éditeur code).
+    files:
+      - name: brand
+        label: Marque & intégrations (brand.json)
+        file: _data/brand.json
+        format: json
+        fields:
+          - { label: Nom du site, name: name, widget: string }
+          - { label: Domaine (URL canonique), name: domain, widget: string }
+          - { label: URL Worker contact, name: contactWorkerUrl, widget: string }
+          - {
+              label: Clé publique Turnstile,
+              name: turnstileSiteKey,
+              widget: string,
+              hint: "Clé publique seulement. Ne jamais mettre de secret ici.",
+            }
+          - { label: Logo (chemin), name: logoUrl, widget: string }
+          - { label: Image Open Graph, name: ogImage, widget: string }
+      - name: i18n_strings
+        label: Textes interface & accueil (i18n.json)
+        file: _data/i18n.json
+        format: raw
+        extension: json
+        fields:
+          - {
+              label: JSON complet (fr / en / it — valider après édition),
+              name: body,
+              widget: code,
+              default_language: plaintext,
+            }
+      - name: services
+        label: Cartes « Stages » hub (services.json)
+        file: _data/services.json
+        format: raw
+        extension: json
+        fields:
+          - {
+              label: JSON (tableau racine — id, slug, img, fr/en/it par carte),
+              name: body,
+              widget: code,
+              default_language: plaintext,
+            }
+      - name: palmares
+        label: Palmarès (palmares.json)
+        file: _data/palmares.json
+        format: raw
+        extension: json
+        fields:
+          - {
+              label: JSON (tableau de blocs period + fr/en/it),
+              name: body,
+              widget: code,
+              default_language: plaintext,
+            }
+      - name: naturfoam_gallery
+        label: Galerie Natur'Foam (naturfoamGallery.json)
+        file: _data/naturfoamGallery.json
+        format: raw
+        extension: json
+        fields:
+          - {
+              label: JSON (liste files — noms dans public/images/naturfoam/),
+              name: body,
+              widget: code,
+              default_language: plaintext,
+            }
+      - name: legacy_redirects
+        label: Redirections anciennes URLs (legacyRedirects.json)
+        file: _data/legacyRedirects.json
+        format: raw
+        extension: json
+        fields:
+          - {
+              label: "JSON (tableau d’objets from / to)",
+              name: body,
+              widget: code,
+              default_language: plaintext,
+            }

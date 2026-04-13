@@ -13,9 +13,13 @@ Official references: [Getting started](https://sveltiacms.app/en/docs/start), [G
 | Path | Role |
 |------|------|
 | `admin/index.html` | Loads Sveltia from the CDN (`unpkg.com/@sveltia/cms`). |
-| `admin/config.yml` | Backend (`github`), `media_folder`, i18n (`fr`, `en`, `it`), **Pages** collection. |
-| `content/pages/{fr,en,it}/` | One Markdown file per locale (e.g. `emmanuel-lecuyer.md`). Paths in `config.yml` use repo-root prefixes (`/content/pages`, `/public/media`). |
+| `admin/config.yml` | Backend (`github`), `media_folder`, and **collections** (see §5). |
+| `content/pages/{fr,en,it}/` | Markdown per locale, including **`stages/`**, **`seminaires/`**, **`collectivites/`** (nested paths are listed in Sveltia). |
+| `content/pages/404.md`, `robots.njk`, `sitemap.njk`, `legacy-redirect.njk` | Singleton templates under **Fichiers uniques** in the CMS. |
+| `content/meta/*.json` | Calendar, featured events, testimonials (structured forms in the CMS). |
+| `_data/*.json` | Global data: `brand.json`, `posters.json`, `i18n.json`, `services.json`, etc. — see §5. |
 | `public/media/` | Images uploaded via the CMS (committed to Git). |
+| `public/images/` | Existing site imagery (Git); referenced by paths like `/images/...` in Markdown and JSON. |
 | `worker/` | Cloudflare Worker for contact + Turnstile (separate README). |
 
 **Build:** This repository includes **[Eleventy](https://www.11ty.dev/)** (`npm run build` → `_site/`). GitHub Actions (`.github/workflows/pages.yml`) runs the build and deploys to **GitHub Pages**. Markdown page bodies are **not** preprocessed as Nunjucks (so characters like `{#` stay literal); layouts still use Nunjucks in `content/pages/_includes/`.
@@ -34,6 +38,8 @@ Official references: [Getting started](https://sveltiacms.app/en/docs/start), [G
 
 - Uploads go to `public/media/`.
 - Site URLs for those files should be `/media/...` once Pages serves the `public` tree (or adjust paths to match your SSG).
+
+Hero images and cards often use **`/images/...`** (files already in `public/images/`). New uploads from the media library use **`/media/...`**.
 
 ---
 
@@ -86,25 +92,22 @@ To avoid circulating a PAT, deploy **[Sveltia CMS Authenticator](https://github.
 
 ---
 
-## 5. Internationalization (FR → EN → IT)
+## 5. Collections (pages, JSON, templates)
 
-Configured at the top of `config.yml`:
+There is **no** single global `i18n` block on collections anymore: each language has its **own folder collection** so nested routes (`stages/stage-3d`, etc.) stay editable.
 
-```yaml
-i18n:
-  structure: multiple_folders
-  locales: [fr, en, it]
-```
+| Collection | What it edits |
+|------------|----------------|
+| **Pages (français / English / italiano)** | All `*.md` under `content/pages/fr`, `…/en`, `…/it` (including subfolders). Shared fields cover `title`, `description`, `translationSlug`, `layout`, `hero_image` / `heroImage`, CTA fields, and Markdown `body` (Nunjucks shortcodes in the body are allowed where the site already uses them). |
+| **Fichiers uniques** | `404.md`, `robots.njk`, `sitemap.njk`, `legacy-redirect.njk`. |
+| **Calendrier, événements…** | `content/meta/calendar.json`, `featuredEvenements.json`, `testimonials.json`, `_data/posters.json`. |
+| **Données globales (_data)** | `brand.json` (form fields), plus **raw JSON** editors for `i18n.json`, `services.json`, `palmares.json`, `naturfoamGallery.json`, `legacyRedirects.json` (root arrays/objects — validate JSON after edits). |
 
-The **Pages** collection uses `folder: /content/pages`, so Sveltia expects:
+**Translations:** keep the **same `translationSlug`** (and matching filenames where the site expects them) across `fr`, `en`, and `it` files so language switching and hreflang stay consistent.
 
-```text
-content/pages/fr/<slug>.md
-content/pages/en/<slug>.md
-content/pages/it/<slug>.md
-```
+**Home page copy** lives mainly in **`_data/i18n.json`** (hero, nav labels, form strings, etc.), not in `home.md` (those files are minimal placeholders for Eleventy).
 
-Create or translate **all three** for each page when possible. Example included: **`emmanuel-lecuyer`**.
+**Layout templates** (`content/pages/_includes/`) are normal repo files; they are not exposed in the CMS by default. Change them in Git or extend `admin/config.yml` if you need them in the UI.
 
 ---
 
@@ -113,7 +116,7 @@ Create or translate **all three** for each page when possible. Example included:
 1. Keep `repo:` correct in `admin/config.yml` (committed to Git).
 2. GitHub Pages from **root** serves `admin/` at `/admin/`.
 3. Open `…/admin/`, **Sign in with token**, paste the shared limited PAT (per browser).
-4. Under **Pages**, pick a locale (**fr** / **en** / **it**), edit Markdown, **Publish** (commit on your default branch).
+4. Open the right **collection** (e.g. **Pages (français)** vs **Pages (English)**), edit the entry, then **Publish** (commit on your default branch).
 
 Coordinate edits: Sveltia warns that **concurrent multi-user** editing can cause merge conflicts — avoid two people editing the same file at once.
 
@@ -151,4 +154,4 @@ Sveltia CMS is still labelled **beta** upstream; watch [release notes](https://s
 - [ ] GitHub Pages: branch + **`/ (root)`**; site and `/admin/` load
 - [ ] Fine-grained PAT: **this repo only**, **Contents R/W**, expiry set; shared securely with Emmanuel and the team
 - [ ] `ALLOWED_ORIGINS` on the contact Worker includes your real Pages URL(s), e.g. `https://<user>.github.io/<repo>`
-- [ ] SSG or hand-built pages read from `content/pages` and `public/media` (when you add the site generator)
+- [ ] After editing **raw JSON** (`i18n.json`, `services.json`, …), run **`npm run build`** locally or check GitHub Actions so invalid JSON does not break the site

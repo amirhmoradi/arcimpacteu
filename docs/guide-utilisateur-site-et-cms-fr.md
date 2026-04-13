@@ -34,16 +34,22 @@ L’administration se trouve à l’adresse **`/admin/`** sur le site publié (p
 
 ---
 
-## 3. Pages Markdown (collection « Pages »)
+## 3. Pages Markdown (trois collections par langue)
 
-Dans Sveltia, la collection **Pages** liste les fichiers sous `content/pages` (avec des dossiers par langue `fr`, `en`, `it`).
+Dans Sveltia, le contenu éditorial est réparti en **trois collections** : **Pages (français)**, **Pages (English)**, **Pagine (italiano)**. Chacune liste **tout** le Markdown du dossier correspondant, y compris les sous-dossiers **`stages/`**, **`seminaires/`** et **`collectivites/`** (fiches détaillées).
 
 - **Titre** : titre affiché et utilisé pour le référencement.
-- **Slug** : partie d’URL (sans espaces). En pratique, beaucoup de pages importantes ont déjà un nom de fichier fixe : évitez de le changer sans accord, sinon les liens externes cassent.
 - **Description** : courte phrase pour les moteurs de recherche.
-- **Corps** : texte principal (titres, listes, liens, images…).
+- **translationSlug** : identifiant commun aux trois langues pour relier les versions entre elles (à garder aligné sur `fr`, `en` et `it`).
+- **Layout** (si affiché) : modèle Eleventy ; souvent vide sur les hubs, renseigné sur les fiches « produit » ou pages spéciales.
+- **Hero** : champs possibles **`hero_image`** (ex. page biographie) ou **`heroImage`** (fiches stages / séminaires / collectivités), **hero kicker**, **posterAlt**, boutons **CTA** — selon la page.
+- **Corps** : texte principal (Markdown ; le site autorise aussi des extraits **Nunjucks** là où les pages existantes en contiennent déjà).
 
-Les pages **Événements** et **Calendrier** ont un **mise en page** particulière : le texte du corps s’affiche sous le bandeau, puis des blocs automatiques (cartes ou calendrier) selon les réglages JSON décrits plus bas.
+**Accueil** : les textes visibles sur la page d’accueil (bandeau, navigation, formulaire, etc.) viennent surtout du fichier **`_data/i18n.json`** (section **Données globales** dans le CMS), pas du fichier `home.md` (presque vide).
+
+**Fichiers à la racine** (`404`, `robots.txt`, plan du site, modèle de redirections anciennes URLs) : collection **Fichiers uniques** — réservés aux personnes à l’aise avec le risque de casser la technique du site.
+
+Les pages **Événements** et **Calendrier** ont une **mise en page** particulière : le texte du corps s’affiche sous le bandeau, puis des blocs automatiques (cartes ou calendrier) selon les réglages JSON décrits plus bas.
 
 ---
 
@@ -137,10 +143,16 @@ Les messages ne doivent **pas** contenir de données bancaires ; pour un devis p
 
 | Fichier / zone | Rôle |
 |----------------|------|
-| `content/pages/fr|en|it/*.md` | Pages éditoriales (dont Événements et Calendrier : texte d’intro). |
+| `content/pages/fr|en|it/**/*.md` | Pages et fiches (hubs + sous-dossiers stages, seminaires, collectivites). |
+| `content/pages/404.md`, `robots.njk`, `sitemap.njk`, `legacy-redirect.njk` | Pages / templates globaux (collection **Fichiers uniques**). |
 | `content/meta/calendar.json` | URL iframe, liens Google / ICS, intros HTML. |
 | `content/meta/featuredEvenements.json` | Cartes de la page Événements. |
 | `content/meta/testimonials.json` | Avis du carrousel sur la page d’accueil. |
+| `_data/posters.json` | Affiches du carrousel d’accueil. |
+| `_data/i18n.json` | Textes d’interface multilingues et blocs d’accueil (éditeur JSON brut dans le CMS). |
+| `_data/services.json` | Cartes du hub Stages (éditeur JSON brut). |
+| `_data/brand.json` | Nom du site, domaine, logo, clé Turnstile **publique**, URL du Worker contact. |
+| `_data/palmares.json`, `naturfoamGallery.json`, `legacyRedirects.json` | Palmarès, liste des images galerie Natur’Foam, table de redirections (JSON brut). |
 | `admin/config.yml` | Configuration de Sveltia (réservé aux personnes à l’aise avec le dépôt). |
 
 Ce guide reflète l’état du projet au moment de sa rédaction ; toute évolution technique pourra compléter ces consignes.
