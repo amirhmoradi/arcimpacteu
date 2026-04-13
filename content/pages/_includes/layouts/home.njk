@@ -107,7 +107,7 @@ layout: layouts/base.njk
     <h2 class="mb-3 text-center font-serif text-3xl font-semibold text-primary md:text-4xl">{{ t.servicesTitle }}</h2>
     <p class="mx-auto mb-12 max-w-2xl text-center text-gray-600">{{ t.servicesLead }}</p>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {% for item in services %}
+      {% for item in services.items %}
       {% set s = item[lang] %}
       <a href="{{ ('/stages/' ~ item.slug ~ '/') | localeUrl(p) | url }}" class="group block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md">
         <img src="{{ item.img | arcImage | url }}" alt="" class="h-40 w-full object-cover transition group-hover:scale-105" loading="lazy" width="400" height="160" />
@@ -125,7 +125,7 @@ layout: layouts/base.njk
   <div class="mx-auto max-w-7xl px-4 lg:px-8">
     <h2 class="mb-10 text-center font-serif text-3xl font-semibold text-accent md:text-4xl">{{ t.palmarèsTitle }}</h2>
     <div class="mx-auto max-w-3xl space-y-6">
-      {% for row in palmares %}
+      {% for row in palmares.rows %}
       <div class="border-l-4 border-accent pl-6">
         <p class="text-sm font-semibold text-accent">{{ row.period }}</p>
         <p class="mt-1 text-white/85">{{ row[lang] }}</p>

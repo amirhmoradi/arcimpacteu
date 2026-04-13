@@ -45,7 +45,7 @@ Dans Sveltia, le contenu éditorial est réparti en **trois collections** : **Pa
 - **Hero** : champs possibles **`hero_image`** (ex. page biographie) ou **`heroImage`** (fiches stages / séminaires / collectivités), **hero kicker**, **posterAlt**, boutons **CTA** — selon la page.
 - **Corps** : texte principal (Markdown ; le site autorise aussi des extraits **Nunjucks** là où les pages existantes en contiennent déjà).
 
-**Accueil** : les textes visibles sur la page d’accueil (bandeau, navigation, formulaire, etc.) viennent surtout du fichier **`_data/i18n.json`** (section **Données globales** dans le CMS), pas du fichier `home.md` (presque vide).
+**Accueil** : le **titre** et la **meta description** de la page d’accueil s’éditent dans **`home.md`** (une entrée par langue : **Pages FR / EN / IT** → fichier `home`). Les **textes du bandeau, menus, blocs** et le reste de l’interface viennent du fichier **`_data/i18n.json`** (éditeur texte JSON dans **Données globales**). Les **cartes stages** sous le bandeau viennent de **`_data/services.json`** ; le **palmarès** de **`_data/palmares.json`**.
 
 **Fichiers à la racine** (`404`, `robots.txt`, plan du site, modèle de redirections anciennes URLs) : collection **Fichiers uniques** — réservés aux personnes à l’aise avec le risque de casser la technique du site.
 
@@ -149,10 +149,12 @@ Les messages ne doivent **pas** contenir de données bancaires ; pour un devis p
 | `content/meta/featuredEvenements.json` | Cartes de la page Événements. |
 | `content/meta/testimonials.json` | Avis du carrousel sur la page d’accueil. |
 | `_data/posters.json` | Affiches du carrousel d’accueil. |
-| `_data/i18n.json` | Textes d’interface multilingues et blocs d’accueil (éditeur JSON brut dans le CMS). |
-| `_data/services.json` | Cartes du hub Stages (éditeur JSON brut). |
+| `_data/i18n.json` | Textes d’interface multilingues et blocs d’accueil (éditeur texte JSON dans le CMS — à valider après modification). |
+| `_data/services.json` | Cartes du hub Stages (liste **items** — formulaire dans le CMS). |
 | `_data/brand.json` | Nom du site, domaine, logo, clé Turnstile **publique**, URL du Worker contact. |
-| `_data/palmares.json`, `naturfoamGallery.json`, `legacyRedirects.json` | Palmarès, liste des images galerie Natur’Foam, table de redirections (JSON brut). |
+| `_data/palmares.json` | Palmarès (liste **rows** — formulaire). |
+| `_data/naturfoamGallery.json` | Liste des fichiers image Natur’Foam (JSON texte ; clé **`files`**). |
+| `_data/legacyRedirects.json` | Redirections anciennes URLs (liste **redirects** — formulaire). |
 | `admin/config.yml` | Configuration de Sveltia (réservé aux personnes à l’aise avec le dépôt). |
 
 Ce guide reflète l’état du projet au moment de sa rédaction ; toute évolution technique pourra compléter ces consignes.

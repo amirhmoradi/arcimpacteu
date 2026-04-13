@@ -138,7 +138,6 @@ collections:
         label: robots.txt (Nunjucks)
         file: content/pages/robots.njk
         format: frontmatter
-        extension: njk
         fields:
           - { label: Permalink, name: permalink, widget: string }
           - {
@@ -156,11 +155,17 @@ collections:
       - name: sitemap_xml
         label: Plan du site (sitemap.xml)
         file: content/pages/sitemap.njk
-        format: raw
-        extension: njk
+        format: frontmatter
         fields:
+          - { label: Permalink, name: permalink, widget: string }
           - {
-              label: "Fichier complet (front matter YAML + template Nunjucks/XML)",
+              label: Exclure des collections,
+              name: eleventyExcludeFromCollections,
+              widget: boolean,
+              default: true,
+            }
+          - {
+              label: "Corps (XML + Nunjucks — conserver les balises {{ … }})",
               name: body,
               widget: code,
               default_language: plaintext,
@@ -169,13 +174,11 @@ collections:
         label: Template redirections index.php (legacy-redirect.njk)
         file: content/pages/legacy-redirect.njk
         format: raw
-        extension: njk
         fields:
           - {
-              label: "Fichier complet (pagination Eleventy + HTML ; à ne modifier qu’en connaissance de cause)",
+              label: "Fichier complet (YAML d’en-tête + HTML ; réservé aux profils techniques)",
               name: body,
-              widget: code,
-              default_language: plaintext,
+              widget: text,
             }
 
   - name: site_meta
@@ -306,7 +309,7 @@ collections:
 
   - name: site_data
     label: Données globales (_data)
-    description: Textes d’interface, services, marque, galerie, redirections — et JSON i18n (éditeur code).
+    description: Textes d’interface (i18n JSON brut), cartes stages, palmarès, redirections, galerie. Les chemins de fichier portent l’extension ; ne pas utiliser l’option extension sur les entrées files (non supportée par Sveltia).
     files:
       - name: brand
         label: Marque & intégrations (brand.json)
@@ -328,59 +331,79 @@ collections:
         label: Textes interface & accueil (i18n.json)
         file: _data/i18n.json
         format: raw
-        extension: json
         fields:
           - {
-              label: JSON complet (fr / en / it — valider après édition),
+              label: JSON complet (fr / en / it — valider avec un validateur JSON après édition),
               name: body,
-              widget: code,
-              default_language: plaintext,
+              widget: text,
             }
       - name: services
         label: Cartes « Stages » hub (services.json)
         file: _data/services.json
-        format: raw
-        extension: json
+        format: json
         fields:
-          - {
-              label: JSON (tableau racine — id, slug, img, fr/en/it par carte),
-              name: body,
-              widget: code,
-              default_language: plaintext,
-            }
+          - label: Cartes (ordre = grille d’accueil / hub)
+            name: items
+            widget: list
+            summary: "{{fields.id}} — {{fields.slug}}"
+            fields:
+              - { label: ID interne, name: id, widget: string }
+              - { label: Slug URL (/stages/…/), name: slug, widget: string }
+              - { label: Image (/images/…), name: img, widget: string }
+              - label: Français
+                name: fr
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: Titre, name: title, widget: string }
+                  - { label: Description, name: desc, widget: text }
+              - label: English
+                name: en
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: desc, widget: text }
+              - label: Italiano
+                name: it
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: Titolo, name: title, widget: string }
+                  - { label: Descrizione, name: desc, widget: text }
       - name: palmares
         label: Palmarès (palmares.json)
         file: _data/palmares.json
-        format: raw
-        extension: json
+        format: json
         fields:
-          - {
-              label: JSON (tableau de blocs period + fr/en/it),
-              name: body,
-              widget: code,
-              default_language: plaintext,
-            }
+          - label: Blocs (par période)
+            name: rows
+            widget: list
+            summary: "{{fields.period}}"
+            fields:
+              - { label: Période, name: period, widget: string }
+              - { label: Texte FR, name: fr, widget: text }
+              - { label: Texte EN, name: en, widget: text }
+              - { label: Texte IT, name: it, widget: text }
       - name: naturfoam_gallery
         label: Galerie Natur'Foam (naturfoamGallery.json)
         file: _data/naturfoamGallery.json
         format: raw
-        extension: json
         fields:
           - {
-              label: JSON (liste files — noms dans public/images/naturfoam/),
+              label: "JSON avec clé files (tableau de noms de fichiers dans public/images/naturfoam/)",
               name: body,
-              widget: code,
-              default_language: plaintext,
+              widget: text,
             }
       - name: legacy_redirects
         label: Redirections anciennes URLs (legacyRedirects.json)
         file: _data/legacyRedirects.json
-        format: raw
-        extension: json
+        format: json
         fields:
-          - {
-              label: "JSON (tableau d’objets from / to)",
-              name: body,
-              widget: code,
-              default_language: plaintext,
-            }
+          - label: Paires from → to
+            name: redirects
+            widget: list
+            summary: "{{fields.from}} → {{fields.to}}"
+            fields:
+              - { label: Ancienne URL (from), name: from, widget: string }
+              - { label: Nouvelle URL (to), name: to, widget: string }

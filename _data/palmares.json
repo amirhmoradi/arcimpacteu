@@ -1,6 +1,8 @@
-[
-  { "period": "2003–2007", "fr": "3 Championnats du Monde — 2 or + 1 bronze équipe féminine, 14 médailles individuelles (1 or). France 2e au rang des nations.", "en": "3 World Championships — 2 gold + 1 bronze women's team, 14 individual medals (1 gold). France 2nd in nations ranking.", "it": "3 Mondiali — 2 ori + 1 bronzo squadra femminile, 14 medaglie individuali (1 oro). Francia 2a nel ranking nazioni." },
-  { "period": "2008–2010", "fr": "2 Championnats d'Europe + 1 Championnat du Monde — titres mondiaux et européens par équipe hommes.", "en": "2 European + 1 World Championship — men's team world and European titles.", "it": "2 Europei + 1 Mondiale — titoli mondiali ed europei a squadre maschili." },
-  { "period": "2011–2013", "fr": "2 Championnats du Monde + 1 Championnat d'Europe — 2 titres mondiaux par équipe, 1 or européen, 8 médailles individuelles (1 or).", "en": "2 World + 1 European Championship — 2 world team titles, 1 European gold, 8 individual medals (1 gold).", "it": "2 Mondiali + 1 Europeo — 2 titoli mondiali a squadre, 1 oro europeo, 8 medaglie individuali (1 oro)." },
-  { "period": "2014", "fr": "Championnat d'Europe à Tallinn — 1 argent + 1 bronze par équipe.", "en": "European Championship in Tallinn — 1 silver + 1 bronze team medals.", "it": "Europeo a Tallinn — 1 argento + 1 bronzo a squadre." }
-]
+{
+  "rows": [
+    { "period": "2003–2007", "fr": "3 Championnats du Monde — 2 or + 1 bronze équipe féminine, 14 médailles individuelles (1 or). France 2e au rang des nations.", "en": "3 World Championships — 2 gold + 1 bronze women's team, 14 individual medals (1 gold). France 2nd in nations ranking.", "it": "3 Mondiali — 2 ori + 1 bronzo squadra femminile, 14 medaglie individuali (1 oro). Francia 2a nel ranking nazioni." },
+    { "period": "2008–2010", "fr": "2 Championnats d'Europe + 1 Championnat du Monde — titres mondiaux et européens par équipe hommes.", "en": "2 European + 1 World Championship — men's team world and European titles.", "it": "2 Europei + 1 Mondiale — titoli mondiali ed europei a squadre maschili." },
+    { "period": "2011–2013", "fr": "2 Championnats du Monde + 1 Championnat d'Europe — 2 titres mondiaux par équipe, 1 or européen, 8 médailles individuelles (1 or).", "en": "2 World + 1 European Championship — 2 world team titles, 1 European gold, 8 individual medals (1 gold).", "it": "2 Mondiali + 1 Europeo — 2 titoli mondiali a squadre, 1 oro europeo, 8 medaglie individuali (1 oro)." },
+    { "period": "2014", "fr": "Championnat d'Europe à Tallinn — 1 argent + 1 bronze par équipe.", "en": "European Championship in Tallinn — 1 silver + 1 bronze team medals.", "it": "Europeo a Tallinn — 1 argento + 1 bronzo a squadre." }
+  ]
+}

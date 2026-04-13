@@ -1,10 +1,4 @@
 module.exports = {
-  layout: 'layouts/home.njk',
-  translationSlug: 'home',
-  title: 'Accueil',
-  description:
-    'Stages de tir à l’arc 3D et technique à La Féclaz (Savoie) — Emmanuel Lécuyer, Arc IMPACT. Chambéry, Lac du Bourget.',
-  translationSlug: 'home',
   schemaJsonLd: JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'SportsActivityLocation',

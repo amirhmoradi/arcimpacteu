@@ -101,7 +101,7 @@ There is **no** single global `i18n` block on collections anymore: each language
 | **Pages (français / English / italiano)** | All `*.md` under `content/pages/fr`, `…/en`, `…/it` (including subfolders). Shared fields cover `title`, `description`, `translationSlug`, `layout`, `hero_image` / `heroImage`, CTA fields, and Markdown `body` (Nunjucks shortcodes in the body are allowed where the site already uses them). |
 | **Fichiers uniques** | `404.md`, `robots.njk`, `sitemap.njk`, `legacy-redirect.njk`. |
 | **Calendrier, événements…** | `content/meta/calendar.json`, `featuredEvenements.json`, `testimonials.json`, `_data/posters.json`. |
-| **Données globales (_data)** | `brand.json` (form fields), plus **raw JSON** editors for `i18n.json`, `services.json`, `palmares.json`, `naturfoamGallery.json`, `legacyRedirects.json` (root arrays/objects — validate JSON after edits). |
+| **Données globales (_data)** | `brand.json` (formulaire), listes structurées pour `services.json` (`items`), `palmares.json` (`rows`), `legacyRedirects.json` (`redirects`), texte brut pour `i18n.json` et `naturfoamGallery.json` (JSON à valider après édition). |
 
 **Translations:** keep the **same `translationSlug`** (and matching filenames where the site expects them) across `fr`, `en`, and `it` files so language switching and hreflang stay consistent.
 
@@ -154,4 +154,4 @@ Sveltia CMS is still labelled **beta** upstream; watch [release notes](https://s
 - [ ] GitHub Pages: branch + **`/ (root)`**; site and `/admin/` load
 - [ ] Fine-grained PAT: **this repo only**, **Contents R/W**, expiry set; shared securely with Emmanuel and the team
 - [ ] `ALLOWED_ORIGINS` on the contact Worker includes your real Pages URL(s), e.g. `https://<user>.github.io/<repo>`
-- [ ] After editing **raw JSON** (`i18n.json`, `services.json`, …), run **`npm run build`** locally or check GitHub Actions so invalid JSON does not break the site
+- [ ] After editing **`i18n.json`** or **`naturfoamGallery.json`** (éditeur texte), vérifier le JSON (parse valide), puis **`npm run build`** ou la CI
