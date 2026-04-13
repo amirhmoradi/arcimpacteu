@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "order": 1,
+      "image": "",
+      "who": "Christine De Lobel Mahy",
+      "bow": { "fr": "Poulies", "en": "Compound", "it": "Compound" },
+      "quote": {
+        "fr": "Avec Manu et Alex, les stages, c'est du sérieux ! Ateliers soigneusement préparés, rien n'est laissé au hasard… dans la joie et la bonne humeur !",
+        "en": "With Manu and Alex, the camps mean business! Carefully prepared workshops, nothing is left to chance — with joy and good humour.",
+        "it": "Con Manu e Alex gli stage sono sul serio! Laboratori preparati con cura, nulla è lasciato al caso — con allegria e buon umore."
+      }
+    },
+    {
+      "order": 2,
+      "image": "",
+      "who": "Alain Plouviez",
+      "bow": { "fr": "Arc classique", "en": "Recurve", "it": "Arco olimpico" },
+      "quote": {
+        "fr": "Les stages Arc Impact, je suis fan. Mes enfants et moi les avons testés en 3D comme en FITA — les entraîneurs sont sérieux et professionnels.",
+        "en": "I’m a fan of Arc IMPACT camps. My children and I tried them in 3D and FITA — the coaches are serious and professional.",
+        "it": "Fan degli stage Arc IMPACT. Io e i miei figli li abbiamo provati in 3D e FITA — staff serio e professionale."
+      }
+    },
+    {
+      "order": 3,
+      "image": "",
+      "who": "Jérôme Vicherat",
+      "bow": { "fr": "Poulies", "en": "Compound", "it": "Compound" },
+      "quote": {
+        "fr": "Venir au stage est l'assurance de repartir avec un plus dans les bagages, avec une bonne ambiance et un cadre magnifique.",
+        "en": "Joining a camp means leaving with something extra in your bag — great atmosphere and a stunning setting.",
+        "it": "Partecipare allo stage significa portare a casa qualcosa in più — clima splendido e cornice magnifica."
+      }
+    },
+    {
+      "order": 4,
+      "image": "",
+      "who": "Fabien Ansard",
+      "bow": { "fr": "Arc classique", "en": "Recurve", "it": "Arco olimpico" },
+      "quote": {
+        "fr": "C'est simple je pense gagner 6 mois par stage.",
+        "en": "Quite simply, I feel I gain six months of progress per camp.",
+        "it": "In pratica sento di guadagnare sei mesi di progresso per ogni stage."
+      }
+    },
+    {
+      "order": 5,
+      "image": "",
+      "who": "Catherine Arnold",
+      "bow": { "fr": "Poulies", "en": "Compound", "it": "Compound" },
+      "quote": {
+        "fr": "Intelligence de la transmission… rigoureux tout en visant l'excellence.",
+        "en": "Smart teaching — rigorous while aiming for excellence.",
+        "it": "Intelligenza nella trasmissione — rigore verso l’eccellenza."
+      }
+    }
+  ]
+}

@@ -2,42 +2,30 @@
 title: Emmanuel Lécuyer
 slug: emmanuel-lecuyer
 date: 2026-04-12
-description: State-certified coach, 20+ years of experience — Arc IMPACT, Savoie (Chambéry, Lake Bourget, La Féclaz).
+description: Founder of Arc IMPACT, state-certified coach — 20+ years of experience, French 3D national team, camps and events across France and nearby countries.
 hero_image: https://domaineabbayedemaizieres.com/images/tmpl/maizieres-emmanuel-lecuyer.jpg
 translationSlug: emmanuel-lecuyer
 ---
 
 ![Emmanuel Lécuyer](https://domaineabbayedemaizieres.com/images/tmpl/maizieres-emmanuel-lecuyer.jpg)
 
-**Emmanuel Lécuyer** is the founder and lead coach of **Arc IMPACT**. Based in the **French Alps**, he works primarily around **Chambéry**, **Lake Bourget (Lac du Bourget)** and the **La Féclaz** training venue (Les Déserts, Savoie) — ideal settings for field archery and 3D.
+**Emmanuel Lécuyer** is the founder and lead coach of **Arc IMPACT**. A **state-certified** archery coach, he has spent more than twenty years pursuing one goal: making high-level archery **demanding, clear and teachable** — from grassroots clubs to international competition.
+
+Together with his **team**, he is on the road **year-round** across **France and neighbouring countries** for **technical camps**, **corporate seminars** and **public animations**. La Féclaz and Savoie remain a strong home base; the heart of the job is to meet **archers and organisers** where they need structure, safety and a proven method.
 
 ## Background
 
-- **Archer** since the early 1990s with extensive competition experience.
-- **Professional coach** (French state certification in archery): clubs, courses, public discovery — daily field practice.
-- **French national 3D team (FFTA), 2003–2014**: coach, physical preparation and selector, with **dozens of national-team titles and medals** across World and European Championships in that period.
-- **Teaching internationally** where your public programme references it (e.g. SwissArchery / Lausanne).
+- **Archer** since the early 1990s, rooted in competition and field practice.
+- **Professional coach**: clubs, camps, discovery sessions — coaching as a daily craft.
+- **French national 3D team (FFTA), 2003–2014**: coaching, physical preparation and selection, with **dozens of titles and medals** in that period (including World and European Championships).
+- **Teaching internationally** wherever teams and federations need field-proven expertise.
 
 ## Coaching philosophy
 
-Emmanuel focuses on **sustainable performance**: useful physical preparation, season planning, team rounds, 3D course management and competition mindset. The recurring line for athletes: **control the bow instead of fighting it**.
+Emmanuel builds programmes around **sustainable performance**: physical work that pays off on course, season planning, team shooting, **3D** course management and competition mindset. The line athletes hear again and again: **control the bow instead of fighting it**.
 
-## Outside Savoie (public references)
+## From the field — distilled ideas
 
-He has also been featured as a **guest expert** on multi-day 3D stays elsewhere in France (see `docs/maizieres-sejour-archery-extract.md`). Arc IMPACT’s **home ground** remains **Savoie**.
+In a long-form conversation about archery and the federation, Emmanuel stresses one principle: **invest on the ground rather than only criticising institutions**. He champions the **value of every discipline**, the need to **train coaches** for field and 3D (where world championships already set the bar) and respect for **experience** alongside formal qualifications — because the next generation of archers needs mentors who have lived every kind of venue and audience. That mix of **rigour, clarity and trust in people** is what he brings to Arc IMPACT for every camp or event.
 
-## Decorative imagery (Unsplash)
-
-![Lake and mountains (Alps-style illustration)](https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80)
-
-*Decorative photo — [Unsplash License](https://unsplash.com/license) (photographer credit on the image’s Unsplash page).*
-
-![Forest](https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80)
-
-*Decorative photo — [Unsplash License](https://unsplash.com/license).*
-
-> **Headshot**: currently hotlinked from a partner site; for production, **mirror the file** into `public/media/` after rights confirmation.
-
-## Interview (2021)
-
-Full French transcript: `docs/emmanuel-interview-2021.md`.
+To talk about a **camp**, **seminar** or **animation**, use the **[Contact](/en/contact/)** page — we reply with concrete options.

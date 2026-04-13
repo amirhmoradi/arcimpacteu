@@ -4,6 +4,8 @@ description: "Piattaforme multi-attività, coesione, tiro con l'arco e sfide mul
 translationSlug: seminaires
 ---
 
+{% set p = localePathPrefix | default('') %}
+
 # Seminari & team building
 
 Da oltre **vent’anni** progettiamo **esperienze concrete** per **comitati aziendali**, **agenzie** e **HR**: arriviamo con **attrezzature certificate**, logistica collaudata e animatori **diplomati** — così il vostro evento resta **sicuro**, **chiaro in agenda** e **memorabile**.
@@ -31,8 +33,8 @@ Da oltre **vent’anni** progettiamo **esperienze concrete** per **comitati azie
 Da **mezza giornata** a **più giorni**, indoor o outdoor. Dimensioniamo tutto su **partecipanti**, **sede** e **obiettivo** (onboarding, kick-off, riconoscimento team).
 
 <p class="cta-row not-prose">
-  <a href="../contact/" class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-accent-light">Brief creativo &amp; preventivo rapido</a>
-  <a href="../contact/" class="inline-flex items-center justify-center rounded-lg border-2 border-primary/30 px-6 py-3 text-sm font-semibold text-primary no-underline hover:border-primary">Parla con un referente</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].seminairesCtaSujet1 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-accent-light">Brief creativo &amp; preventivo rapido</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].seminairesCtaSujet2 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary/30 px-6 py-3 text-sm font-semibold text-primary no-underline hover:border-primary">Parla con un referente</a>
 </p>
 
 ## Perché Arc IMPACT
@@ -50,5 +52,5 @@ Da **mezza giornata** a **più giorni**, indoor o outdoor. Dimensioniamo tutto s
 <p class="not-prose rounded-2xl bg-primary px-6 py-8 text-center text-white">
   <strong class="font-serif text-xl text-accent">Volete un evento che si ricorda?</strong><br />
   <span class="mt-2 block text-sm text-white/85">Indicate date, città, numero di partecipanti e tono desiderato: proponiamo scaletta e fascia di budget.</span><br />
-  <a href="../contact/" class="mt-6 inline-flex rounded-lg bg-accent px-8 py-3 font-semibold text-primary no-underline hover:bg-accent-light">Inizia dal modulo contatti</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].seminairesCtaSujetBanner | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg bg-accent px-8 py-3 font-semibold text-primary no-underline hover:bg-accent-light">Inizia dal modulo contatti</a>
 </p>

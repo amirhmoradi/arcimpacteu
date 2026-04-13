@@ -3,7 +3,8 @@
 <section class="bg-[#F5F5F0] pb-20 pt-8">
   <div class="mx-auto max-w-7xl px-4 lg:px-8">
     <h1 class="mb-3 font-serif text-4xl font-semibold text-primary">{{ t.contactTitle }}</h1>
-    <p class="mb-10 max-w-2xl text-gray-600">{{ t.contactLead }}</p>
+    <p class="mb-6 max-w-2xl text-gray-600">{{ t.contactLead }}</p>
+    <p class="mb-10 max-w-2xl rounded-xl border border-primary/10 bg-primary/5 px-4 py-3 text-sm text-gray-700">{{ t.reviewsOnContactHint | safe }}</p>
     <div class="grid gap-12 lg:grid-cols-2">
       <div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
         <form id="contact-form" class="space-y-5" novalidate>
@@ -25,12 +26,38 @@
             <input class="w-full rounded-lg border border-gray-300 px-3 py-2" id="club" name="club" type="text" autocomplete="organization" />
           </div>
           <div class="form-group">
+            <label class="mb-1 block text-sm font-medium text-gray-700" for="sujet">{{ t.form.subject }}</label>
+            <input class="w-full rounded-lg border border-gray-300 px-3 py-2" id="sujet" name="sujet" type="text" maxlength="200" autocomplete="off" placeholder="{{ t.form.subjectPlaceholder }}" />
+          </div>
+          <div class="form-group">
             <label class="mb-1 block text-sm font-medium text-gray-700" for="email">{{ t.form.email }} *</label>
             <input class="w-full rounded-lg border border-gray-300 px-3 py-2" id="email" name="email" type="email" required autocomplete="email" />
           </div>
           <div class="form-group">
             <label class="mb-1 block text-sm font-medium text-gray-700" for="telephone">{{ t.form.phone }} *</label>
             <input class="w-full rounded-lg border border-gray-300 px-3 py-2" id="telephone" name="telephone" type="tel" required autocomplete="tel" />
+          </div>
+          <div class="form-group grid gap-4 sm:grid-cols-2">
+            <div>
+              <label class="mb-1 block text-sm font-medium text-gray-700" for="arme">{{ t.form.bow }}</label>
+              <select class="w-full rounded-lg border border-gray-300 px-3 py-2" id="arme" name="arme" autocomplete="off">
+                <option value="">{{ t.form.optionSelect }}</option>
+                <option value="classique">{{ t.form.bowClassic }}</option>
+                <option value="poulies">{{ t.form.bowCompound }}</option>
+                <option value="barebow">{{ t.form.bowBarebow }}</option>
+                <option value="autre">{{ t.form.bowOther }}</option>
+              </select>
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-medium text-gray-700" for="niveau">{{ t.form.level }}</label>
+              <select class="w-full rounded-lg border border-gray-300 px-3 py-2" id="niveau" name="niveau" autocomplete="off">
+                <option value="">{{ t.form.optionSelect }}</option>
+                <option value="initiation">{{ t.form.levelBeginner }}</option>
+                <option value="club">{{ t.form.levelClub }}</option>
+                <option value="regional">{{ t.form.levelRegional }}</option>
+                <option value="national">{{ t.form.levelNational }}</option>
+              </select>
+            </div>
           </div>
           <div class="form-group">
             <span class="mb-2 block text-sm font-medium text-gray-700">{{ t.form.newsletter }}</span>

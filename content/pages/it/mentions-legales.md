@@ -25,6 +25,10 @@ Testi, immagini e media sono protetti. È vietata la riproduzione non autorizzat
 
 Il sito statico può essere pubblicato su **GitHub Pages**; il modulo contatti usa **Cloudflare Workers** e un provider e-mail transazionale.
 
+## Realizzazione del sito
+
+Progettazione e sviluppo del sito: **Amir Moradi** — [amirmoradi.com](https://amirmoradi.com).
+
 ## Dati personali
 
 I dati inviati dal modulo servono solo a rispondere. Per i diritti (accesso, rettifica, cancellazione) usate lo stesso modulo nella pagina Contatti, indicando la richiesta.

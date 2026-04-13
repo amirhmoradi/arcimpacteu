@@ -75,7 +75,12 @@ function buildEmailText(fields: Record<string, string>): { subject: string; text
   }
   lines.push('', `Reply-To suggestion: ${replyEmail || '(none)'}`);
 
-  const subject = `[Arc IMPACT] ${name}${replyEmail ? ` <${replyEmail}>` : ''}`.slice(0, 200);
+  const sujet = (fields.sujet || '').trim();
+  const subject = (
+    sujet
+      ? `[Arc IMPACT] ${sujet} — ${name}${replyEmail ? ` <${replyEmail}>` : ''}`
+      : `[Arc IMPACT] ${name}${replyEmail ? ` <${replyEmail}>` : ''}`
+  ).slice(0, 200);
   return { subject, text: lines.join('\n') };
 }
 

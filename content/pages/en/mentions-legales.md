@@ -25,6 +25,10 @@ Texts, images and media are protected by copyright. Unauthorised reproduction is
 
 The static site may be served on **GitHub Pages**; contact form submissions are processed by **Cloudflare Workers** and a transactional e-mail provider.
 
+## Website design & development
+
+Site design and implementation: **Amir Moradi** — [amirmoradi.com](https://amirmoradi.com).
+
 ## Personal data
 
 Contact form data is used only to answer your request. To exercise your rights (access, rectification, erasure), use the same form on the Contact page and describe your request.

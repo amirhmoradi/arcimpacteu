@@ -1,12 +1,15 @@
 ---
 layout: layouts/calendar.njk
 title: Calendrier
-description: Vue publique des dates de stages, séminaires et interventions — synchronisée avec l’agenda partagé Arc IMPACT.
+description: Dates des stages, séminaires et interventions Arc IMPACT — réservez tôt, les créneaux sont souvent limités.
 translationSlug: calendrier
 ---
 
-## Planning
+## Votre agenda Arc IMPACT
 
-Les visiteurs consultent ici **les créneaux annoncés publiquement**. Pour l’ouvrir dans une autre application ou s’abonner, utilisez les boutons sous le cadre (selon ce que l’équipe a configuré dans Sveltia).
+Retrouvez ici **les dates rendues publiques** : stages techniques, séminaires, animations et déplacements d’Emmanuel et de **l’équipe** en France et à l’étranger proche.
 
-Les **réservations et devis** se font toujours via la page **Contact**.
+- **Ajoutez l’agenda** à votre téléphone ou ordinateur grâce au lien **Google Calendar** ou au fichier **.ics** (abonnement) sous le calendrier, pour ne rien manquer.
+- **Pour réserver une place**, obtenir le programme détaillé ou un devis, utilisez toujours le **formulaire Contact** : c’est le seul canal pour confirmer disponibilité, tarif et modalités.
+
+Les affiches et fiches **stages** du site complètent cette vue d’ensemble — en cas de différence sur une date, **l’affiche officielle** ou la réponse de l’équipe par le formulaire fait foi.

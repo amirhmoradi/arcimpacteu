@@ -1,12 +1,12 @@
 ---
 layout: layouts/evenements-hub.njk
 title: Highlights
-description: Curated stages, seminars and public events. Cards are managed in Sveltia (featured events) without editing code.
+description: Curated picks — training camps, seminars and events worth a look.
 translationSlug: evenements
 ---
 
-## A dedicated hub
+## A curated hub
 
-This page **does not replace** the Training camps, Corporate or Groups sections — it surfaces **a short list** of flagship or seasonal offers. Card order and copy are edited in the CMS (**featured events**).
+This page **does not replace** Training camps, Corporate or Groups — it highlights **a short list** of flagship or seasonal offers.
 
-Open each **product page** from the grid or the main navigation for full detail.
+Open the **dedicated page** for each format from the grid or the main navigation.

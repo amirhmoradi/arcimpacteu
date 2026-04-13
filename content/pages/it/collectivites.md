@@ -4,6 +4,8 @@ description: Multi-tiro, arco, dirt monster, stand di tiro — Arc IMPACT per sc
 translationSlug: collectivites
 ---
 
+{% set p = localePathPrefix | default('') %}
+
 # Enti pubblici & animazioni
 
 Progettiamo **percorsi educativi** per **scuole**, **centri estivi**, **comuni**, **sagre** e **giornate sportive**: attrezzature per fascia d’età, **staff diplomato**, code ordinate e **regole di sicurezza** semplici da ripetere ai volontari sul campo.
@@ -34,8 +36,8 @@ Progettiamo **percorsi educativi** per **scuole**, **centri estivi**, **comuni**
 - **Interventi in Savoia** (Chambéry – Lago del Bourget / La Féclaz) o **trasferte** secondo calendario.
 
 <p class="cta-row not-prose">
-  <a href="../contact/" class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-accent-light">Chiedi una proposta su misura</a>
-  <a href="../contact/" class="inline-flex items-center justify-center rounded-lg border-2 border-primary/30 px-6 py-3 text-sm font-semibold text-primary no-underline hover:border-primary">Verifica disponibilità</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujet1 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-accent-light">Chiedi una proposta su misura</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujet2 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary/30 px-6 py-3 text-sm font-semibold text-primary no-underline hover:border-primary">Verifica disponibilità</a>
 </p>
 
 ---
@@ -43,5 +45,5 @@ Progettiamo **percorsi educativi** per **scuole**, **centri estivi**, **comuni**
 <p class="not-prose rounded-2xl bg-primary px-6 py-8 text-center text-white">
   <strong class="font-serif text-xl text-accent">Sagra o centro estivo in organizzazione?</strong><br />
   <span class="mt-2 block text-sm text-white/85">Indica fascia d’età, durata e spazio disponibile: ti inviamo uno svolgimento al minuto.</span><br />
-  <a href="../contact/" class="mt-6 inline-flex rounded-lg bg-accent px-8 py-3 font-semibold text-primary no-underline hover:bg-accent-light">Scrivi dal modulo contatti</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujetBanner | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg bg-accent px-8 py-3 font-semibold text-primary no-underline hover:bg-accent-light">Scrivi dal modulo contatti</a>
 </p>

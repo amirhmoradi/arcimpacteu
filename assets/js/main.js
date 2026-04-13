@@ -359,6 +359,40 @@
   }
 
   // =======================================================================
+  // 9b. Contact form URL prefill (?sujet=…&arme=…&niveau=…)
+  // =======================================================================
+  function initContactPrefill() {
+    var form = qs('#contact-form');
+    if (!form) return;
+    var params = new URLSearchParams(window.location.search);
+    var map = [
+      ['sujet', 'sujet'],
+      ['arme', 'arme'],
+      ['niveau', 'niveau'],
+    ];
+    map.forEach(function (pair) {
+      var raw = params.get(pair[0]);
+      if (raw == null || raw === '') return;
+      var val = raw;
+      try {
+        val = decodeURIComponent(raw.replace(/\+/g, ' '));
+      } catch (e) {
+        val = raw;
+      }
+      var el = qs('[name="' + pair[1] + '"]', form);
+      if (!el) return;
+      if (el.tagName === 'SELECT') {
+        var opt = Array.prototype.find.call(el.options, function (o) {
+          return o.value === val;
+        });
+        if (opt) el.value = val;
+      } else {
+        el.value = val;
+      }
+    });
+  }
+
+  // =======================================================================
   // 10. Contact Form
   // =======================================================================
   function initContactForm() {
@@ -470,8 +504,12 @@
     });
 
     // Live validation clearing
-    qsa('input, textarea', form).forEach(function (input) {
+    qsa('input, textarea, select', form).forEach(function (input) {
       input.addEventListener('input', function () {
+        var group = this.closest('.form-group');
+        if (group) group.classList.remove('error');
+      });
+      input.addEventListener('change', function () {
         var group = this.closest('.form-group');
         if (group) group.classList.remove('error');
       });
@@ -540,6 +578,7 @@
       initCarousels,
       initLightbox,
       initLanguageSwitcher,
+      initContactPrefill,
       initContactForm,
       initBackToTop,
       initActiveNav,

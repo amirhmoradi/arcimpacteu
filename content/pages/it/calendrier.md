@@ -1,12 +1,15 @@
 ---
 layout: layouts/calendar.njk
 title: Calendario
-description: Date pubbliche di stage, seminari e interventi — allineate all’agenda condivisa Arc IMPACT.
+description: Date di stage, seminari ed eventi Arc IMPACT — prenota in anticipo, i posti sono spesso limitati.
 translationSlug: calendrier
 ---
 
-## Pianificazione
+## Il calendario Arc IMPACT
 
-Qui compaiono i **turni resi pubblici**. I pulsanti sotto il riquadro (Google / file .ics) funzionano quando il team li ha compilati in Sveltia.
+Qui trovi le **date rese pubbliche**: stage tecnici, seminari, animazioni e trasferte di Emmanuel e del **team** in **Francia e Paesi vicini**.
 
-**Iscrizioni e preventivi** passano sempre dal modulo **Contatti**.
+- **Aggiungi l’agenda** al telefono o al computer con **Google Calendar** o l’abbonamento **.ics** sotto il calendario.
+- **Per prenotare**, ricevere il programma o un preventivo, usa sempre il **modulo Contatti**: è il canale con cui confermiamo disponibilità, prezzo e dettagli pratici.
+
+Le schede stage e le **locandine** sul sito completano la panoramica; in caso di differenza su una data, fa fede la **locandina ufficiale** o la nostra risposta dal modulo.

@@ -39,6 +39,15 @@ layout: layouts/base.njk
       {% endif %}
       {{ content | safe }}
     </div>
+    {% if prefillContactSubject == false %}
+    {% set ctaSujet = '' %}
+    {% elif ctaContactSubject %}
+    {% set ctaSujet = ctaContactSubject %}
+    {% elif ctaSujet %}
+    {# keep front-matter ctaSujet #}
+    {% else %}
+    {% set ctaSujet = title %}
+    {% endif %}
     {% include "partials/cta-block.njk" %}
   </div>
 </section>

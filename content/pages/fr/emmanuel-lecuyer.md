@@ -2,42 +2,30 @@
 title: Emmanuel Lécuyer
 slug: emmanuel-lecuyer
 date: 2026-04-12
-description: Entraîneur diplômé d’État, plus de 20 ans d’expérience — Arc IMPACT, Savoie (Chambéry, Lac du Bourget, La Féclaz).
+description: Fondateur d’Arc IMPACT, entraîneur d’État — 20 ans d’expérience, équipe de France 3D, stages et animations en France et à l’international proche.
 hero_image: https://domaineabbayedemaizieres.com/images/tmpl/maizieres-emmanuel-lecuyer.jpg
 translationSlug: emmanuel-lecuyer
 ---
 
 ![Emmanuel Lécuyer](https://domaineabbayedemaizieres.com/images/tmpl/maizieres-emmanuel-lecuyer.jpg)
 
-**Emmanuel Lécuyer** est le fondateur et pilier pédagogique d’**Arc IMPACT**. Installé au cœur des **Alpes**, il exerce principalement autour de **Chambéry**, du **Lac du Bourget** et sur le site de pratique de **La Féclaz** (Les Déserts, Savoie) — cadres naturels de tir en campagne et 3D.
+**Emmanuel Lécuyer** est le fondateur et le pilier pédagogique d’**Arc IMPACT**. Entraîneur **diplômé d’État**, il partage depuis plus de vingt ans une même obsession : rendre le tir à l’arc **exigeant, lisible et transmissible** — du club au plus haut niveau international.
+
+Avec son **équipe**, il se déplace **toute l’année** sur tout le territoire français et dans les **pays voisins** pour des **stages techniques**, des **séminaires** et des **animations** : La Féclaz et la Savoie restent un socle fort, mais l’essentiel du métier, c’est d’aller **là où les archers et les organisateurs** ont besoin de méthode et de repères.
 
 ## Parcours
 
-- **Tireur** depuis le début des années 1990, avec une forte expérience de la compétition.
-- **Entraîneur professionnel** (Brevet d’État d’éducateur sportif, spécialité tir à l’arc) : stages, clubs, initiation grand public — une pratique quotidienne du terrain.
-- **Équipe de France 3D (FFTA), 2003–2014** : rôles d’entraîneur, préparateur et sélectionneur, avec une **cinquantaine de titres et médailles** obtenus avec l’équipe nationale (période 2003–2014, dont championnats du monde et d’Europe).
-- **Transmission** : cours et collaborations internationales (ex. SwissArchery / Excellence Centre à Lausanne, selon vos pages publiques).
+- **Tireur** depuis le début des années 1990, ancré dans la compétition et le terrain.
+- **Entraîneur professionnel** : clubs, stages, grand public — une pratique quotidienne de la pédagogie.
+- **Équipe de France 3D (FFTA), 2003–2014** : entraînement, préparation physique et sélection, avec une **cinquantaine de titres et médailles** sur la période (dont championnats du monde et d’Europe).
+- **Transmission** : collaborations et interventions en France et à l’étranger, au service d’archers et d’équipes qui veulent progresser avec méthode.
 
 ## Une pédagogie tournée vers le parcours
 
-Emmanuel structure ses stages autour de la **performance durable** : préparation physique utile sur le terrain, organisation de la saison, tir par équipes, lecture du parcours 3D et gestion du mental en compétition. L’objectif reste constant : **« contrôler son arc plutôt que de le subir »**.
+Emmanuel structure ses accompagnements autour de la **performance durable** : préparation physique utile sur le parcours, organisation de saison, tir par équipes, lecture du **3D** et gestion du mental en compétition. La formule qui revient, simple et exigeante : **« contrôler son arc plutôt que de le subir »**.
 
-## Hors Savoie (références publiques)
+## Voix du terrain — en résumé
 
-Il a également été mis en avant comme **expert invité** sur des séjours tir à l’arc en milieu naturel (ex. séjour 3D en Bourgogne — voir fiche source archivée dans `docs/maizieres-sejour-archery-extract.md`). Ces interventions **ne remplacent pas** le socle géographique d’Arc IMPACT en **Savoie**.
+Dans un échange de fond sur le tir à l’arc et la fédération, Emmanuel insiste sur une idée forte : **moins critiquer les instances, plus s’investir sur le terrain**. Il défend la **richesse de chaque discipline**, la nécessité de **former les cadres** pour le parcours et le 3D (là où le spectacle et les championnats du monde existent déjà), et le respect de **l’expérience** autant que du diplôme — parce que la transmission repose sur des coachs qui ont vécu la compétition et les publics variés. C’est cette combinaison — **exigence, lucidité et confiance dans les équipes** — qu’il transpose aujourd’hui dans Arc IMPACT, pour chaque archer ou chaque organisateur qui franchit la porte d’un stage ou d’un événement.
 
-## Environnement — visuels libres de droits (Unsplash)
-
-![Lac et montagnes (illustration régionale Alpes / lacs)](https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80)
-
-*Photo décorative — [licence Unsplash](https://unsplash.com/license) (crédit photographe affiché sur la fiche Unsplash de l’image).*
-
-![Forêt de montagne](https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80)
-
-*Photo décorative — [licence Unsplash](https://unsplash.com/license).*
-
-> **Portrait** : URL ci-dessus hébergée par un site partenaire historique ; pour la production, **téléchargez l’image**, vérifiez les droits avec le client, puis placez-la dans `public/media/` et mettez à jour `hero_image`.
-
-## Voix du terrain (2021)
-
-Pour une transcription intégrale d’une interview vidéo (contexte fédéral), voir le fichier interne `docs/emmanuel-interview-2021.md`.
+Pour échanger sur un **stage**, un **séminaire** ou une **animation**, passez par la page **[Contact](/contact/)** : nous revenons vers vous avec des propositions concrètes.

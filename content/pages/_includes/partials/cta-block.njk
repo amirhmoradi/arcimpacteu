@@ -1,5 +1,9 @@
-{# Hrefs are site-root paths e.g. /contact/ ; localeUrl + url applied. #}
-{% set primary = (ctaPrimaryHref | default('/contact/')) | localeUrl(p) | url %}
+{# Hrefs are site-root paths e.g. /contact/ ; localeUrl + url applied. Optional ctaSujet → /contact/?sujet=… #}
+{% if ctaSujet %}
+  {% set primary = ('/contact/?sujet=' ~ (ctaSujet | encodeURIComponent)) | localeUrl(p) | url %}
+{% else %}
+  {% set primary = (ctaPrimaryHref | default('/contact/')) | localeUrl(p) | url %}
+{% endif %}
 {% set secRaw = ctaSecondaryHref | default(false) %}
 {% set sec = secRaw and (secRaw | localeUrl(p) | url) %}
 <section class="not-prose mx-auto mt-14 max-w-4xl rounded-2xl bg-primary px-6 py-10 text-center text-white lg:px-10">

@@ -61,7 +61,7 @@ Le calendrier sert à la **visibilité** (savoir quand ont lieu stages ou gros r
 
 ## 5. Calendrier — côté gestion (Sveltia, fichier JSON)
 
-Dans Sveltia, ouvrez la section **« Calendrier & événements (JSON) »** puis **« Calendrier (iframe + liens) »**. Ce fichier pilote la page Calendrier.
+Dans Sveltia, ouvrez la section **« Calendrier, événements & témoignages (JSON) »** puis **« Calendrier (iframe + liens) »**. Ce fichier pilote la page Calendrier.
 
 ### 5.1 Créer ou choisir un agenda Google
 
@@ -98,6 +98,10 @@ Pour chaque carte :
 Vérifiez les liens après publication : une faute dans le chemin mène à une erreur 404.
 
 **Rôle de la page** : mettre en avant les **temps forts** (stages, séminaires, animations) sans dupliquer tout le catalogue. Le détail reste sur les pages Stages, Séminaires, Collectivités.
+
+### 6.1 Témoignages sur l’accueil
+
+Les avis du carrousel **Ils en parlent** viennent du fichier **« Témoignages (page d’accueil) »** dans la même section JSON que le calendrier. **Processus typique** : un visiteur envoie son ressenti via la page **Contact** ; après accord (et éventuellement une reprise de texte), vous ajoutez une ligne dans la liste avec **ordre**, **nom affiché**, **citations FR / EN / IT**, **discipline par langue**, et éventuellement une **photo** (`/images/...` ou `/media/...`).
 
 ---
 
@@ -136,6 +140,7 @@ Les messages ne doivent **pas** contenir de données bancaires ; pour un devis p
 | `content/pages/fr|en|it/*.md` | Pages éditoriales (dont Événements et Calendrier : texte d’intro). |
 | `content/meta/calendar.json` | URL iframe, liens Google / ICS, intros HTML. |
 | `content/meta/featuredEvenements.json` | Cartes de la page Événements. |
+| `content/meta/testimonials.json` | Avis du carrousel sur la page d’accueil. |
 | `admin/config.yml` | Configuration de Sveltia (réservé aux personnes à l’aise avec le dépôt). |
 
 Ce guide reflète l’état du projet au moment de sa rédaction ; toute évolution technique pourra compléter ces consignes.

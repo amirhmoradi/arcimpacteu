@@ -1,12 +1,12 @@
 ---
 layout: layouts/evenements-hub.njk
-title: Eventi in evidenza
-description: Una selezione di stage, seminari e animazioni. Le schede si gestiscono in Sveltia (eventi in evidenza).
+title: In evidenza
+description: Una selezione di stage, seminari ed eventi da scoprire.
 translationSlug: evenements
 ---
 
-## Hub dedicato
+## Un hub dedicato
 
-Questa pagina **non sostituisce** le sezioni Stage, Seminari o Enti: mette in risalto **alcune proposte** emblematiche o stagionali. Ordine e testi delle schede si modificano nel pannello (**eventi in evidenza**).
+Questa pagina **non sostituisce** le sezioni Stage, Seminari o Enti: mette in evidenza **alcune proposte** particolarmente rappresentative o di stagione.
 
-Per il dettaglio completo, apri le **schede prodotto** dalla griglia o dal menu.
+Per i dettagli di ogni formato, apri la **scheda dedicata** dalla griglia o dal menu.

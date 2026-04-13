@@ -25,6 +25,10 @@ Les contenus (textes, images, vidéos) sont protégés par le droit d’auteur. 
 
 Le site statique peut être servi via **GitHub Pages** ; les messages du formulaire transitent par un service **Cloudflare Workers** et un fournisseur de messagerie transactionnelle. L’hébergement historique mentionné sur l’ancien site (OVH) peut être mis à jour selon la configuration en production.
 
+## Création du site
+
+Conception et développement du site : **Amir Moradi** — [amirmoradi.com](https://amirmoradi.com).
+
 ## Données personnelles
 
 Les données envoyées via le formulaire de contact sont utilisées uniquement pour répondre à votre demande. Pour exercer vos droits (accès, rectification, suppression), utilisez le même formulaire sur la page Contact en précisant votre demande.

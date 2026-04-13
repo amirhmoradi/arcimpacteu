@@ -35,6 +35,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData('featuredEvenements', () =>
     readMetaJson('featuredEvenements.json', { items: [] }),
   );
+  /** Published reviews (edited in CMS JSON); replaces legacy _data/testimonials.json */
+  eleventyConfig.addGlobalData('testimonials', () => {
+    const data = readMetaJson('testimonials.json', { items: [] });
+    const items = Array.isArray(data.items) ? data.items : [];
+    return items.slice().sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+  });
 
   eleventyConfig.addPassthroughCopy('assets');
   eleventyConfig.addPassthroughCopy('admin');
@@ -68,10 +74,12 @@ module.exports = function (eleventyConfig) {
     return src.startsWith('/') ? src : `/${src}`;
   });
 
+  eleventyConfig.addFilter('encodeURIComponent', (s) => encodeURIComponent(String(s ?? '')));
+
   return {
     pathPrefix: pathPrefix(),
     templateFormats: ['md', 'njk', 'html'],
-    markdownTemplateEngine: false,
+    markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     dir: {
       input: 'content/pages',

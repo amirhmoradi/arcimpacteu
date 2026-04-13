@@ -4,6 +4,8 @@ description: Multi-activity platforms, cohesion, archery and multi-shooting chal
 translationSlug: seminaires
 ---
 
+{% set p = localePathPrefix | default('') %}
+
 # Corporate seminars & team events
 
 For **20+ years**, Arc IMPACT has designed **hands-on experiences** for **works councils**, **event agencies** and **HR teams**. We arrive with **certified equipment**, proven logistics and **state-qualified** facilitators—so your seminar stays **safe**, **easy to read on an agenda**, and **memorable**.
@@ -31,8 +33,8 @@ For **20+ years**, Arc IMPACT has designed **hands-on experiences** for **works 
 From a **half-day** to **multi-day** programmes, indoors or outdoors. We scale the setup to your **headcount**, **venue** (client site, estate, conference centre) and **intent** (onboarding, project kick-off, team recognition).
 
 <p class="cta-row not-prose">
-  <a href="../contact/" class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-accent-light">Creative brief &amp; quote within 48 h</a>
-  <a href="../contact/" class="inline-flex items-center justify-center rounded-lg border-2 border-primary/30 px-6 py-3 text-sm font-semibold text-primary no-underline hover:border-primary">Talk to a project lead</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].seminairesCtaSujet1 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-accent-light">Creative brief &amp; quote within 48 h</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].seminairesCtaSujet2 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary/30 px-6 py-3 text-sm font-semibold text-primary no-underline hover:border-primary">Talk to a project lead</a>
 </p>
 
 ## Why teams choose us
@@ -50,5 +52,5 @@ From a **half-day** to **multi-day** programmes, indoors or outdoors. We scale t
 <p class="not-prose rounded-2xl bg-primary px-6 py-8 text-center text-white">
   <strong class="font-serif text-xl text-accent">Need a seminar that people still talk about on Monday?</strong><br />
   <span class="mt-2 block text-sm text-white/85">Share dates, city, headcount and the vibe you want—we’ll return with a workshop outline and a budget range.</span><br />
-  <a href="../contact/" class="mt-6 inline-flex rounded-lg bg-accent px-8 py-3 font-semibold text-primary no-underline hover:bg-accent-light">Start with the contact form</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].seminairesCtaSujetBanner | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg bg-accent px-8 py-3 font-semibold text-primary no-underline hover:bg-accent-light">Start with the contact form</a>
 </p>

@@ -36,8 +36,8 @@ collections:
       - { label: Body, name: body, widget: markdown, i18n: true }
 
   - name: site_meta
-    label: Calendrier & événements (JSON)
-    description: Paramètres lus par le site au build — calendrier public et cartes « Événements ».
+    label: Calendrier, événements & témoignages (JSON)
+    description: Données publiques du site (calendrier, cartes « Événements », avis affichés sur l’accueil).
     files:
       - name: calendar
         label: Calendrier (iframe + liens)
@@ -105,6 +105,41 @@ collections:
                   - { label: FR, name: fr, widget: string }
                   - { label: EN, name: en, widget: string }
                   - { label: IT, name: it, widget: string }
+      - name: testimonials
+        label: Témoignages (page d’accueil)
+        file: content/meta/testimonials.json
+        format: json
+        fields:
+          - label: Avis publiés (ordre croissant)
+            name: items
+            widget: list
+            summary: "{{fields.who}} — ordre {{fields.order}}"
+            fields:
+              - { label: Ordre, name: order, widget: number, value_type: int, default: 1 }
+              - {
+                  label: Photo (optionnel, /images/... ou /media/...),
+                  name: image,
+                  widget: string,
+                  required: false,
+                  hint: "Portrait carré recommandé ; sinon une vignette décorative s’affiche.",
+                }
+              - { label: Nom ou pseudo affiché, name: who, widget: string }
+              - label: Discipline / arc (par langue)
+                name: bow
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: FR, name: fr, widget: string }
+                  - { label: EN, name: en, widget: string }
+                  - { label: IT, name: it, widget: string }
+              - label: Citation (par langue)
+                name: quote
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: FR, name: fr, widget: text }
+                  - { label: EN, name: en, widget: text }
+                  - { label: IT, name: it, widget: text }
       - name: home_posters
         label: Affiches page d’accueil (carrousel)
         file: _data/posters.json
