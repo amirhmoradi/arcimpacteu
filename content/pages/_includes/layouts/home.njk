@@ -5,7 +5,7 @@ layout: layouts/base.njk
 {% set p = localePathPrefix | default('') %}
 <section class="hero relative flex min-h-[92vh] items-end overflow-hidden bg-primary-dark pb-24 pt-32 text-white md:items-center md:pb-32">
   <div class="absolute inset-0 z-0">
-    <img src="{{ '/images/arcimpact/headers/DSC_0083_v.jpg' | arcImage }}" alt="" class="h-full w-full object-cover opacity-50" loading="eager" />
+    <img src="{{ '/images/arcimpact/headers/DSC_0083_v.jpg' | arcImage | url }}" alt="" class="h-full w-full object-cover opacity-50" loading="eager" />
     <div class="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/70 to-primary/40"></div>
   </div>
   <div class="relative z-10 mx-auto w-full max-w-7xl px-4 lg:px-8">
@@ -23,7 +23,7 @@ layout: layouts/base.njk
 <section id="intro" class="py-16 lg:py-24">
   <div class="mx-auto grid max-w-7xl gap-12 px-4 lg:grid-cols-2 lg:items-center lg:px-8">
     <div data-animate="fade-up" class="transition duration-700">
-      <img src="{{ '/images/arcimpact/headers/DSC_0169_v.jpg' | arcImage }}" alt="{{ t.intro.title }}" class="rounded-2xl shadow-xl" loading="lazy" width="640" height="420" />
+      <img src="{{ '/images/arcimpact/headers/DSC_0169_v.jpg' | arcImage | url }}" alt="{{ t.intro.title }}" class="rounded-2xl shadow-xl" loading="lazy" width="640" height="420" />
     </div>
     <div data-animate="fade-up" class="transition delay-75 duration-700">
       <h2 class="mb-4 font-serif text-3xl font-semibold text-primary md:text-4xl">{{ t.intro.title }}</h2>
@@ -66,7 +66,7 @@ layout: layouts/base.njk
       {% for item in services %}
       {% set s = item[lang] %}
       <a href="{{ '/stages/' | localeUrl(p) | url }}#{{ item.id }}" class="group block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-        <img src="{{ item.img | arcImage }}" alt="" class="h-40 w-full object-cover transition group-hover:scale-105" loading="lazy" width="400" height="160" />
+        <img src="{{ item.img | arcImage | url }}" alt="" class="h-40 w-full object-cover transition group-hover:scale-105" loading="lazy" width="400" height="160" />
         <div class="p-5">
           <h3 class="font-semibold text-primary group-hover:text-primary-light">{{ s.title }}</h3>
           <p class="mt-2 text-sm text-gray-600">{{ s.desc }}</p>

@@ -10,7 +10,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{% if title %}{{ title }} — {% endif %}{{ brand.name }}" />
   <meta property="og:description" content="{{ description | default(brand.name) | escape }}" />
-  <meta property="og:image" content="{{ brand.ogImage }}" />
+  <meta property="og:image" content="https://arcimpact.eu{{ brand.ogImage }}" />
   <meta name="twitter:card" content="summary_large_image" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>

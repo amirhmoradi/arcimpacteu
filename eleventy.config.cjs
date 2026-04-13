@@ -5,6 +5,13 @@ function pathPrefix() {
   return '/';
 }
 
+/** Strip slashes: `/repo-name/` → `repo-name` (for joining with root-relative paths). */
+function pathPrefixDir() {
+  const p = pathPrefix();
+  if (!p || p === '/') return '';
+  return p.replace(/^\/+|\/+$/g, '');
+}
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData('metadata', () => ({
     url: (process.env.SITE_URL || 'https://arcimpact.eu').replace(/\/$/, ''),
@@ -12,7 +19,20 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy('assets');
   eleventyConfig.addPassthroughCopy('admin');
-  eleventyConfig.addPassthroughCopy('public');
+  eleventyConfig.addPassthroughCopy({ 'public/images': 'images' });
+  eleventyConfig.addPassthroughCopy({ 'public/media': 'media' });
+
+  /** Markdown emits src="/images/...". Add PATH_PREFIX only when not already prefixed (Nunjucks | url handles templates). */
+  eleventyConfig.addTransform('prefix-root-assets', function (html, outputPath) {
+    if (!outputPath || !outputPath.endsWith('.html')) return html;
+    const seg = pathPrefixDir();
+    if (!seg) return html;
+    const lead = `/${seg}`;
+    return html.replace(/(\ssrc=")(\/images\/[^"]+)(")/gi, (_, a, path, z) => {
+      if (path.startsWith(lead + '/') || path.startsWith(lead + '"')) return _;
+      return `${a}${lead}${path}${z}`;
+    });
+  });
 
   eleventyConfig.addFilter('localeUrl', function (href, localePrefix) {
     const h = href.startsWith('/') ? href : `/${href}`;
@@ -22,10 +42,11 @@ module.exports = function (eleventyConfig) {
     return `${p}${h}`;
   });
 
+  /** Local images under /images (copied from public/images). Pass-through URLs use | url for PATH_PREFIX. */
   eleventyConfig.addFilter('arcImage', function (src) {
     if (!src) return '';
     if (src.startsWith('http')) return src;
-    return `https://arcimpact.eu${src.startsWith('/') ? '' : '/'}${src}`;
+    return src.startsWith('/') ? src : `/${src}`;
   });
 
   return {

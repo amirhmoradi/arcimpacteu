@@ -3,6 +3,6 @@
   "domain": "https://arcimpact.eu",
   "contactWorkerUrl": "https://contact.arcimpact.eu/api/contact",
   "turnstileSiteKey": "1x00000000000000000000AA",
-  "logoUrl": "https://arcimpact.eu/images/arcimpact/logo-arcimpact-retina.png",
-  "ogImage": "https://arcimpact.eu/images/arcimpact/headers/DSC_0083_v.jpg"
+  "logoUrl": "/images/arcimpact/logo-arcimpact-retina.png",
+  "ogImage": "/images/arcimpact/headers/DSC_0083_v.jpg"
 }
