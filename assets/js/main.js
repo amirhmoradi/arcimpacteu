@@ -37,8 +37,12 @@
     function toggle(open) {
       const isOpen = typeof open === 'boolean' ? open : !mobileMenu.classList.contains('active');
       hamburger.classList.toggle('active', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       mobileMenu.classList.toggle('active', isOpen);
-      if (overlay) overlay.classList.toggle('active', isOpen);
+      if (overlay) {
+        overlay.classList.toggle('active', isOpen);
+        overlay.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      }
       document.body.classList.toggle('menu-open', isOpen);
     }
 
@@ -55,21 +59,27 @@
   function initStickyHeader() {
     var header = qs('.site-header');
     if (!header) return;
-    var lastY = 0;
+
+    var scrolled = false;
     var ticking = false;
+    var SCROLL_ON = 64;
+    var SCROLL_OFF = 16;
+
+    function applyScrollState(y) {
+      var next = scrolled;
+      if (!scrolled && y > SCROLL_ON) next = true;
+      if (scrolled && y < SCROLL_OFF) next = false;
+      if (next !== scrolled) {
+        scrolled = next;
+        header.classList.toggle('scrolled', scrolled);
+      }
+    }
 
     function onScroll() {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(function () {
-        var y = window.scrollY;
-        header.classList.toggle('scrolled', y > 50);
-        if (y > 300) {
-          header.classList.toggle('hidden-up', y > lastY && y - lastY > 5);
-        } else {
-          header.classList.remove('hidden-up');
-        }
-        lastY = y;
+        applyScrollState(window.scrollY || window.pageYOffset || 0);
         ticking = false;
       });
     }
