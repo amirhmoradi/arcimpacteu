@@ -2,12 +2,10 @@
 {% set p = localePathPrefix | default('') %}
 <header class="site-header">
   <div class="site-header-inner mx-auto flex h-full max-w-7xl items-center justify-between px-4 lg:px-8">
-    <a href="{{ '/' | localeUrl(p) | url }}" class="site-header-brand flex items-center gap-3 no-underline">
-      <img src="{{ brand.logoUrl | url }}" alt="{{ brand.name }}" width="140" height="48" class="header-logo h-10 w-auto" loading="eager" />
-      <span class="hidden font-semibold tracking-tight text-primary sm:inline">{{ brand.name }}</span>
+    <a href="{{ '/' | localeUrl(p) | url }}" class="site-header-brand flex items-center no-underline" aria-label="{{ t.navAriaLogo }}">
+      <img src="{{ brand.logoUrl | url }}" alt="" width="140" height="48" class="header-logo h-10 w-auto" loading="eager" />
     </a>
     <nav class="hidden items-center gap-6 md:flex" aria-label="Main">
-      <a class="nav-link text-sm font-medium" href="{{ '/' | localeUrl(p) | url }}">{{ t.nav.home }}</a>
       <a class="nav-link text-sm font-medium" href="{{ '/emmanuel-lecuyer/' | localeUrl(p) | url }}">{{ t.nav.emmanuel }}</a>
       <a class="nav-link text-sm font-medium" href="{{ '/stages/' | localeUrl(p) | url }}">{{ t.nav.stages }}</a>
       <a class="nav-link text-sm font-medium" href="{{ '/seminaires/' | localeUrl(p) | url }}">{{ t.nav.seminaires }}</a>
@@ -32,7 +30,6 @@
   <div class="mobile-menu-overlay" aria-hidden="true"></div>
   <div id="mobile-menu" class="mobile-menu">
     <nav class="mobile-menu-nav flex flex-col gap-1 px-6 py-4" aria-label="Mobile">
-      <a class="mobile-menu-link" href="{{ '/' | localeUrl(p) | url }}">{{ t.nav.home }}</a>
       <a class="mobile-menu-link" href="{{ '/emmanuel-lecuyer/' | localeUrl(p) | url }}">{{ t.nav.emmanuel }}</a>
       <a class="mobile-menu-link" href="{{ '/stages/' | localeUrl(p) | url }}">{{ t.nav.stages }}</a>
       <a class="mobile-menu-link" href="{{ '/seminaires/' | localeUrl(p) | url }}">{{ t.nav.seminaires }}</a>

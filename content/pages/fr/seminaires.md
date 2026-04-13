@@ -31,8 +31,8 @@ Depuis plus de **vingt ans**, Arc IMPACT conçoit des **expériences vivantes** 
 De la **demi-journée** à **plusieurs jours**, en intérieur comme en extérieur. Nous dimensionnons le dispositif selon vos **effectifs**, vos **lieux** (site client, domaine, centre de conférences) et vos **objectifs** (intégration, lancement de projet, remerciement d’équipe).
 
 <p class="cta-row not-prose">
-  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].seminairesCtaSujet1 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-accent-light">Brief créatif &amp; devis sous 48 h</a>
-  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].seminairesCtaSujet2 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary/30 px-6 py-3 text-sm font-semibold text-primary no-underline hover:border-primary">Parler à un chargé de projet</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].seminairesCtaSujet1 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white no-underline shadow transition hover:bg-primary-light">Brief créatif &amp; devis sous 48 h</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].seminairesCtaSujet2 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-6 py-3 text-sm font-semibold text-primary no-underline transition hover:bg-gray-50">Parler à un chargé de projet</a>
 </p>
 
 ## Pourquoi nous confier votre événement
@@ -49,6 +49,6 @@ De la **demi-journée** à **plusieurs jours**, en intérieur comme en extérieu
 
 <p class="not-prose rounded-2xl bg-primary px-6 py-8 text-center text-white">
   <strong class="font-serif text-xl text-accent">Un séminaire qui doit marquer les esprits ?</strong><br />
-  <span class="mt-2 block text-sm text-white/85">Décrivez vos dates, ville, nombre de participants et ambiance recherchée : nous vous proposons un canevas d’ateliers et une fourchette budgétaire.</span><br />
-  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].seminairesCtaSujetBanner | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg bg-accent px-8 py-3 font-semibold text-primary no-underline hover:bg-accent-light">Démarrer via le formulaire de contact</a>
+  <span class="mt-2 block text-sm text-white/90">Décrivez vos dates, ville, nombre de participants et ambiance recherchée : nous vous proposons un canevas d’ateliers et une fourchette budgétaire.</span><br />
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].seminairesCtaSujetBanner | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg bg-white px-8 py-3 font-semibold text-primary no-underline shadow transition hover:bg-gray-100">Démarrer via le formulaire de contact</a>
 </p>

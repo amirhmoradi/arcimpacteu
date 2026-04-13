@@ -34,14 +34,14 @@ We design **pedagogical runs** for **schools**, **holiday centres**, **town hall
 - **Local work** around **Chambéry – Lake Bourget** / **La Féclaz**, or **travel** depending on the calendar.
 
 <p class="cta-row not-prose">
-  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujet1 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-accent-light">Request a tailored proposal</a>
-  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujet2 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary/30 px-6 py-3 text-sm font-semibold text-primary no-underline hover:border-primary">Check availability</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujet1 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white no-underline shadow transition hover:bg-primary-light">Request a tailored proposal</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujet2 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-6 py-3 text-sm font-semibold text-primary no-underline transition hover:bg-gray-50">Check availability</a>
 </p>
 
 ---
 
 <p class="not-prose rounded-2xl bg-primary px-6 py-8 text-center text-white">
   <strong class="font-serif text-xl text-accent">Planning a festival or summer programme?</strong><br />
-  <span class="mt-2 block text-sm text-white/85">Tell us age range, desired duration and available surface—we’ll send a minute-by-minute run of show.</span><br />
-  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujetBanner | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg bg-accent px-8 py-3 font-semibold text-primary no-underline hover:bg-accent-light">Use the contact form</a>
+  <span class="mt-2 block text-sm text-white/90">Tell us age range, desired duration and available surface—we’ll send a minute-by-minute run of show.</span><br />
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujetBanner | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg bg-white px-8 py-3 font-semibold text-primary no-underline shadow transition hover:bg-gray-100">Use the contact form</a>
 </p>

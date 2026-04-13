@@ -96,7 +96,7 @@ img {
 
 .nav-link {
   position: relative;
-  color: rgba(27, 67, 50, 0.88);
+  color: var(--color-primary);
   transition: color var(--transition-fast);
 }
 
@@ -243,7 +243,7 @@ img {
 }
 
 .header-lang-link {
-  color: rgba(27, 67, 50, 0.65);
+  color: rgba(27, 67, 50, 0.82);
   text-decoration: none;
   transition: color 0.15s ease, background 0.15s ease;
 }
@@ -258,7 +258,7 @@ img {
 }
 
 .mobile-menu .header-lang-link {
-  color: rgba(27, 67, 50, 0.75);
+  color: rgba(27, 67, 50, 0.88);
   border: 1px solid rgba(15, 42, 30, 0.1);
 }
 

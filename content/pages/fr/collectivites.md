@@ -34,14 +34,14 @@ Nous concevons des **parcours pédagogiques** pour **écoles**, **centres de loi
 - **Possibilité d’intervention locale** en Savoie / région **Chambéry – Lac du Bourget** ou **déplacement** selon calendrier.
 
 <p class="cta-row not-prose">
-  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujet1 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-accent-light">Demander une proposition sur-mesure</a>
-  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujet2 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary/30 px-6 py-3 text-sm font-semibold text-primary no-underline hover:border-primary">Vérifier les dates disponibles</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujet1 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white no-underline shadow transition hover:bg-primary-light">Demander une proposition sur-mesure</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujet2 | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-6 py-3 text-sm font-semibold text-primary no-underline transition hover:bg-gray-50">Vérifier les dates disponibles</a>
 </p>
 
 ---
 
 <p class="not-prose rounded-2xl bg-primary px-6 py-8 text-center text-white">
   <strong class="font-serif text-xl text-accent">Une fête ou un centre aéré à programmer ?</strong><br />
-  <span class="mt-2 block text-sm text-white/85">Indiquez tranche d’âge, durée souhaitée et surface disponible : nous vous proposons un déroulé minute par minute.</span><br />
-  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujetBanner | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg bg-accent px-8 py-3 font-semibold text-primary no-underline hover:bg-accent-light">Écrire via le formulaire contact</a>
+  <span class="mt-2 block text-sm text-white/90">Indiquez tranche d’âge, durée souhaitée et surface disponible : nous vous proposons un déroulé minute par minute.</span><br />
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].collectivitesCtaSujetBanner | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg bg-white px-8 py-3 font-semibold text-primary no-underline shadow transition hover:bg-gray-100">Écrire via le formulaire contact</a>
 </p>

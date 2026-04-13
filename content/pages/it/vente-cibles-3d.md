@@ -29,8 +29,8 @@ State equipaggiando un **club**, un **percorso di allenamento** o una **gara 3D*
   <p class="m-0 font-serif text-xl font-semibold text-primary">Volete quantificare il progetto?</p>
   <p class="mt-3 text-sm text-gray-700 md:text-base">Un unico interlocutore dal primo contatto alla logistica — nessun vincolo finché non accettate il preventivo.</p>
   <p class="cta-row mt-6 not-prose">
-    <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].targets3dContactSujet | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-accent-light">Richiedi un preventivo</a>
-    <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].targets3dContactSujetAdvice | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary/30 px-6 py-3 text-sm font-semibold text-primary no-underline hover:border-primary">Consulenza percorso / gara</a>
+    <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].targets3dContactSujet | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white no-underline shadow transition hover:bg-primary-light">Richiedi un preventivo</a>
+    <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].targets3dContactSujetAdvice | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-6 py-3 text-sm font-semibold text-primary no-underline transition hover:bg-gray-50">Consulenza percorso / gara</a>
   </p>
 </div>
 
@@ -38,6 +38,6 @@ State equipaggiando un **club**, un **percorso di allenamento** o una **gara 3D*
 
 <p class="not-prose mt-10 rounded-2xl bg-primary px-6 py-8 text-center text-white">
   <strong class="font-serif text-xl text-accent">Non sapete ancora quali modelli scegliere?</strong><br />
-  <span class="mt-2 block text-sm text-white/85">Indicate disciplina, spazio disponibile e numero previsto di tiratori: proponiamo un mix realistico e durevole.</span><br />
-  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].targets3dContactSujet | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg bg-accent px-8 py-3 font-semibold text-primary no-underline hover:bg-accent-light">Scrivici dal modulo contatti</a>
+  <span class="mt-2 block text-sm text-white/90">Indicate disciplina, spazio disponibile e numero previsto di tiratori: proponiamo un mix realistico e durevole.</span><br />
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].targets3dContactSujet | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg bg-white px-8 py-3 font-semibold text-primary no-underline shadow transition hover:bg-gray-100">Scrivici dal modulo contatti</a>
 </p>

@@ -32,8 +32,8 @@ The **coaching hour starts at the agreed time**, **after your personal warm-up**
   <p class="m-0 font-serif text-xl font-semibold text-primary">Book your slot</p>
   <p class="mt-3 text-sm text-gray-700 md:text-base">Tell us your bow style, level, and the priority you want to work on — we suggest a time slot and how we connect (video call).</p>
   <p class="cta-row mt-6 not-prose">
-    <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].videoTrainingContactSujet | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-accent-light">Solo session — contact us</a>
-    <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].videoTrainingContactSujetGroup | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary/30 px-6 py-3 text-sm font-semibold text-primary no-underline hover:border-primary">Small group 2–3 — contact us</a>
+    <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].videoTrainingContactSujet | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white no-underline shadow transition hover:bg-primary-light">Solo session — contact us</a>
+    <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].videoTrainingContactSujetGroup | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-6 py-3 text-sm font-semibold text-primary no-underline transition hover:bg-gray-50">Small group 2–3 — contact us</a>
   </p>
 </div>
 
@@ -49,7 +49,7 @@ We can set up **club-funded video coaching** so archers **without regular local 
 
 <p class="not-prose mt-12 rounded-2xl bg-primary px-6 py-8 text-center text-white">
   <strong class="font-serif text-xl text-accent">On-site camps at La Féclaz and on tour</strong><br />
-  <span class="mt-2 block text-sm text-white/85">Combine remote coaching with a residential camp — the posters above link to each camp page.</span><br />
-  <a href="{{ '/stages/' | localeUrl(p) | url }}" class="mt-6 mr-2 inline-flex rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline hover:bg-accent-light">Browse all camps</a>
-  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].videoTrainingContactSujet | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg border-2 border-white/50 px-6 py-3 text-sm font-semibold text-white no-underline hover:border-accent hover:text-accent">Ask about video coaching</a>
+  <span class="mt-2 block text-sm text-white/90">Combine remote coaching with a residential camp — the posters above link to each camp page.</span><br />
+  <a href="{{ '/stages/' | localeUrl(p) | url }}" class="mt-6 mr-2 inline-flex rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-gray-100">Browse all camps</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].videoTrainingContactSujet | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg border-2 border-white/85 px-6 py-3 text-sm font-semibold text-white no-underline transition hover:bg-white/15">Ask about video coaching</a>
 </p>

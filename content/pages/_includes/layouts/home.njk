@@ -14,8 +14,8 @@ layout: layouts/base.njk
     <h1 class="mb-6 max-w-3xl font-serif text-4xl font-semibold leading-tight md:text-5xl lg:text-6xl">{{ t.hero.title }}</h1>
     <p class="mb-10 max-w-2xl text-lg text-white/90 md:text-xl">{{ t.hero.subtitle }}</p>
     <div class="flex flex-wrap gap-4">
-      <a href="{{ '/stages/' | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded bg-accent px-6 py-3 text-sm font-semibold text-primary shadow transition hover:bg-accent-light">{{ t.hero.ctaStages }}</a>
-      <a href="{{ contactHomeHref }}" class="inline-flex items-center justify-center rounded border-2 border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:border-accent hover:text-accent">{{ t.hero.ctaContact }}</a>
+      <a href="{{ '/stages/' | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded bg-white px-6 py-3 text-sm font-semibold text-primary shadow transition hover:bg-gray-100">{{ t.hero.ctaStages }}</a>
+      <a href="{{ contactHomeHref }}" class="inline-flex items-center justify-center rounded border-2 border-white/70 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10">{{ t.hero.ctaContact }}</a>
     </div>
   </div>
   <div class="scroll-indicator absolute bottom-8 left-1/2 hidden -translate-x-1/2 md:block" aria-hidden="true"></div>
@@ -139,5 +139,5 @@ layout: layouts/base.njk
 
 <section class="bg-primary py-14 text-center text-white">
   <h2 class="mb-6 font-serif text-2xl font-semibold md:text-3xl">{{ t.ctaBand }}</h2>
-  <a href="{{ contactHomeHref }}" class="inline-flex rounded bg-accent px-8 py-3 font-semibold text-primary hover:bg-accent-light">{{ t.ctaBandBtn }}</a>
+  <a href="{{ contactHomeHref }}" class="inline-flex rounded bg-white px-8 py-3 font-semibold text-primary shadow transition hover:bg-gray-100">{{ t.ctaBandBtn }}</a>
 </section>

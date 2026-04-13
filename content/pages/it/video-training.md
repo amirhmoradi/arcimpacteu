@@ -32,8 +32,8 @@ L’**ora di lezione inizia all’orario concordato**, **dopo il tuo riscaldamen
   <p class="m-0 font-serif text-xl font-semibold text-primary">Prenota il tuo slot</p>
   <p class="mt-3 text-sm text-gray-700 md:text-base">Indica disciplina, livello e priorità su cui vuoi lavorare: ti proponiamo orario e modalità di collegamento (videocall).</p>
   <p class="cta-row mt-6 not-prose">
-    <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].videoTrainingContactSujet | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-accent-light">Sessione individuale — scrivici</a>
-    <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].videoTrainingContactSujetGroup | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary/30 px-6 py-3 text-sm font-semibold text-primary no-underline hover:border-primary">Piccolo gruppo 2–3 — scrivici</a>
+    <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].videoTrainingContactSujet | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white no-underline shadow transition hover:bg-primary-light">Sessione individuale — scrivici</a>
+    <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].videoTrainingContactSujetGroup | encodeURIComponent)) | localeUrl(p) | url }}" class="inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-6 py-3 text-sm font-semibold text-primary no-underline transition hover:bg-gray-50">Piccolo gruppo 2–3 — scrivici</a>
   </p>
 </div>
 
@@ -49,7 +49,7 @@ Possiamo impostare un **sistema in cui la società sostiene** il coaching video 
 
 <p class="not-prose mt-12 rounded-2xl bg-primary px-6 py-8 text-center text-white">
   <strong class="font-serif text-xl text-accent">Stage in presenza a La Féclaz e in trasferta</strong><br />
-  <span class="mt-2 block text-sm text-white/85">Combina coaching video e stage residenziale — le locandine sopra portano alle schede dettagliate.</span><br />
-  <a href="{{ '/stages/' | localeUrl(p) | url }}" class="mt-6 mr-2 inline-flex rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary no-underline hover:bg-accent-light">Tutti gli stage</a>
-  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].videoTrainingContactSujet | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg border-2 border-white/50 px-6 py-3 text-sm font-semibold text-white no-underline hover:border-accent hover:text-accent">Domanda sul coaching video</a>
+  <span class="mt-2 block text-sm text-white/90">Combina coaching video e stage residenziale — le locandine sopra portano alle schede dettagliate.</span><br />
+  <a href="{{ '/stages/' | localeUrl(p) | url }}" class="mt-6 mr-2 inline-flex rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary no-underline shadow transition hover:bg-gray-100">Tutti gli stage</a>
+  <a href="{{ ('/contact/?sujet=' ~ (i18n[lang].videoTrainingContactSujet | encodeURIComponent)) | localeUrl(p) | url }}" class="mt-6 inline-flex rounded-lg border-2 border-white/85 px-6 py-3 text-sm font-semibold text-white no-underline transition hover:bg-white/15">Domanda sul coaching video</a>
 </p>

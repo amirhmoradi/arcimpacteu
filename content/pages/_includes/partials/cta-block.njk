@@ -8,11 +8,11 @@
 {% set sec = secRaw and (secRaw | localeUrl(p) | url) %}
 <section class="not-prose mx-auto mt-14 max-w-4xl rounded-2xl bg-primary px-6 py-10 text-center text-white lg:px-10">
   {% if ctaTitle %}<h2 class="font-serif text-2xl font-semibold text-accent md:text-3xl">{{ ctaTitle }}</h2>{% endif %}
-  {% if ctaLead %}<p class="mx-auto mt-3 max-w-2xl text-sm text-white/85 md:text-base">{{ ctaLead }}</p>{% endif %}
+  {% if ctaLead %}<p class="mx-auto mt-3 max-w-2xl text-sm text-white/90 md:text-base">{{ ctaLead }}</p>{% endif %}
   <div class="mt-8 flex flex-wrap justify-center gap-4">
-    <a href="{{ primary }}" class="inline-flex rounded-lg bg-accent px-8 py-3 font-semibold text-primary no-underline transition hover:bg-accent-light">{{ ctaPrimaryLabel | default(i18n[lang].ctaBlockPrimary) }}</a>
+    <a href="{{ primary }}" class="inline-flex rounded-lg bg-white px-8 py-3 font-semibold text-primary no-underline shadow transition hover:bg-gray-100">{{ ctaPrimaryLabel | default(i18n[lang].ctaBlockPrimary) }}</a>
     {% if sec and ctaSecondaryLabel %}
-    <a href="{{ sec }}" class="inline-flex rounded-lg border-2 border-white/40 px-8 py-3 font-semibold text-white no-underline transition hover:border-accent hover:text-accent">{{ ctaSecondaryLabel }}</a>
+    <a href="{{ sec }}" class="inline-flex rounded-lg border-2 border-white/80 px-8 py-3 font-semibold text-white no-underline transition hover:bg-white/15">{{ ctaSecondaryLabel }}</a>
     {% endif %}
   </div>
 </section>
