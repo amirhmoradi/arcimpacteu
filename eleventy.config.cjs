@@ -42,6 +42,15 @@ module.exports = function (eleventyConfig) {
     return items.slice().sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
   });
 
+  /** Optional raw HTML / scripts from CMS (tracking pixels, GTM, etc.) — trusted editors only */
+  eleventyConfig.addGlobalData('siteInject', () =>
+    readMetaJson('siteInject.json', {
+      headExtraHtml: '',
+      afterBodyOpenHtml: '',
+      beforeBodyCloseHtml: '',
+    }),
+  );
+
   eleventyConfig.addPassthroughCopy('assets');
   eleventyConfig.addPassthroughCopy('admin');
   eleventyConfig.addPassthroughCopy({ 'public/images': 'images' });

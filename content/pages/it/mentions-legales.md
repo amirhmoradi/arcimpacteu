@@ -25,7 +25,7 @@ Il sito statico può essere pubblicato su **GitHub Pages**; il modulo contatti u
 
 ## Realizzazione del sito
 
-Progettazione e sviluppo del sito: **Amir Moradi** — [amirmoradi.com](https://amirmoradi.com).
+Progettazione e sviluppo del sito: **Amir Moradi** — [amirmoradi.com](https://amirmoradi.com?ref=arcimpact_legal).
 
 ## Dati personali
 

@@ -25,7 +25,7 @@ The static site may be served on **GitHub Pages**; contact form submissions are 
 
 ## Website design & development
 
-Site design and implementation: **Amir Moradi** — [amirmoradi.com](https://amirmoradi.com).
+Site design and implementation: **Amir Moradi** — [amirmoradi.com](https://amirmoradi.com/?ref=arcimpact_legal).
 
 ## Personal data
 

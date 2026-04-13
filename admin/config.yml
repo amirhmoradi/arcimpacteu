@@ -187,6 +187,32 @@ collections:
     label: Calendrier, événements, témoignages & affiches
     description: JSON éditoriaux sous content/meta et _data/posters.json.
     files:
+      - name: site_inject
+        label: Scripts & pixels (toutes les pages)
+        file: content/meta/siteInject.json
+        format: json
+        fields:
+          - {
+              label: Fin du <head> (HTML brut),
+              name: headExtraHtml,
+              widget: text,
+              required: false,
+              hint: "Balises <script>, <link>, meta verification, GTM <head>, etc. — réservé aux comptes de confiance.",
+            }
+          - {
+              label: Juste après <body> (HTML brut),
+              name: afterBodyOpenHtml,
+              widget: text,
+              required: false,
+              hint: "Typiquement GTM noscript ou pixels 1×1 en premier dans le corps.",
+            }
+          - {
+              label: Avant </body> (HTML brut),
+              name: beforeBodyCloseHtml,
+              widget: text,
+              required: false,
+              hint: "Scripts différés, pixels de fin de page, etc.",
+            }
       - name: calendar
         label: Calendrier (iframe + liens)
         file: content/meta/calendar.json

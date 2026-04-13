@@ -16,7 +16,7 @@ Official references: [Getting started](https://sveltiacms.app/en/docs/start), [G
 | `admin/config.yml` | Backend (`github`), `media_folder`, and **collections** (see §5). |
 | `content/pages/{fr,en,it}/` | Markdown per locale, including **`stages/`**, **`seminaires/`**, **`collectivites/`** (nested paths are listed in Sveltia). |
 | `content/pages/404.md`, `robots.njk`, `sitemap.njk`, `legacy-redirect.njk` | Singleton templates under **Fichiers uniques** in the CMS. |
-| `content/meta/*.json` | Calendar, featured events, testimonials (structured forms in the CMS). |
+| `content/meta/*.json` | Calendar, featured events, testimonials, **siteInject** (optional HTML in head / body) — structured forms in the CMS. |
 | `_data/*.json` | Global data: `brand.json`, `posters.json`, `i18n.json`, `services.json`, etc. — see §5. |
 | `public/images/` | Imagery du site + **médiathèque Sveltia** (`media_folder` → URLs `/images/...`). |
 | `public/media/` | Optional legacy path for **`/media/...`** links; not the CMS media library root anymore. |
@@ -97,7 +97,7 @@ There is **no** single global `i18n` block on collections anymore: each language
 |------------|----------------|
 | **Pages (français / English / italiano)** | All `*.md` under `content/pages/fr`, `…/en`, `…/it` (including subfolders). Shared fields cover `title`, `description`, `translationSlug`, `layout`, `hero_image` / `heroImage`, CTA fields, and Markdown `body` (Nunjucks shortcodes in the body are allowed where the site already uses them). |
 | **Fichiers uniques** | `404.md`, `robots.njk`, `sitemap.njk`, `legacy-redirect.njk`. |
-| **Calendrier, événements…** | `content/meta/calendar.json`, `featuredEvenements.json`, `testimonials.json`, `_data/posters.json`. |
+| **Calendrier, événements…** | `content/meta/calendar.json`, `featuredEvenements.json`, `testimonials.json`, `siteInject.json`, `_data/posters.json`. |
 | **Données globales (_data)** | `brand.json` (formulaire), listes structurées pour `services.json` (`items`), `palmares.json` (`rows`), `legacyRedirects.json` (`redirects`), texte brut pour `i18n.json` et `naturfoamGallery.json` (JSON à valider après édition). |
 
 **Translations:** keep the **same `translationSlug`** (and matching filenames where the site expects them) across `fr`, `en`, and `it` files so language switching and hreflang stay consistent.
@@ -105,6 +105,8 @@ There is **no** single global `i18n` block on collections anymore: each language
 **Home page copy** lives mainly in **`_data/i18n.json`** (hero, nav labels, form strings, etc.), not in `home.md` (those files are minimal placeholders for Eleventy).
 
 **Layout templates** (`content/pages/_includes/`) are normal repo files; they are not exposed in the CMS by default. Change them in Git or extend `admin/config.yml` if you need them in the UI.
+
+**Tracking / third-party scripts:** edit **Scripts & pixels (toutes les pages)** (`content/meta/siteInject.json`). Content is inserted **unescaped** into every HTML page that uses `layouts/base.njk` (and the legacy redirect shell). Only trusted editors should change it; invalid markup can break the whole site.
 
 ---
 

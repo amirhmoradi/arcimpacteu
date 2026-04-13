@@ -146,6 +146,7 @@ Les messages ne doivent **pas** contenir de données bancaires ; pour un devis p
 | `content/pages/fr|en|it/**/*.md` | Pages et fiches (hubs + sous-dossiers stages, seminaires, collectivites). |
 | `content/pages/404.md`, `robots.njk`, `sitemap.njk`, `legacy-redirect.njk` | Pages / templates globaux (collection **Fichiers uniques**). |
 | `content/meta/calendar.json` | URL iframe, liens Google / ICS, intros HTML. |
+| `content/meta/siteInject.json` | Scripts ou pixels sur **toutes** les pages (trois zones : fin du `<head>`, après `<body>`, avant `</body>`) — **réservé aux profils techniques de confiance**. |
 | `content/meta/featuredEvenements.json` | Cartes de la page Événements. |
 | `content/meta/testimonials.json` | Avis du carrousel sur la page d’accueil. |
 | `_data/posters.json` | Affiches du carrousel d’accueil. |

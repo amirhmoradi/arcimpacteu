@@ -10,13 +10,17 @@ eleventyExcludeFromCollections: true
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
+  <link rel="icon" href="{{ '/images/favicon.svg' | url }}" type="image/svg+xml" />
   <title>Redirection…</title>
   <meta name="robots" content="noindex, nofollow" />
   <link rel="canonical" href="{{ metadata.url }}{{ legacyRedirect.to | url }}" />
   <meta http-equiv="refresh" content="0;url={{ legacyRedirect.to | url }}" />
   <script>location.replace('{{ legacyRedirect.to | url }}');</script>
+  {% if siteInject.headExtraHtml %}{{ siteInject.headExtraHtml | safe }}{% endif %}
 </head>
 <body>
+  {% if siteInject.afterBodyOpenHtml %}{{ siteInject.afterBodyOpenHtml | safe }}{% endif %}
   <p>La page a déménagé. Si vous n’êtes pas redirigé, <a href="{{ legacyRedirect.to | url }}">suivez ce lien</a>.</p>
+  {% if siteInject.beforeBodyCloseHtml %}{{ siteInject.beforeBodyCloseHtml | safe }}{% endif %}
 </body>
 </html>

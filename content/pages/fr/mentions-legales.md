@@ -25,7 +25,7 @@ Le site statique peut être servi via **GitHub Pages** ; les messages du formula
 
 ## Création du site
 
-Conception et développement du site : **Amir Moradi** — [amirmoradi.com](https://amirmoradi.com).
+Conception et développement du site : **Amir Moradi** — [amirmoradi.com](https://amirmoradi.com?ref=arcimpact_legal).
 
 ## Données personnelles
 
