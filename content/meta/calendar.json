@@ -1,0 +1,10 @@
+{
+  "embedUrl": "",
+  "publicCalendarUrl": "",
+  "icsUrl": "",
+  "intro": {
+    "fr": "<p><strong>Comment remplir le calendrier :</strong> créez un agenda Google « Arc IMPACT — public », ajoutez-y vos dates de stages et séminaires, puis collez l’URL d’intégration ci-dessous dans Sveltia (fichier <em>Calendrier</em>). Les visiteurs verront l’agenda à jour sur la page Calendrier.</p>",
+    "en": "<p><strong>To go live:</strong> create a public Google Calendar, add your camp dates, then paste the embed URL in the CMS calendar settings file. Visitors will see the agenda on the Calendar page.</p>",
+    "it": "<p><strong>Attivazione:</strong> crea un Google Calendar pubblico con le date degli stage, poi incolla l’URL di incorporamento nel file calendario in Sveltia.</p>"
+  }
+}

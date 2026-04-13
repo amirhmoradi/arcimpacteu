@@ -1,6 +1,6 @@
 ---
 title: Seminari & aziende
-description: Piattaforme multi-attività, coesione, tiro con l'arco e sfide multi-tiro — Arc IMPACT in tutta la Francia con materiale autonomo.
+description: "Piattaforme multi-attività, coesione, tiro con l'arco e sfide multi-tiro — Arc IMPACT in tutta la Francia con materiale autonomo."
 translationSlug: seminaires
 ---
 

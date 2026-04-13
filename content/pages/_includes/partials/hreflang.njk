@@ -1,8 +1,11 @@
 {% set slug = translationSlug | default(page.fileSlug) %}
+{% set hub = hubSegment | default('') %}
 {% if slug == '404' %}
   {% set paths = { fr: '/', en: '/en/', it: '/it/' } %}
 {% elif slug == 'home' %}
   {% set paths = { fr: '/', en: '/en/', it: '/it/' } %}
+{% elif hub %}
+  {% set paths = { fr: '/' + hub + '/' + slug + '/', en: '/en/' + hub + '/' + slug + '/', it: '/it/' + hub + '/' + slug + '/' } %}
 {% else %}
   {% set paths = { fr: '/' + slug + '/', en: '/en/' + slug + '/', it: '/it/' + slug + '/' } %}
 {% endif %}

@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 /** GitHub Pages project site: /repo-name/ ; custom domain: / */
 function pathPrefix() {
   const p = process.env.PATH_PREFIX;
@@ -12,10 +15,26 @@ function pathPrefixDir() {
   return p.replace(/^\/+|\/+$/g, '');
 }
 
+function readMetaJson(file, fallback) {
+  const fp = path.join(__dirname, 'content', 'meta', file);
+  try {
+    return JSON.parse(fs.readFileSync(fp, 'utf8'));
+  } catch {
+    return fallback;
+  }
+}
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData('metadata', () => ({
     url: (process.env.SITE_URL || 'https://arcimpact.eu').replace(/\/$/, ''),
   }));
+
+  eleventyConfig.addGlobalData('calendar', () =>
+    readMetaJson('calendar.json', { embedUrl: '', publicCalendarUrl: '', icsUrl: '', intro: {} }),
+  );
+  eleventyConfig.addGlobalData('featuredEvenements', () =>
+    readMetaJson('featuredEvenements.json', { items: [] }),
+  );
 
   eleventyConfig.addPassthroughCopy('assets');
   eleventyConfig.addPassthroughCopy('admin');

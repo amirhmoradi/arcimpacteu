@@ -65,7 +65,7 @@ layout: layouts/base.njk
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {% for item in services %}
       {% set s = item[lang] %}
-      <a href="{{ '/stages/' | localeUrl(p) | url }}#{{ item.id }}" class="group block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+      <a href="{{ ('/stages/' ~ item.slug ~ '/') | localeUrl(p) | url }}" class="group block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md">
         <img src="{{ item.img | arcImage | url }}" alt="" class="h-40 w-full object-cover transition group-hover:scale-105" loading="lazy" width="400" height="160" />
         <div class="p-5">
           <h3 class="font-semibold text-primary group-hover:text-primary-light">{{ s.title }}</h3>

@@ -1,6 +1,7 @@
 [
   {
     "id": "3d",
+    "slug": "stage-3d",
     "img": "/images/banners/stages-2026/Stage-2026-tEch-feclaz-3D.jpg",
     "fr": { "title": "Stage technique 3D", "desc": "La Féclaz — parcours Natur'Foam, salle et gymnase. Jusqu'à 8 archers." },
     "en": { "title": "3D technical camp", "desc": "La Féclaz — Natur'Foam course, classroom and gym. Up to 8 archers." },
@@ -8,6 +9,7 @@
   },
   {
     "id": "indoor",
+    "slug": "stage-indoor",
     "img": "/images/banners/stages-2026/Stage-Indoor-Feeclaz-2026.jpg",
     "fr": { "title": "Stage salle (indoor)", "desc": "Mental et compétition sur 18 m — classique, poulie, arc nu." },
     "en": { "title": "Indoor camp", "desc": "Mental and competition at 18 m — recurve, compound, barebow." },
@@ -15,6 +17,7 @@
   },
   {
     "id": "tae",
+    "slug": "stage-tae",
     "img": "/images/banners/stages-2026/Stage-2026-TAE.jpg",
     "fr": { "title": "TAE — tir extérieur", "desc": "70 / 60 / 50 / 30 m — licenciés FFTA." },
     "en": { "title": "Field / outdoor", "desc": "70 / 60 / 50 / 30 m — FFTA members." },
@@ -22,6 +25,7 @@
   },
   {
     "id": "prestige",
+    "slug": "stage-prestige",
     "img": "/images/banners/stages-2026/Stage-Prestige-2026.jpg",
     "fr": { "title": "Stage prestige 3D", "desc": "Château de Roche-sur-Linotte — 50+ cibles 3D." },
     "en": { "title": "Prestige 3D", "desc": "Roche-sur-Linotte estate — 50+ 3D targets." },
@@ -29,6 +33,7 @@
   },
   {
     "id": "ados",
+    "slug": "stage-ados",
     "img": "/images/banners/stages-2026/Lou-Poney-2026.jpg",
     "fr": { "title": "Franco-Suisse ados 3D", "desc": "Massif des Bauges — village tipis, 3 jours." },
     "en": { "title": "Franco-Swiss youth 3D", "desc": "Bauges mountains — tipi village, 3 days." },
@@ -36,6 +41,7 @@
   },
   {
     "id": "physique",
+    "slug": "stage-physique",
     "img": "/images/arcimpact/tec3d05-600x400.jpg",
     "fr": { "title": "Préparation physique", "desc": "Gainage, renforcement, cardio — hiver, toutes armes." },
     "en": { "title": "Physical preparation", "desc": "Core, strength, cardio — winter, all bow types." },
@@ -43,6 +49,7 @@
   },
   {
     "id": "coaching",
+    "slug": "stage-coaching",
     "img": "/images/banners/stages-2026/Stage-2026-Perf-Feclaz-3D.jpg",
     "fr": { "title": "Stage coaching", "desc": "Compétition — théorie et coaching en situation." },
     "en": { "title": "Competition coaching", "desc": "Theory plus on-line coaching blocks." },
@@ -50,6 +57,7 @@
   },
   {
     "id": "clubs",
+    "slug": "stage-clubs",
     "img": "/images/arcimpact/multitir-Am.jpg",
     "fr": { "title": "Clubs & départements", "desc": "Sur devis — France et voisinage." },
     "en": { "title": "Clubs & regions", "desc": "On request — France and nearby." },

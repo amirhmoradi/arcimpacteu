@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "order": 1,
+      "image": "/images/banners/stages-2026/Stage-2026-tEch-feclaz-3D.jpg",
+      "badge": { "fr": "Stage", "en": "Camp", "it": "Stage" },
+      "title": {
+        "fr": "Stage technique 3D — La Féclaz",
+        "en": "3D technical camp — La Féclaz",
+        "it": "Stage tecnico 3D — La Féclaz"
+      },
+      "excerpt": {
+        "fr": "Semaine intensive : Natur’Foam, salle, gymnase, jusqu’à 8 archers.",
+        "en": "One-week immersion: Natur’Foam, classroom, gym, max 8 archers.",
+        "it": "Settimana intensiva: Natur’Foam, aula, palestra, max 8 arcieri."
+      },
+      "href": { "fr": "/stages/stage-3d/", "en": "/en/stages/stage-3d/", "it": "/it/stages/stage-3d/" }
+    },
+    {
+      "order": 2,
+      "image": "/images/banners/stages-2026/Stage-Indoor-Feeclaz-2026.jpg",
+      "badge": { "fr": "Stage", "en": "Camp", "it": "Stage" },
+      "title": {
+        "fr": "Indoor 18 m — mental & compétition",
+        "en": "Indoor 18 m — mental & match play",
+        "it": "Indoor 18 m — mentalità & gara"
+      },
+      "excerpt": {
+        "fr": "Préparation hivernale FFTA : classique, poulie, arc nu.",
+        "en": "Winter FFTA prep: recurve, compound, barebow.",
+        "it": "Preparazione invernale FFTA: olimpico, compound, nudo."
+      },
+      "href": { "fr": "/stages/stage-indoor/", "en": "/en/stages/stage-indoor/", "it": "/it/stages/stage-indoor/" }
+    },
+    {
+      "order": 3,
+      "image": "/images/arcimpact/plateau-mt-menu.jpg",
+      "badge": { "fr": "Séminaire", "en": "Corporate", "it": "Seminario" },
+      "title": {
+        "fr": "Plateau multi-activités entreprise",
+        "en": "Multi-activity corporate platform",
+        "it": "Plateau multi-attività aziendale"
+      },
+      "excerpt": {
+        "fr": "Cohésion, tir à l’arc, multi-tirs — France entière.",
+        "en": "Cohesion, archery, multi-shooting — anywhere in France.",
+        "it": "Coesione, arco, multi-tiro — in tutta la Francia."
+      },
+      "href": { "fr": "/seminaires/plateau/", "en": "/en/seminaires/plateau/", "it": "/it/seminaires/plateau/" }
+    },
+    {
+      "order": 4,
+      "image": "/images/banners/stages-2026/Stage-Prestige-2026.jpg",
+      "badge": { "fr": "Prestige", "en": "Prestige", "it": "Prestige" },
+      "title": {
+        "fr": "Stage prestige 3D — Roche-sur-Linotte",
+        "en": "Prestige 3D — Roche-sur-Linotte estate",
+        "it": "Prestige 3D — Roche-sur-Linotte"
+      },
+      "excerpt": {
+        "fr": "50+ cibles 3D, groupe restreint, cadre exceptionnel.",
+        "en": "50+ 3D targets, small group, exceptional venue.",
+        "it": "Oltre 50 bersagli 3D, gruppo ristretto."
+      },
+      "href": { "fr": "/stages/stage-prestige/", "en": "/en/stages/stage-prestige/", "it": "/it/stages/stage-prestige/" }
+    },
+    {
+      "order": 5,
+      "image": "/images/arcimpact/multitir-Am.jpg",
+      "badge": { "fr": "Collectivité", "en": "Public event", "it": "Ente" },
+      "title": {
+        "fr": "Multi-tirs & animations",
+        "en": "Multi-shooting & public animations",
+        "it": "Multi-tiro & animazioni"
+      },
+      "excerpt": {
+        "fr": "Écoles, centres de loisirs, fêtes — encadrement diplômé.",
+        "en": "Schools, holiday centres, festivals — qualified staff.",
+        "it": "Scuole, centri estivi, feste — staff diplomato."
+      },
+      "href": { "fr": "/collectivites/multi-tirs/", "en": "/en/collectivites/multi-tirs/", "it": "/it/collectivites/multi-tirs/" }
+    },
+    {
+      "order": 6,
+      "image": "/images/banners/stages-2026/Lou-Poney-2026.jpg",
+      "badge": { "fr": "Jeunes", "en": "Youth", "it": "Giovani" },
+      "title": {
+        "fr": "Franco-Suisse ados 3D",
+        "en": "Franco-Swiss youth 3D",
+        "it": "Franco-Svizzero giovani 3D"
+      },
+      "excerpt": {
+        "fr": "3 jours Bauges, tipis, découverte encadrée.",
+        "en": "3 days in the Bauges, tipis, guided discovery.",
+        "it": "3 giorni Bauges, tipi, scoperta guidata."
+      },
+      "href": { "fr": "/stages/stage-ados/", "en": "/en/stages/stage-ados/", "it": "/it/stages/stage-ados/" }
+    }
+  ]
+}

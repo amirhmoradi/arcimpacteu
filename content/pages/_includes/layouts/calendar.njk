@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+---
+{% set t = i18n[lang] %}
+{% set p = localePathPrefix | default('') %}
+{% set cal = calendar | default({}) %}
+<section class="bg-primary-dark py-14 text-white md:py-18">
+  <div class="mx-auto max-w-4xl px-4 text-center lg:px-8">
+    <p class="mb-2 text-sm font-medium uppercase tracking-widest text-accent">{{ t.calendarKicker }}</p>
+    <h1 class="font-serif text-3xl font-semibold md:text-4xl">{{ title }}</h1>
+    {% if description %}<p class="mx-auto mt-4 max-w-2xl text-lg text-white/85">{{ description }}</p>{% endif %}
+  </div>
+</section>
+<section class="bg-[#F5F5F0] py-12">
+  <div class="mx-auto max-w-5xl px-4 lg:px-8">
+    <div class="prose-wrap mx-auto mb-8 max-w-3xl text-charcoal">
+      <div class="article-markdown text-base leading-relaxed [&_a]:font-medium [&_a]:text-primary-light [&_a]:underline">{{ content | safe }}</div>
+    </div>
+    {% if cal.intro and cal.intro[lang] %}
+    <div class="mx-auto mb-8 max-w-3xl rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-700">{{ cal.intro[lang] | safe }}</div>
+    {% endif %}
+    {% if cal.embedUrl %}
+    <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
+      <iframe title="{{ t.calendarIframeTitle }}" src="{{ cal.embedUrl }}" class="h-[720px] w-full border-0" loading="lazy"></iframe>
+    </div>
+    {% else %}
+    <p class="rounded-xl border border-amber-200 bg-amber-50 p-6 text-center text-amber-900">{{ t.calendarPlaceholder }}</p>
+    {% endif %}
+    <div class="mt-8 flex flex-wrap justify-center gap-4 text-center">
+      {% if cal.publicCalendarUrl %}
+      <a href="{{ cal.publicCalendarUrl }}" class="inline-flex rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white no-underline hover:bg-primary-light" rel="noopener noreferrer">{{ t.calendarOpenGoogle }}</a>
+      {% endif %}
+      {% if cal.icsUrl %}
+      <a href="{{ cal.icsUrl }}" class="inline-flex rounded-lg border-2 border-primary px-6 py-3 text-sm font-semibold text-primary no-underline hover:bg-primary/5">{{ t.calendarAddIcs }}</a>
+      {% endif %}
+    </div>
+    {% set ctaTitle = t.calendarCtaTitle %}
+    {% set ctaLead = t.calendarCtaLead %}
+    {% set ctaPrimaryLabel = t.calendarCtaPrimary %}
+    {% set ctaPrimaryHref = '/contact/' %}
+    {% set ctaSecondaryLabel = t.nav.evenements %}
+    {% set ctaSecondaryHref = '/evenements/' %}
+    <div class="mx-auto mt-12 max-w-4xl">
+      {% include "partials/cta-block.njk" %}
+    </div>
+  </div>
+</section>

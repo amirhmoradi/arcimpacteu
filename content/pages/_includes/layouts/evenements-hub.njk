@@ -1,0 +1,56 @@
+---
+layout: layouts/base.njk
+---
+{% set t = i18n[lang] %}
+{% set p = localePathPrefix | default('') %}
+{% set items = (featuredEvenements.items | default([])) | sort(attribute='order') %}
+<section class="bg-primary-dark py-14 text-white md:py-18">
+  <div class="mx-auto max-w-4xl px-4 text-center lg:px-8">
+    <p class="mb-2 text-sm font-medium uppercase tracking-widest text-accent">{{ t.evenementsKicker }}</p>
+    <h1 class="font-serif text-3xl font-semibold md:text-4xl">{{ title }}</h1>
+    {% if description %}<p class="mx-auto mt-4 max-w-2xl text-lg text-white/85">{{ description }}</p>{% endif %}
+  </div>
+</section>
+<section class="bg-[#F5F5F0] py-14">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <div class="prose-wrap mx-auto mb-12 max-w-3xl text-charcoal">
+      <div class="article-markdown text-base leading-relaxed [&_a]:font-medium [&_a]:text-primary-light [&_a]:underline">{{ content | safe }}</div>
+    </div>
+    {% if items | length %}
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {% for ev in items %}
+      {% set Tt = ev.title %}
+      {% set titleEv = (Tt[lang] if Tt and Tt[lang] else (Tt.fr if Tt else '')) %}
+      {% set Ex = ev.excerpt %}
+      {% set excerptEv = (Ex[lang] if Ex and Ex[lang] else (Ex.fr if Ex else '')) %}
+      {% set Bd = ev.badge %}
+      {% set badgeEv = (Bd[lang] if Bd and Bd[lang] else (Bd.fr if Bd else '')) %}
+      {% set Hr = ev.href %}
+      {% set hrefEv = (Hr[lang] if Hr and Hr[lang] else (Hr.fr if Hr else '#')) %}
+      <article class="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+        <a href="{{ hrefEv | url }}" class="block shrink-0">
+          <img src="{{ ev.image | arcImage | url }}" alt="" class="h-48 w-full object-cover" loading="lazy" width="600" height="320" />
+        </a>
+        <div class="flex flex-1 flex-col p-6">
+          {% if badgeEv %}<p class="mb-2 text-xs font-semibold uppercase tracking-wide text-accent">{{ badgeEv }}</p>{% endif %}
+          <h2 class="font-serif text-xl font-semibold text-primary"><a href="{{ hrefEv | url }}" class="text-inherit no-underline hover:text-primary-light">{{ titleEv }}</a></h2>
+          <p class="mt-2 flex-1 text-sm text-gray-600">{{ excerptEv }}</p>
+          <a href="{{ hrefEv | url }}" class="mt-4 inline-flex font-semibold text-primary-light hover:text-accent">{{ t.evenementsCardCta }} →</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-center text-gray-500">{{ t.evenementsEmpty }}</p>
+    {% endif %}
+    {% set ctaTitle = t.evenementsCtaTitle %}
+    {% set ctaLead = t.evenementsCtaLead %}
+    {% set ctaPrimaryLabel = t.evenementsCtaPrimary %}
+    {% set ctaPrimaryHref = '/contact/' %}
+    {% set ctaSecondaryLabel = t.nav.stages %}
+    {% set ctaSecondaryHref = '/stages/' %}
+    <div class="mx-auto mt-14 max-w-4xl">
+      {% include "partials/cta-block.njk" %}
+    </div>
+  </div>
+</section>
