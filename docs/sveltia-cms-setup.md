@@ -18,8 +18,8 @@ Official references: [Getting started](https://sveltiacms.app/en/docs/start), [G
 | `content/pages/404.md`, `robots.njk`, `sitemap.njk`, `legacy-redirect.njk` | Singleton templates under **Fichiers uniques** in the CMS. |
 | `content/meta/*.json` | Calendar, featured events, testimonials (structured forms in the CMS). |
 | `_data/*.json` | Global data: `brand.json`, `posters.json`, `i18n.json`, `services.json`, etc. — see §5. |
-| `public/media/` | Images uploaded via the CMS (committed to Git). |
-| `public/images/` | Existing site imagery (Git); referenced by paths like `/images/...` in Markdown and JSON. |
+| `public/images/` | Imagery du site + **médiathèque Sveltia** (`media_folder` → URLs `/images/...`). |
+| `public/media/` | Optional legacy path for **`/media/...`** links; not the CMS media library root anymore. |
 | `worker/` | Cloudflare Worker for contact + Turnstile (separate README). |
 
 **Build:** This repository includes **[Eleventy](https://www.11ty.dev/)** (`npm run build` → `_site/`). GitHub Actions (`.github/workflows/pages.yml`) runs the build and deploys to **GitHub Pages**. Markdown page bodies are **not** preprocessed as Nunjucks (so characters like `{#` stay literal); layouts still use Nunjucks in `content/pages/_includes/`.
@@ -34,12 +34,9 @@ Official references: [Getting started](https://sveltiacms.app/en/docs/start), [G
 2. Set `backend.repo` to `owner/repo` for this GitHub repository (you already maintain this).
 3. Commit changes when you update `repo` or collections (the CMS needs a valid `repo` for the GitHub API).
 
-`media_folder` and `public_folder` are already set for this layout:
+`media_folder` and `public_folder` point at **`public/images`** and **`/images`**, so the **Asset Library** lists the same tree the site already uses for heroes, bannières, etc., and new uploads land next to those files.
 
-- Uploads go to `public/media/`.
-- Site URLs for those files should be `/media/...` once Pages serves the `public` tree (or adjust paths to match your SSG).
-
-Hero images and cards often use **`/images/...`** (files already in `public/images/`). New uploads from the media library use **`/media/...`**.
+Older content may still reference **`/media/...`** (folder `public/media/`); Eleventy keeps serving that path if files exist there.
 
 ---
 

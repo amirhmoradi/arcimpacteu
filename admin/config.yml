@@ -12,8 +12,10 @@ backend:
   repo: amirhmoradi/arcimpacteu
   # base_url: https://your-sveltia-auth-worker.workers.dev
 
-media_folder: /public/media
-public_folder: /media
+# Asset Library + uploads: must match where real images live (see eleventy.config.cjs passthrough public/images → /images/).
+# public/media exists for occasional uploads but stays empty on many sites, so the library pointed there showed nothing.
+media_folder: /public/images
+public_folder: /images
 
 # Shared Markdown fields (FR / EN / IT folder collections). Optional keys stay out of the saved file when empty.
 x-markdown-fields: &markdown_fields

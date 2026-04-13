@@ -107,13 +107,13 @@ Vérifiez les liens après publication : une faute dans le chemin mène à une e
 
 ### 6.1 Témoignages sur l’accueil
 
-Les avis du carrousel **Ils en parlent** viennent du fichier **« Témoignages (page d’accueil) »** dans la même section JSON que le calendrier. **Processus typique** : un visiteur envoie son ressenti via la page **Contact** ; après accord (et éventuellement une reprise de texte), vous ajoutez une ligne dans la liste avec **ordre**, **nom affiché**, **citations FR / EN / IT**, **discipline par langue**, et éventuellement une **photo** (`/images/...` ou `/media/...`).
+Les avis du carrousel **Ils en parlent** viennent du fichier **« Témoignages (page d’accueil) »** dans la même section JSON que le calendrier. **Processus typique** : un visiteur envoie son ressenti via la page **Contact** ; après accord (et éventuellement une reprise de texte), vous ajoutez une ligne dans la liste avec **ordre**, **nom affiché**, **citations FR / EN / IT**, **discipline par langue**, et éventuellement une **photo** (chemin **`/images/...`** depuis la médiathèque ou à la main).
 
 ---
 
 ## 7. Images et médias
 
-Les **photos d’illustration** des pages sont en général déjà dans le dossier `public/images` du site. Pour de **nouvelles** images accessibles partout, utilisez l’upload média de Sveltia : les fichiers partent vers **`public/media`** et apparaissent sur le site sous **`/media/...`**.
+Les **photos d’illustration** des pages vivent dans **`public/images`** (sur le site : **`/images/...`**). La **médiathèque Sveltia** (menu *Assets*) parcourt ce même dossier : vous y voyez les images déjà en dépôt et les **nouveaux envois** y sont enregistrés aussi.
 
 Compressez les images lourdes avant envoi (temps de chargement et quota du dépôt).
 
