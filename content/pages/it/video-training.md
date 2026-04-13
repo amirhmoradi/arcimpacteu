@@ -23,10 +23,29 @@ Vuoi **correggere un automatismo**, **sbloccare un gesto** o **lavorare su un so
 
 L’**ora di lezione inizia all’orario concordato**, **dopo il tuo riscaldamento personale**: arrivi pronto a tirare e ottimizziamo ogni minuto su tecnica e analisi.
 
-| Formula | Prezzo | Durata |
-|--------|--------|--------|
-| **Individuale** | **17 €** | **1 h** |
-| **2 o 3 arcieri** | **30 €** totali | **1 h** condivisa |
+<div class="not-prose my-8 overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm">
+  <table class="w-full min-w-[300px] border-collapse text-left text-sm text-gray-800">
+    <thead>
+      <tr class="border-b border-gray-200 bg-primary/10">
+        <th scope="col" class="px-4 py-3.5 font-serif text-base font-semibold text-primary">Formula</th>
+        <th scope="col" class="px-4 py-3.5 font-serif text-base font-semibold text-primary">Prezzo</th>
+        <th scope="col" class="px-4 py-3.5 font-serif text-base font-semibold text-primary">Durata</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-gray-100">
+        <td class="px-4 py-3.5 align-middle font-medium">Individuale</td>
+        <td class="px-4 py-3.5 align-middle"><strong class="text-primary">17 €</strong></td>
+        <td class="px-4 py-3.5 align-middle"><strong>1 h</strong></td>
+      </tr>
+      <tr class="bg-[#F5F5F0]">
+        <td class="px-4 py-3.5 align-middle font-medium">2 o 3 arcieri</td>
+        <td class="px-4 py-3.5 align-middle"><strong class="text-primary">30 €</strong> totali</td>
+        <td class="px-4 py-3.5 align-middle"><strong>1 h</strong> condivisa</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <div class="not-prose my-10 rounded-2xl border border-accent/40 bg-accent/10 px-6 py-8 md:px-10">
   <p class="m-0 font-serif text-xl font-semibold text-primary">Prenota il tuo slot</p>

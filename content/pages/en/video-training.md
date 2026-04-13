@@ -23,10 +23,29 @@ Want to **fix a habit**, **unlock a movement**, or **work one lever** without wa
 
 The **coaching hour starts at the agreed time**, **after your personal warm-up**: you arrive ready to shoot, and we use every minute on technique and analysis.
 
-| Option | Price | Duration |
-|--------|-------|----------|
-| **Solo** | **€17** | **1 h** |
-| **2 or 3 archers** | **€30** total | **1 h** shared |
+<div class="not-prose my-8 overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm">
+  <table class="w-full min-w-[300px] border-collapse text-left text-sm text-gray-800">
+    <thead>
+      <tr class="border-b border-gray-200 bg-primary/10">
+        <th scope="col" class="px-4 py-3.5 font-serif text-base font-semibold text-primary">Option</th>
+        <th scope="col" class="px-4 py-3.5 font-serif text-base font-semibold text-primary">Price</th>
+        <th scope="col" class="px-4 py-3.5 font-serif text-base font-semibold text-primary">Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-gray-100">
+        <td class="px-4 py-3.5 align-middle font-medium">Solo</td>
+        <td class="px-4 py-3.5 align-middle"><strong class="text-primary">€17</strong></td>
+        <td class="px-4 py-3.5 align-middle"><strong>1 h</strong></td>
+      </tr>
+      <tr class="bg-[#F5F5F0]">
+        <td class="px-4 py-3.5 align-middle font-medium">2 or 3 archers</td>
+        <td class="px-4 py-3.5 align-middle"><strong class="text-primary">€30</strong> total</td>
+        <td class="px-4 py-3.5 align-middle"><strong>1 h</strong> shared</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <div class="not-prose my-10 rounded-2xl border border-accent/40 bg-accent/10 px-6 py-8 md:px-10">
   <p class="m-0 font-serif text-xl font-semibold text-primary">Book your slot</p>

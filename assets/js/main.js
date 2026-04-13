@@ -346,14 +346,10 @@
   // =======================================================================
   function initLanguageSwitcher() {
     qsa('.lang-btn').forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
+      btn.addEventListener('click', function () {
         var lang = this.getAttribute('data-lang');
-        if (lang) {
-          localStorage.setItem('arc-impact-lang', lang);
-          var href = this.getAttribute('href');
-          if (href) window.location.href = href;
-        }
+        if (lang) localStorage.setItem('arc-impact-lang', lang);
+        /* Let the browser follow <a href> (works with PATH_PREFIX e.g. /arcimpacteu/). */
       });
     });
   }

@@ -23,10 +23,29 @@ Vous voulez **corriger une habitude**, **débloquer un geste** ou **prioriser un
 
 L’**heure de cours commence à l’heure convenue**, **après votre échauffement personnel** : vous arrivez prêt à tirer, nous optimisons chaque minute sur la technique et l’analyse.
 
-| Formule | Tarif | Durée |
-|--------|-------|--------|
-| **Individuel** | **17 €** | **1 h** |
-| **2 ou 3 archers** | **30 €** au total | **1 h** partagée |
+<div class="not-prose my-8 overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm">
+  <table class="w-full min-w-[300px] border-collapse text-left text-sm text-gray-800">
+    <thead>
+      <tr class="border-b border-gray-200 bg-primary/10">
+        <th scope="col" class="px-4 py-3.5 font-serif text-base font-semibold text-primary">Formule</th>
+        <th scope="col" class="px-4 py-3.5 font-serif text-base font-semibold text-primary">Tarif</th>
+        <th scope="col" class="px-4 py-3.5 font-serif text-base font-semibold text-primary">Durée</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-gray-100">
+        <td class="px-4 py-3.5 align-middle font-medium">Individuel</td>
+        <td class="px-4 py-3.5 align-middle"><strong class="text-primary">17 €</strong></td>
+        <td class="px-4 py-3.5 align-middle"><strong>1 h</strong></td>
+      </tr>
+      <tr class="bg-[#F5F5F0]">
+        <td class="px-4 py-3.5 align-middle font-medium">2 ou 3 archers</td>
+        <td class="px-4 py-3.5 align-middle"><strong class="text-primary">30 €</strong> au total</td>
+        <td class="px-4 py-3.5 align-middle"><strong>1 h</strong> partagée</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <div class="not-prose my-10 rounded-2xl border border-accent/40 bg-accent/10 px-6 py-8 md:px-10">
   <p class="m-0 font-serif text-xl font-semibold text-primary">Réservez votre créneau</p>

@@ -9,7 +9,7 @@ translationSlug: emmanuel-lecuyer
 
 {% set p = localePathPrefix | default('') %}
 
-<div class="not-prose mb-12 grid gap-8 sm:grid-cols-[minmax(0,200px)_1fr] sm:items-start sm:gap-10 md:grid-cols-[minmax(0,220px)_1fr] md:gap-12 lg:grid-cols-[minmax(0,240px)_1fr] lg:gap-14">
+<div class="not-prose mb-12 grid items-center gap-8 sm:grid-cols-[minmax(0,200px)_1fr] sm:gap-10 md:grid-cols-[minmax(0,220px)_1fr] md:gap-12 lg:grid-cols-[minmax(0,240px)_1fr] lg:gap-14">
   <figure class="m-0 w-full max-w-[240px] shrink-0">
     <img src="{{ '/images/arcimpact/emmanuel-lecuyer.jpg' | url }}" alt="Portrait of Emmanuel Lécuyer" width="240" height="243" class="w-full rounded-xl object-cover shadow-md" loading="eager" />
   </figure>

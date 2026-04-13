@@ -17,9 +17,9 @@
       <a class="nav-link text-sm font-medium" href="{{ '/contact/' | localeUrl(p) | url }}">{{ t.nav.contact }}</a>
     </nav>
     <div class="header-lang-desktop hidden items-center gap-1 md:flex">
-      <a class="lang-btn header-lang-link rounded px-2 py-1 text-xs font-semibold {% if lang == 'fr' %}is-active{% endif %}" href="{{ '/' | url }}">FR</a>
-      <a class="lang-btn header-lang-link rounded px-2 py-1 text-xs font-semibold {% if lang == 'en' %}is-active{% endif %}" href="{{ '/en/' | url }}">EN</a>
-      <a class="lang-btn header-lang-link rounded px-2 py-1 text-xs font-semibold {% if lang == 'it' %}is-active{% endif %}" href="{{ '/it/' | url }}">IT</a>
+      <a class="lang-btn header-lang-link rounded px-2 py-1 text-xs font-semibold {% if lang == 'fr' %}is-active{% endif %}" href="{{ '/' | url }}" data-lang="fr">FR</a>
+      <a class="lang-btn header-lang-link rounded px-2 py-1 text-xs font-semibold {% if lang == 'en' %}is-active{% endif %}" href="{{ '/en/' | url }}" data-lang="en">EN</a>
+      <a class="lang-btn header-lang-link rounded px-2 py-1 text-xs font-semibold {% if lang == 'it' %}is-active{% endif %}" href="{{ '/it/' | url }}" data-lang="it">IT</a>
     </div>
     <button type="button" class="hamburger md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
       <span></span>
